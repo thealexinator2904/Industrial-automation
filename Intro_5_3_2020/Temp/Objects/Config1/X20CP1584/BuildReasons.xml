@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildReasons>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\cyclic.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\program\cyclic.c" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\_bur_pvdef.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\cyclic.c.o" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\cyclic.c.o" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\program.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\a.out" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program\program.ox" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <BuildReason>Regel wird erzwungen.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\config1\x20cp1584\transfer.lst">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\program.br" weicht ab.
+</BuildReason>
+  </Rule>
+</BuildReasons>

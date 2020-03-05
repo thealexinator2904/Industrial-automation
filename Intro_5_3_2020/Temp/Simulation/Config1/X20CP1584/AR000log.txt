@@ -1,0 +1,45 @@
+Thu Mar  5 14:32:07 2020
+COPYRIGHT (C) B&R Industrial Automation GmbH
+
+Thu Mar  5 14:32:07 2020
+No ARsim registration found!
+
+Thu Mar  5 14:32:07 2020
+InstanceName: 01d5f2f277230990
+
+Thu Mar  5 14:32:07 2020
+WorkingDirectory: \\MARS\ECE18$\grebiena18\projects\Intro_5_3_2020\Temp\Simulation\Config1\X20CP1584\
+
+Thu Mar  5 14:32:07 2020
+COMMAND_COLDSTART
+
+Thu Mar  5 14:32:09 2020
+Version: C4.72
+
+Thu Mar  5 14:32:10 2020
+COMMAND_TERMINATE
+
+Thu Mar  5 14:32:10 2020
+COMMAND_COLDSTART
+
+Thu Mar  5 14:32:13 2020
+Version: C4.72
+
+Thu Mar  5 14:58:50 2020
+COMMAND_TERMINATE
+
+Thu Mar  5 14:58:50 2020
+COMMAND_COLDSTART
+
+Thu Mar  5 14:58:52 2020
+Version: C4.72
+
+Thu Mar  5 14:58:52 2020
+COMMAND_TERMINATE
+
+Thu Mar  5 14:58:52 2020
+COMMAND_COLDSTART
+
+Thu Mar  5 14:58:55 2020
+Version: C4.72
+

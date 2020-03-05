@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?AutomationRuntimeIOSystem Version = 2.5.0.7?>
+<ChannelConfiguration xmlns="http://www.br-automation.com/AR/IO">
+  <Module ID="$root" Hardware="X20CP1584" HardwareModuleName="X20CP1584" ModuleID="1">
+    <Channel ID="SerialNumber" Description="Seriennummer" Ext="/HW" Address="0" Direction="IN" Type="UDINT" Sig_St_Udint="1" ChannelType="SerialNumber" />
+    <Channel ID="ModuleID" Description="Modulkennung" Ext="/HW" Address="1" Direction="IN" Type="UINT" Sig_St_Uint="1" ChannelType="ModuleID" />
+    <Channel ID="HardwareVariant" Description="Hardware Variante" FromVersion="J4.25" Ext="/HW" Address="15" Direction="IN" Type="UINT" ChannelType="HardwareVariant" />
+    <Channel ID="FirmwareVersion" Description="Firmware Version" FromVersion="J4.25" Ext="/HW" Address="16" Direction="IN" Type="UINT" ChannelType="FirmwareVersion" />
+    <Channel ID="ModeSwitch" Description="Mode Schalter" Ext="/HW" Address="2" Direction="IN" Type="USINT" Sig_St_Byte="1" ChannelType="Mode" />
+    <Channel ID="BatteryStatusCPU" Description="Batterie Status CPU (0 = Batterie leer oder nicht vorhanden, 1 = Batterie OK)" Ext="/HW" Address="3" Direction="IN" Type="USINT" Sig_St_Byte="1" ChannelType="Battery" BatteryDetectionMethod="1" Ordinal="2" />
+    <Channel ID="TemperatureCPU" Description="Temperatur CPU [1/10C]" Ext="/HW" Address="4" Direction="IN" Type="UINT" Sig_Temp_CpuTemp="1" ChannelType="Temp" Ordinal="1" />
+    <Channel ID="TemperatureENV" Description="Temperatur Kühlblech [1/10C]" Ext="/HW" Address="5" Direction="IN" Type="UINT" Sig_Temp_CpuTemp="1" ChannelType="Temp" Ordinal="2" />
+    <Channel ID="SystemTime" Description="Systemzeit beim Start des aktuellen Taskklassenzyklus [µs]" Ext="/HW" Address="9" Direction="IN" Type="DINT" Sig_St_Dint="1" ChannelType="SystemTime" />
+    <Channel ID="StatusInput01" Description="I/O Versorgungswarnung (0 = DC OK)" Ext="/HW" Address="8" Direction="IN" Type="BOOL" Sig_St_Bool="1" ChannelType="StatusInput" Ordinal="2" />
+    <Channel ID="SupplyCurrent" Description="Busstrom 0,1 A  X2X Link IF6" FromVersion="A4.51" Ext="/HW" Address="11" Direction="IN" Type="USINT" Sig_St_Byte="1" ChannelType="StatusInput" Ordinal="3" />
+    <Channel ID="SupplyVoltage" Description="Busspannung 0,1 V  X2X Link IF6" FromVersion="A4.51" Ext="/HW" Address="12" Direction="IN" Type="USINT" Sig_St_Byte="1" ChannelType="StatusInput" Ordinal="4" />
+    <Channel ID="IF2.NodeSwitch" Description="Node Schalter" Ext="/HW" Address="6" Direction="IN" Type="USINT" Sig_St_Byte="1" ChannelType="Node" Device="PCI.IF2" />
+    <Channel ID="IF3.LinkOk" Description="Link-Status" Ext="/INFO" Address="0x8000001A" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="IF3.OutputDMAMargin" Description="Abstand zur Ouput Zyklus Deadline in Mikrosekunden" Ext="/INFO" Address="0x8000000C" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF3.NodeNumber" Description="Verwendete POWERLINK Knotennummer" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF3.CycleOk" Description="Indikator für zyklischen Betrieb (1 = in Betrieb)" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="IF3.SyncOk" Description="Indikator für ein synchronisiertes POWERLINK-System (1 = synchronisiert)" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="IF3.TimeSeconds" Description="Absolute Zeit aus aktuellem SoC-Frame (NetTime in POWERLINK V2) - Sekunden" FromVersion="M2.90" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.TimeNanoseconds" Description="Absolute Zeit aus aktuellem SoC-Frame (NetTime in POWERLINK V2) - Nanosekunden" FromVersion="M2.90" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.NettimeSoC" Description="Netzwerkzeit aus aktuellem SoC-Frame [µs] (RelativeTime in POWERLINK V2)" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF3.NettimeOffset" Description="Zeitversatz der Netzwerkzeit zur lokalen Systemzeit [µs]" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF3.CycleCount" Description="Anzahl aller Buszyklen" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.FailedCycleCount" Description="Anzahl der fehlerhaften Buszyklen" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.CycleTimeViolationCount" Description="Anzahl der Zykluszeitverletzungen" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.CycleIdleTime" Description="Ungenützte Zeit während eines POWERLINK Zyklus [µs]" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.CycleCongestionCount" Description="Immer 0, verfuegbar wegen Abwaertskompatibilitaet" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF6.CycleCount" Description="Anzahl der Buszyklen" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.BreakCount" Description="Anzahl der Buszyklen mit gesetztem Break-Signal" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.Nettime" Description="Zeitstempel bei dem der aktuelle Inputframe gestartet wurde [µs]" FromVersion="I2.90" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncErrorCount" Description="Anzahl der fehlerhaften synchronen Frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncSramErrorCount" Description="Anzahl der Speicherzugriffsfehler beim synchronen Frame (Overflow/Underrun)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncBusyErrorCount" Description="Anzahl der nicht versendeten synchronen Frames (Sender nicht bereit)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncNoRxErrorCount" Description="Anzahl der nicht empfangenen synchronen Frames (Timeout)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncFormatErrorCount" Description="Anzahl der zerstörten synchronen Frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncPendingErrorCount" Description="Anzahl der synchronen Frames, die nicht versendet werden konnten, weil gerade ein anderer empfangen wurde" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncErrorCount" Description="Anzahl der fehlerhaften asynchronen Frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncSramErrorCount" Description="Anzahl der Speicherzugriffsfehler beim asynchronen Frame (Overflow/Underrun)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncBusyErrorCount" Description="Anzahl der nicht versendeten asynchronen Frames (Sender nicht bereit)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncNoRxErrorCount" Description="Anzahl der nicht empfangenen asynchronen Frames (Timeout)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncFormatErrorCount" Description="Anzahl der zerstörten asynchronen Frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncPendingErrorCount" Description="Anzahl der asynchronen Frames, die nicht versendet werden konnten, weil gerade ein anderer empfangen wurde" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.DMALateOutputErrorCount" Description="Anzahl der Zyklen in denen der Output-DMA-Zugriff zu spät gestartet wurde" FromVersion="G2.93" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.NrOfStationsMax" Description="Anzahl der max. Station" FromVersion="A3.08" Ext="/INFO" Address="0x80000113" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.NrOfStationsConfigured" Description="Anzahl der konfigurierten Station" FromVersion="A3.08" Ext="/INFO" Address="0x80000114" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.StationAtBusEnd" Description="Station am Busende" FromVersion="A3.08" Ext="/INFO" Address="0x80000115" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.StationAtBusEndChangeTime" Description="Zeitpunkt der letzten Änderung der Station am Busende" FromVersion="A3.08" Ext="/INFO" Address="0xC0000115" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.StationPastOutFrameError" Description="Erste Station die einen Output Frame Error erkannt hat" FromVersion="A3.08" Ext="/INFO" Address="0x80000116" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.StationPastOutFrameErrorChangeTime" Description="Zeitpunkt der letzten Änderung des Datenpunktes StationPastOutFrameError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000116" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.StationPastInFrameError" Description="Erste Station die einen Input Frame Error erkannt hat" FromVersion="A3.08" Ext="/INFO" Address="0x80000117" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.StationPastInFrameErrorChangeTime" Description="Zeitpunkt der letzten Änderung des Datenpunktes StationPastInFrameError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000117" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.SyncInFrameSize" Description="Größe des syncronen Input Frames [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x80000118" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.SyncOutFrameSize" Description="Größe des syncronen Output Frames [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x80000119" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.AsyncFrameSize" Description="Größe des asyncronen Frames [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x8000011A" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.AsyncFrameSpareSize" Description="Größe der Reserve des asyncronen Frames [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x8000011B" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="IF6.BusLengthConfigured" Description="Konfigurierte Buslänge [m]" FromVersion="A3.08" Ext="/INFO" Address="0x8000011C" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+  </Module>
+</ChannelConfiguration>

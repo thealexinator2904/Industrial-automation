@@ -1,0 +1,7 @@
+VAR
+	Time_on : TON;
+	OUT : BOOL;
+	IN2 : BOOL;
+	IN1 : BOOL;
+	ON_Del : TIME;
+END_VAR

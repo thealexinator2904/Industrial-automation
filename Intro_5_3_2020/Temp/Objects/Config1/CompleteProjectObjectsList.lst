@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.7.2.98"?>
+<Objects>
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="132278877416351360" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="132278875122202780"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="132278875122492710"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="132278909871640540" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\operator\binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="132278875133162670" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="132278875134362042"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="132278875134651833"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="132278875134936865"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\runtime\binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="132278875139152860" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="132278875140521236"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="132278875140730592"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="132278875140941842"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\astime\binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="132278875144712800" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="132278875146090191"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="132278875146310542"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="132278875146510088"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="132278875150462750" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="132278875151773188"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="132278875152003817"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="132278875152244371"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\standard\binary.lby"
+    LogicalPath="Libraries.standard"
+    Type="Library"
+    LastWriteTime="132278909870570520" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\standard\standard.fun"
+    LogicalPath="Libraries.standard.standard.fun"
+    Type="File"
+    LastWriteTime="132278909872109523"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\standard\standard.typ"
+    LogicalPath="Libraries.standard.standard.typ"
+    Type="File"
+    LastWriteTime="132278909872349013"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Libraries\standard\standard.var"
+    LogicalPath="Libraries.standard.standard.var"
+    Type="File"
+    LastWriteTime="132278909872578804"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Program\ANSIC.prg"
+    LogicalPath="Program"
+    Type="Program"
+    LastWriteTime="132278877416281370" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Program\Cyclic.c"
+    LogicalPath="Program.Cyclic.c"
+    Type="File"
+    LastWriteTime="132278915161831540"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Program\Init.c"
+    LogicalPath="Program.Init.c"
+    Type="File"
+    LastWriteTime="132278912755321080"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Program\Exit.c"
+    LogicalPath="Program.Exit.c"
+    Type="File"
+    LastWriteTime="132278877417807784"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Program\Types.typ"
+    LogicalPath="Program.Types.typ"
+    Type="File"
+    LastWriteTime="132278877417928702"
+    Private="true" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Logical\Program\Variables.var"
+    LogicalPath="Program.Variables.var"
+    Type="File"
+    LastWriteTime="132278911010470660"
+    Private="true" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\Config.pkg"
+    LogicalPath="Config1"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="132278875190912820" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\Hardware.hw"
+    LogicalPath="Config1.Hardware.hw"
+    Type="File"
+    LastWriteTime="132278887268511010"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\Hardware.hwl"
+    LogicalPath="Config1.Hardware.hwl"
+    Type="File"
+    LastWriteTime="132278881812054110"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\Cpu.pkg"
+    LogicalPath="Config1.X20CP1584"
+    Type="Cpu"
+    LastWriteTime="132278875160952670" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\Cpu.sw"
+    LogicalPath="Config1.X20CP1584.Cpu.sw"
+    Type="File"
+    LastWriteTime="132278909873400890"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\Cpu.per"
+    LogicalPath="Config1.X20CP1584.Cpu.per"
+    Type="File"
+    LastWriteTime="132278875154072880"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\IoMap.iom"
+    LogicalPath="Config1.X20CP1584.IoMap.iom"
+    Type="File"
+    LastWriteTime="132278875154202810"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\PvMap.vvm"
+    LogicalPath="Config1.X20CP1584.PvMap.vvm"
+    Type="File"
+    LastWriteTime="132278875154292780"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\Connectivity\Package.pkg"
+    LogicalPath="Config1.X20CP1584.Connectivity"
+    Type="Package"
+    LastWriteTime="132278875155232700" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\Connectivity\OpcUA\Package.pkg"
+    LogicalPath="Config1.X20CP1584.Connectivity.OpcUA"
+    Type="Package"
+    LastWriteTime="132278875155162920" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\TextSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1584.TextSystem"
+    Type="Package"
+    LastWriteTime="132278875155472710" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\UnitSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1584.UnitSystem"
+    Type="Package"
+    LastWriteTime="132278875155732760" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity"
+    Type="Package"
+    LastWriteTime="132278875159352800" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\UserRoleSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.UserRoleSystem"
+    Type="Package"
+    LastWriteTime="132278875156612920" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\UserRoleSystem\Role.role"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.UserRoleSystem.Role.role"
+    Type="File"
+    LastWriteTime="132278875158189626"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\UserRoleSystem\User.user"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.UserRoleSystem.User.user"
+    Type="File"
+    LastWriteTime="132278875158411722"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore"
+    Type="Package"
+    LastWriteTime="132278875158542680" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates"
+    Type="Package"
+    LastWriteTime="132278875157522810" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\Certificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates.Certificates"
+    Type="Package"
+    LastWriteTime="132278875157212800" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\PrivateKeys\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates.PrivateKeys"
+    Type="Package"
+    LastWriteTime="132278875157462920" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.ThirdPartyCertificates"
+    Type="Package"
+    LastWriteTime="132278875157972860" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\SoftwareCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.ThirdPartyCertificates.SoftwareCertificates"
+    Type="Package"
+    LastWriteTime="132278875157912940" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\CertificateRevocationLists\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.CertificateRevocationLists"
+    Type="Package"
+    LastWriteTime="132278875158212710" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\CertificateSigningRequests\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.CertificateSigningRequests"
+    Type="Package"
+    LastWriteTime="132278875158472710" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\TransportLayerSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.TransportLayerSecurity"
+    Type="Package"
+    LastWriteTime="132278875158792830" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\Firewall\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.Firewall"
+    Type="Package"
+    LastWriteTime="132278875159292760" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\AccessAndSecurity\Firewall\Rules.firewallRules"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.Firewall.Rules.firewallRules"
+    Type="File"
+    LastWriteTime="132278875161058484"
+    Private="false" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\mappControl\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappControl"
+    Type="Package"
+    LastWriteTime="132278875159702760" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\mappMotion\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappMotion"
+    Type="Package"
+    LastWriteTime="132278875160012750" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\mappServices\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappServices"
+    Type="Package"
+    LastWriteTime="132278875160342670" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\mappView\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappView"
+    Type="Package"
+    LastWriteTime="132278875160592650" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\X20CP1584\mappCockpit\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappCockpit"
+    Type="Package"
+    LastWriteTime="132278875160892730" />
+  <Object
+    Path="Z:\projects\Intro_5_3_2020\Physical\Config1\Hardware.jpg"
+    LogicalPath="Config1.Hardware.jpg"
+    Type="File"
+    LastWriteTime="132278881812274060"
+    Private="false" />
+</Objects>
