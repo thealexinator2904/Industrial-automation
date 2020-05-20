@@ -1,0 +1,24 @@
+VAR_CONFIG
+	::switch_left AT %IX."4SIM.10-01".DigitalInput01;
+	::switch_right AT %IX."4SIM.10-01".DigitalInput02;
+	::LED1_red AT %QX."4SIM.10-01".DigitalOutput03;
+	::LED1_orange AT %QX."4SIM.10-01".DigitalOutput04;
+	::LED1_green AT %QX."4SIM.10-01".DigitalOutput05;
+	::LED2_red AT %QX."4SIM.10-01".DigitalOutput06;
+	::LED2_orange AT %QX."4SIM.10-01".DigitalOutput07;
+	::LED2_green AT %QX."4SIM.10-01".DigitalOutput08;
+	::LED3_red AT %QX."4SIM.10-01".DigitalOutput09;
+	::LED3_orange AT %QX."4SIM.10-01".DigitalOutput10;
+	::LED3_green AT %QX."4SIM.10-01".DigitalOutput11;
+	::LED4_red AT %QX."4SIM.10-01".DigitalOutput12;
+	::LED4_orange AT %QX."4SIM.10-01".DigitalOutput13;
+	::LED4_green AT %QX."4SIM.10-01".DigitalOutput14;
+	::seven_seg AT %QW."4SIM.10-01".AnalogOutput01;
+	::but_1 AT %IX."4SIM.10-01".DigitalInput03;
+	::but_2 AT %IX."4SIM.10-01".DigitalInput04;
+	::but_3 AT %IX."4SIM.10-01".DigitalInput05;
+	::but_4 AT %IX."4SIM.10-01".DigitalInput06;
+	::pot_1 AT %IW."4SIM.10-01".AnalogInput01;
+	::pot_2 AT %IW."4SIM.10-01".AnalogInput02;
+	::takt AT %IW."4SIM.10-01".Encoder01;
+END_VAR

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.7.2.98?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="4SIM.10-01" Type="4SIM.10-01" Version="1.3.0.0">
+    <Connection Connector="PLK1" TargetModule="X20CP1584" TargetConnector="IF3">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.2" />
+    </Connection>
+  </Module>
+  <Module Name="X20BM11" Type="X20BM11" Version="1.0.0.1">
+    <Connection Connector="X2X1" TargetModule="X20CP1584" TargetConnector="IF6" />
+  </Module>
+  <Module Name="X20CP1584" Type="X20CP1584" Version="1.6.0.0">
+    <Connector Name="IF2">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="10.36.37.14" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+    </Connector>
+  </Module>
+  <Module Name="X20DO8322" Type="X20DO8322" Version="1.1.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11" TargetConnector="SL1" />
+  </Module>
+  <Module Name="X20TB12" Type="X20TB12" Version="1.0.0.0" />
+</Hardware>

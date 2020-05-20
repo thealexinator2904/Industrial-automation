@@ -1,0 +1,39 @@
+VAR
+	switch_left : BOOL;
+	switch_right : BOOL;
+	but_1 : BOOL;
+	but_3 : BOOL;
+	but_2 : BOOL;
+	but_4 : BOOL;
+END_VAR
+(*LEDS*)
+VAR
+	LED1_green : BOOL;
+	LED1_red : BOOL;
+	LED1_orange : BOOL;
+END_VAR
+(*Insert your comment here.*)
+VAR
+	LED2_green : BOOL;
+	LED2_red : BOOL;
+	LED2_orange : BOOL;
+END_VAR
+(*Insert your comment here.*)
+VAR
+	LED3_green : BOOL;
+	LED3_red : BOOL;
+	LED3_orange : BOOL;
+END_VAR
+(*Insert your comment here.*)
+VAR
+	LED4_green : BOOL;
+	LED4_red : BOOL;
+	LED4_orange : BOOL;
+END_VAR
+(*Analog*)
+VAR
+	pot_1 : INT;
+	pot_2 : INT;
+	takt : UINT;
+	seven_seg : INT;
+END_VAR

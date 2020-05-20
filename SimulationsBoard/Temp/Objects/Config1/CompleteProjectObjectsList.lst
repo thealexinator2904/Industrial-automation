@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.7.2.98"?>
+<Objects>
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="132344412525652737" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="132344348133687609"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="132344410006148905"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="132344348182961295" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\operator\binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="132344348169521246" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="132344348169365252"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="132344348169521246"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="132344348169521246"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\runtime\binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="132344348173896247" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="132344348173740320"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="132344348173896247"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="132344348173896247"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\astime\binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="132344348178271570" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="132344348178115287"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="132344348178271570"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="132344348178271570"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="132344348182648791" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="132344348182492847"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="132344348182648791"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="132344348182648791"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\ANSIC.prg"
+    LogicalPath="Aufgabe_1"
+    Type="Program"
+    LastWriteTime="132344390193439693" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\Cyclic.c"
+    LogicalPath="Aufgabe_1.Cyclic.c"
+    Type="File"
+    LastWriteTime="132344390193283477"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\Init.c"
+    LogicalPath="Aufgabe_1.Init.c"
+    Type="File"
+    LastWriteTime="132344411493803134"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\Exit.c"
+    LogicalPath="Aufgabe_1.Exit.c"
+    Type="File"
+    LastWriteTime="132344390193283477"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\Types.typ"
+    LogicalPath="Aufgabe_1.Types.typ"
+    Type="File"
+    LastWriteTime="132344390193439693"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\Variables.var"
+    LogicalPath="Aufgabe_1.Variables.var"
+    Type="File"
+    LastWriteTime="132344390193439693"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\ANSIC.prg"
+    LogicalPath="Aufgabe_2"
+    Type="Program"
+    LastWriteTime="132344412476111757" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Cyclic.c"
+    LogicalPath="Aufgabe_2.Cyclic.c"
+    Type="File"
+    LastWriteTime="132344419448870950"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Init.c"
+    LogicalPath="Aufgabe_2.Init.c"
+    Type="File"
+    LastWriteTime="132344414193294720"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Exit.c"
+    LogicalPath="Aufgabe_2.Exit.c"
+    Type="File"
+    LastWriteTime="132344412475955481"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Types.typ"
+    LogicalPath="Aufgabe_2.Types.typ"
+    Type="File"
+    LastWriteTime="132344412475955481"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Variables.var"
+    LogicalPath="Aufgabe_2.Variables.var"
+    Type="File"
+    LastWriteTime="132344412476111757"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\Config.pkg"
+    LogicalPath="Config1"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="132344348219216092" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\Hardware.hw"
+    LogicalPath="Config1.Hardware.hw"
+    Type="File"
+    LastWriteTime="132344364655101298"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\Hardware.hwl"
+    LogicalPath="Config1.Hardware.hwl"
+    Type="File"
+    LastWriteTime="132344390411193921"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Cpu.pkg"
+    LogicalPath="Config1.X20CP1584"
+    Type="Cpu"
+    LastWriteTime="132344348197182120" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Cpu.sw"
+    LogicalPath="Config1.X20CP1584.Cpu.sw"
+    Type="File"
+    LastWriteTime="132344414028262528"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Cpu.per"
+    LogicalPath="Config1.X20CP1584.Cpu.per"
+    Type="File"
+    LastWriteTime="132344348194838246"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\IoMap.iom"
+    LogicalPath="Config1.X20CP1584.IoMap.iom"
+    Type="File"
+    LastWriteTime="132344408735099162"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\PvMap.vvm"
+    LogicalPath="Config1.X20CP1584.PvMap.vvm"
+    Type="File"
+    LastWriteTime="132344348194994508"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Connectivity\Package.pkg"
+    LogicalPath="Config1.X20CP1584.Connectivity"
+    Type="Package"
+    LastWriteTime="132344348196400924" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Connectivity\OpcUA\Package.pkg"
+    LogicalPath="Config1.X20CP1584.Connectivity.OpcUA"
+    Type="Package"
+    LastWriteTime="132344348196400924" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\TextSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1584.TextSystem"
+    Type="Package"
+    LastWriteTime="132344348196400924" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\UnitSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1584.UnitSystem"
+    Type="Package"
+    LastWriteTime="132344348196400924" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity"
+    Type="Package"
+    LastWriteTime="132344348197025750" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\UserRoleSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.UserRoleSystem"
+    Type="Package"
+    LastWriteTime="132344348196713609" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\UserRoleSystem\Role.role"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.UserRoleSystem.Role.role"
+    Type="File"
+    LastWriteTime="132344348196557034"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\UserRoleSystem\User.user"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.UserRoleSystem.User.user"
+    Type="File"
+    LastWriteTime="132344348196713609"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore"
+    Type="Package"
+    LastWriteTime="132344348196869519" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates"
+    Type="Package"
+    LastWriteTime="132344348196713609" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\Certificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates.Certificates"
+    Type="Package"
+    LastWriteTime="132344348196713609" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\PrivateKeys\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates.PrivateKeys"
+    Type="Package"
+    LastWriteTime="132344348196713609" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.ThirdPartyCertificates"
+    Type="Package"
+    LastWriteTime="132344348196869519" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\SoftwareCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.ThirdPartyCertificates.SoftwareCertificates"
+    Type="Package"
+    LastWriteTime="132344348196869519" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\CertificateRevocationLists\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.CertificateRevocationLists"
+    Type="Package"
+    LastWriteTime="132344348196869519" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\CertificateStore\CertificateSigningRequests\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.CertificateStore.CertificateSigningRequests"
+    Type="Package"
+    LastWriteTime="132344348196869519" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\TransportLayerSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.TransportLayerSecurity"
+    Type="Package"
+    LastWriteTime="132344348196869519" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\Firewall\Package.pkg"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.Firewall"
+    Type="Package"
+    LastWriteTime="132344348197025750" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\AccessAndSecurity\Firewall\Rules.firewallRules"
+    LogicalPath="Config1.X20CP1584.AccessAndSecurity.Firewall.Rules.firewallRules"
+    Type="File"
+    LastWriteTime="132344348197025750"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\mappControl\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappControl"
+    Type="Package"
+    LastWriteTime="132344348197025750" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\mappMotion\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappMotion"
+    Type="Package"
+    LastWriteTime="132344348197182120" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\mappServices\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappServices"
+    Type="Package"
+    LastWriteTime="132344348197182120" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\mappView\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappView"
+    Type="Package"
+    LastWriteTime="132344348197182120" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\mappCockpit\Package.pkg"
+    LogicalPath="Config1.X20CP1584.mappCockpit"
+    Type="Package"
+    LastWriteTime="132344348197182120" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Physical\Config1\Hardware.jpg"
+    LogicalPath="Config1.Hardware.jpg"
+    Type="File"
+    LastWriteTime="132344390411193921"
+    Private="false" />
+</Objects>

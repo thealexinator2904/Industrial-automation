@@ -1,0 +1,14 @@
+$(AS_CPU_PATH)/aufgabe_2/exit.c.o:
+$(AS_PROJECT_PATH)/logical/aufgabe_2/exit.c
+$(AS_GNU_INST_PATH)/i386-elf/include/bur/plctypes.h
+$(AS_GNU_INST_PATH)/i386-elf/include/bur/plc.h
+$(AS_TEMP_PATH)/includes/aufgabe_2/asdefault.h
+$(AS_TEMP_PATH)/includes/asdefault.h
+$(AS_TEMP_PATH)/includes/operator.h
+$(AS_TEMP_PATH)/includes/runtime.h
+$(AS_TEMP_PATH)/includes/astime.h
+$(AS_TEMP_PATH)/includes/asieccon.h
+$(AS_TEMP_PATH)/includes/globaltyp.h
+$(AS_TEMP_PATH)/includes/globalvar.h
+$(AS_TEMP_PATH)/includes/aufgabe_2/typestyp.h
+$(AS_TEMP_PATH)/includes/aufgabe_2/variablesvar.h

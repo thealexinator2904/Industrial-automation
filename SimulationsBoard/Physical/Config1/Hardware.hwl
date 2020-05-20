@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="05/20/2020 10:21:05" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="4SIM.10-01" Type="4SIM.10-01" X="473.6" Y="172" />
+    <Module Name="X20BM11" Type="X20BM11" X="250" Y="100" />
+    <Module Name="X20DO8322" Type="X20DO8322" X="250" Y="100" />
+    <Module Name="X20TB12" Type="X20TB12" X="250" Y="127" />
+    <Module Name="X20CP1584" Type="X20CP1584" X="100" Y="100" />
+  </Modules>
+  <Links>
+    <Link From="X20CP1584" To="4SIM.10-01" FromPort="IF3" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="156" Y="187" />
+      <Point X="156" Y="187" />
+      <Point X="156" Y="200" />
+      <Point X="156" Y="285" />
+      <Point X="527.7999" Y="285" />
+      <Point X="527.7999" Y="279" />
+      <Point X="527.7999" Y="274" />
+      <Point X="527.7999" Y="274" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>
