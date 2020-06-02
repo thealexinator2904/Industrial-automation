@@ -29,6 +29,8 @@ VAR
 	LED4_green : BOOL;
 	LED4_red : BOOL;
 	LED4_orange : BOOL;
+	LED_SW_left : BOOL;
+	LED_SW_right : BOOL;
 END_VAR
 (*Analog*)
 VAR

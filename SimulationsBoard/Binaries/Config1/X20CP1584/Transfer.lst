@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=3.0?>
 <Transfer xmlns="http://br-automation.co.at/AS/Transfer">
-  <OperatingSystem Version="C4.72"/>
+  <OperatingSystem Version="A4.73"/>
   <Hardware Target="SG4"/>
+  <Operation Delete="Aufgabe_6.br"/>
+  <Operation Delete="Aufgabe_7.br"/>
   <Operation Download="ashwd.br" Memory="SystemROM"/>
   <Operation Download="asfw.br" Memory="SystemROM"/>
   <Operation Download="arconfig.br" Memory="SystemROM"/>
@@ -15,5 +17,7 @@
   <Operation Download="ashwac.br" Memory="UserROM"/>
   <Operation Download="Role.br" Memory="UserROM"/>
   <Operation Download="User.br" Memory="UserROM"/>
-  <Operation Download="Aufgabe_2.br" Memory="UserROM"/>
+  <Operation Download="standard.br" Memory="UserROM"/>
+  <Operation Download="Aufgabe_7.br" Memory="UserROM"/>
+  <Operation Download="Aufgabe_6.br" Memory="UserROM"/>
 </Transfer>

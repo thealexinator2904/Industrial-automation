@@ -9,6 +9,7 @@ extern "C"
 #endif
 	#include <operator.h>
 	#include <runtime.h>
+	#include <standard.h>
 	#include <astime.h>
 	#include <AsIecCon.h>
 #ifdef __cplusplus

@@ -7,5 +7,10 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="Program" Language="ANSIC">Aufgabe_1</Object>
     <Object Type="Program" Language="ANSIC">Aufgabe_2</Object>
+    <Object Type="Program" Language="ANSIC">Aufgabe_3</Object>
+    <Object Type="Program" Language="ANSIC">Aufgabe_4</Object>
+    <Object Type="Program" Language="ANSIC">Aufgabe_5</Object>
+    <Object Type="Program" Language="ANSIC">Aufgabe_6</Object>
+    <Object Type="Program" Language="ANSIC">Aufgabe_7</Object>
   </Objects>
 </Package>

@@ -34,5 +34,4 @@ void _INIT ProgramInit(void)
 	pot_2 = 0;
 	takt = 0;
 	seven_seg = 420;
-
 }

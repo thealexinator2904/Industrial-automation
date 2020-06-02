@@ -25,4 +25,10 @@
     IsStatic="false"
     UseAsStatic="false"
     Version="" />
+  <Library
+    Name="standard"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
 </LibraryInfos>

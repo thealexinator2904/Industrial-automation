@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1589967403_1_
-#define _BUR_1589967403_1_
+#ifndef _BUR_1591099078_2_
+#define _BUR_1591099078_2_
 
 #include <bur/plctypes.h>
 
@@ -17,6 +17,8 @@ _GLOBAL signed short seven_seg;
 _GLOBAL unsigned short takt;
 _GLOBAL signed short pot_2;
 _GLOBAL signed short pot_1;
+_GLOBAL plcbit LED_SW_right;
+_GLOBAL plcbit LED_SW_left;
 _GLOBAL plcbit LED4_orange;
 _GLOBAL plcbit LED4_red;
 _GLOBAL plcbit LED4_green;
@@ -50,5 +52,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1589967403_1_ */
+#endif /* _BUR_1591099078_2_ */
 

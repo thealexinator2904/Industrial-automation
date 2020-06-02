@@ -5,10 +5,12 @@
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
-    <Task Name="Aufgabe_2" Source="Aufgabe_2.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="Aufgabe_7" Source="Aufgabe_7.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
-  <TaskClass Name="Cyclic#6" />
+  <TaskClass Name="Cyclic#6">
+    <Task Name="Aufgabe_6" Source="Aufgabe_6.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8" />
   <Binaries>
@@ -24,4 +26,7 @@
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwd" Source="" Memory="SystemROM" Language="Binary" />
   </Binaries>
+  <Libraries>
+    <LibraryObject Name="standard" Source="Libraries.standard.lby" Memory="UserROM" Language="binary" Debugging="true" />
+  </Libraries>
 </SwConfiguration>

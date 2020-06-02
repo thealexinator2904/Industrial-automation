@@ -184,99 +184,101 @@
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput01" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput01" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::switch_left" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::switch_left" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput02" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput02" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::switch_right" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::switch_right" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput03" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput03" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::but_1" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::but_1" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput04" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput04" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::but_2" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::but_2" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput05" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput05" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::but_3" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::but_3" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput06" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput06" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::but_4" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::but_4" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.DigitalInput07" Type="BOOL">
 <Prod Device="IF3.ST1" DPName="DigitalInput07" Kind="io"/>
 </LN>
 <LN ID="%IW.IF3.ST1.AnalogInput01" Type="INT">
 <Prod Device="IF3.ST1" DPName="AnalogInput01" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::pot_1" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::pot_1" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.AnalogInput02" Type="INT">
 <Prod Device="IF3.ST1" DPName="AnalogInput02" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::pot_2" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::pot_2" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF3.ST1.Encoder01" Type="UINT">
 <Prod Device="IF3.ST1" DPName="Encoder01" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="::takt" Kind="pv"/>
+<Cons Device="TC#6-CPYDEV" DPName="::takt" Kind="pv"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput01" Type="BOOL">
+<Prod Device="TC#6-CPYDEV" DPName="::LED_SW_left" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput01" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput02" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="::LED_SW_right" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput02" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput03" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED1_red" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED1_red" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput03" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput04" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED1_orange" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED1_orange" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput04" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput05" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED1_green" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED1_green" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput05" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput06" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED2_red" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED2_red" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput06" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput07" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED2_orange" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED2_orange" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput07" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput08" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED2_green" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED2_green" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput08" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput09" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED3_red" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED3_red" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput09" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput10" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED3_orange" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED3_orange" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput10" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput11" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED3_green" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED3_green" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput11" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput12" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED4_red" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED4_red" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput12" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput13" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED4_orange" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED4_orange" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput13" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.DigitalOutput14" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="::LED4_green" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::LED4_green" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="DigitalOutput14" Kind="io"/>
 </LN>
 <LN ID="%QW.IF3.ST1.AnalogOutput01" Type="INT">
-<Prod Device="TC#4-CPYDEV" DPName="::seven_seg" Kind="pv"/>
+<Prod Device="TC#6-CPYDEV" DPName="::seven_seg" Kind="pv"/>
 <Cons Device="IF3.ST1" DPName="AnalogOutput01" Kind="io"/>
 </LN>
 <LN ID="%IX.IF6.ST1.ModuleOk" Type="BOOL">

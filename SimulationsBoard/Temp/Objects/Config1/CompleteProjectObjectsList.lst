@@ -5,7 +5,7 @@
     Path="D:\ia\SimulationsBoard\Logical\Package.pkg"
     LogicalPath=""
     Type="Package.ParentUnknown"
-    LastWriteTime="132344412525652737" />
+    LastWriteTime="132355728854700888" />
   <Object
     Path="D:\ia\SimulationsBoard\Logical\Global.typ"
     LogicalPath="Global.typ"
@@ -16,13 +16,13 @@
     Path="D:\ia\SimulationsBoard\Logical\Global.var"
     LogicalPath="Global.var"
     Type="File"
-    LastWriteTime="132344410006148905"
+    LastWriteTime="132355675134237385"
     Private="false" />
   <Object
     Path="D:\ia\SimulationsBoard\Logical\Libraries\Package.pkg"
     LogicalPath="Libraries"
     Type="Package"
-    LastWriteTime="132344348182961295" />
+    LastWriteTime="132348797912617135" />
   <Object
     Path="D:\ia\SimulationsBoard\Logical\Libraries\operator\binary.lby"
     LogicalPath="Libraries.operator"
@@ -116,6 +116,29 @@
     LastWriteTime="132344348182648791"
     Private="false" />
   <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\standard\binary.lby"
+    LogicalPath="Libraries.standard"
+    Type="Library"
+    LastWriteTime="132348797912461165" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\standard\standard.fun"
+    LogicalPath="Libraries.standard.standard.fun"
+    Type="File"
+    LastWriteTime="132348797912304938"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\standard\standard.typ"
+    LogicalPath="Libraries.standard.standard.typ"
+    Type="File"
+    LastWriteTime="132348797912461165"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Libraries\standard\standard.var"
+    LogicalPath="Libraries.standard.standard.var"
+    Type="File"
+    LastWriteTime="132348797912461165"
+    Private="false" />
+  <Object
     Path="D:\ia\SimulationsBoard\Logical\Aufgabe_1\ANSIC.prg"
     LogicalPath="Aufgabe_1"
     Type="Program"
@@ -159,13 +182,13 @@
     Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Cyclic.c"
     LogicalPath="Aufgabe_2.Cyclic.c"
     Type="File"
-    LastWriteTime="132344419448870950"
+    LastWriteTime="132355735904858041"
     Private="false" />
   <Object
     Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Init.c"
     LogicalPath="Aufgabe_2.Init.c"
     Type="File"
-    LastWriteTime="132344414193294720"
+    LastWriteTime="132348808470845717"
     Private="false" />
   <Object
     Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Exit.c"
@@ -183,7 +206,182 @@
     Path="D:\ia\SimulationsBoard\Logical\Aufgabe_2\Variables.var"
     LogicalPath="Aufgabe_2.Variables.var"
     Type="File"
-    LastWriteTime="132344412476111757"
+    LastWriteTime="132348809803795215"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_3\ANSIC.prg"
+    LogicalPath="Aufgabe_3"
+    Type="Program"
+    LastWriteTime="132348812457112512" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Cyclic.c"
+    LogicalPath="Aufgabe_3.Cyclic.c"
+    Type="File"
+    LastWriteTime="132355681348298132"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Init.c"
+    LogicalPath="Aufgabe_3.Init.c"
+    Type="File"
+    LastWriteTime="132348821868611251"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Exit.c"
+    LogicalPath="Aufgabe_3.Exit.c"
+    Type="File"
+    LastWriteTime="132348812457112512"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Types.typ"
+    LogicalPath="Aufgabe_3.Types.typ"
+    Type="File"
+    LastWriteTime="132348812457112512"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Variables.var"
+    LogicalPath="Aufgabe_3.Variables.var"
+    Type="File"
+    LastWriteTime="132348815017399046"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_4\ANSIC.prg"
+    LogicalPath="Aufgabe_4"
+    Type="Program"
+    LastWriteTime="132355670139857233" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_4\Cyclic.c"
+    LogicalPath="Aufgabe_4.Cyclic.c"
+    Type="File"
+    LastWriteTime="132355681115927235"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_4\Init.c"
+    LogicalPath="Aufgabe_4.Init.c"
+    Type="File"
+    LastWriteTime="132355668514885456"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_4\Exit.c"
+    LogicalPath="Aufgabe_4.Exit.c"
+    Type="File"
+    LastWriteTime="132355668169203805"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_4\Types.typ"
+    LogicalPath="Aufgabe_4.Types.typ"
+    Type="File"
+    LastWriteTime="132355668169213777"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_4\Variables.var"
+    LogicalPath="Aufgabe_4.Variables.var"
+    Type="File"
+    LastWriteTime="132355669982003342"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_5\ANSIC.prg"
+    LogicalPath="Aufgabe_5"
+    Type="Program"
+    LastWriteTime="132355687249669618" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_5\Cyclic.c"
+    LogicalPath="Aufgabe_5.Cyclic.c"
+    Type="File"
+    LastWriteTime="132355718465853915"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_5\Init.c"
+    LogicalPath="Aufgabe_5.Init.c"
+    Type="File"
+    LastWriteTime="132355687066831213"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_5\Exit.c"
+    LogicalPath="Aufgabe_5.Exit.c"
+    Type="File"
+    LastWriteTime="132355686653394626"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_5\Types.typ"
+    LogicalPath="Aufgabe_5.Types.typ"
+    Type="File"
+    LastWriteTime="132355686653394626"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_5\Variables.var"
+    LogicalPath="Aufgabe_5.Variables.var"
+    Type="File"
+    LastWriteTime="132355715709601524"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_6\ANSIC.prg"
+    LogicalPath="Aufgabe_6"
+    Type="Program"
+    LastWriteTime="132355721990926065" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Cyclic.c"
+    LogicalPath="Aufgabe_6.Cyclic.c"
+    Type="File"
+    LastWriteTime="132355736410680914"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Init.c"
+    LogicalPath="Aufgabe_6.Init.c"
+    Type="File"
+    LastWriteTime="132355722826096671"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Exit.c"
+    LogicalPath="Aufgabe_6.Exit.c"
+    Type="File"
+    LastWriteTime="132355721643335861"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Types.typ"
+    LogicalPath="Aufgabe_6.Types.typ"
+    Type="File"
+    LastWriteTime="132355721643335861"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Variables.var"
+    LogicalPath="Aufgabe_6.Variables.var"
+    Type="File"
+    LastWriteTime="132355721827145948"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_7\ANSIC.prg"
+    LogicalPath="Aufgabe_7"
+    Type="Program"
+    LastWriteTime="132355729309152400" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Cyclic.c"
+    LogicalPath="Aufgabe_7.Cyclic.c"
+    Type="File"
+    LastWriteTime="132355742066967010"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Init.c"
+    LogicalPath="Aufgabe_7.Init.c"
+    Type="File"
+    LastWriteTime="132355739306829477"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Exit.c"
+    LogicalPath="Aufgabe_7.Exit.c"
+    Type="File"
+    LastWriteTime="132355728776331959"
+    Private="false" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Types.typ"
+    LogicalPath="Aufgabe_7.Types.typ"
+    Type="File"
+    LastWriteTime="132355728776331959"
+    Private="true" />
+  <Object
+    Path="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Variables.var"
+    LogicalPath="Aufgabe_7.Variables.var"
+    Type="File"
+    LastWriteTime="132355729309152400"
     Private="true" />
   <Object
     Path="D:\ia\SimulationsBoard\Physical\Config1\Config.pkg"
@@ -206,12 +404,12 @@
     Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Cpu.pkg"
     LogicalPath="Config1.X20CP1584"
     Type="Cpu"
-    LastWriteTime="132344348197182120" />
+    LastWriteTime="132348764362007999" />
   <Object
     Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Cpu.sw"
     LogicalPath="Config1.X20CP1584.Cpu.sw"
     Type="File"
-    LastWriteTime="132344414028262528"
+    LastWriteTime="132355728854700888"
     Private="false" />
   <Object
     Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\Cpu.per"
@@ -223,7 +421,7 @@
     Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\IoMap.iom"
     LogicalPath="Config1.X20CP1584.IoMap.iom"
     Type="File"
-    LastWriteTime="132344408735099162"
+    LastWriteTime="132355676149876470"
     Private="false" />
   <Object
     Path="D:\ia\SimulationsBoard\Physical\Config1\X20CP1584\PvMap.vvm"

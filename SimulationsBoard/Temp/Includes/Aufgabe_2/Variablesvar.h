@@ -1,10 +1,25 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1589967879_2_
-#define _BUR_1589967879_2_
+#ifndef _BUR_1590407386_1_
+#define _BUR_1590407386_1_
 
 #include <bur/plctypes.h>
+
+/* Constants */
+#ifdef _REPLACE_CONST
+#else
+#endif
+
+
+/* Variables */
+_BUR_LOCAL struct F_TRIG F_TRIG_SW;
+_BUR_LOCAL struct R_TRIG R_TRIG_SW;
+_BUR_LOCAL struct R_TRIG R_TRIG_BUT_4;
+_BUR_LOCAL struct R_TRIG R_TRIG_BUT_3;
+_BUR_LOCAL struct R_TRIG R_TRIG_BUT_2;
+_BUR_LOCAL struct R_TRIG R_TRIG_BUT_1;
+
 
 
 
@@ -13,11 +28,12 @@ __asm__(".section \".plc\"");
 
 /* Used IEC files */
 __asm__(".ascii \"iecfile \\\"Logical/Aufgabe_2/Variables.var\\\" scope \\\"local\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.fun\\\" scope \\\"global\\\"\\n\"");
 
 /* Exported library functions and function blocks */
 
 __asm__(".previous");
 
 
-#endif /* _BUR_1589967879_2_ */
+#endif /* _BUR_1590407386_1_ */
 

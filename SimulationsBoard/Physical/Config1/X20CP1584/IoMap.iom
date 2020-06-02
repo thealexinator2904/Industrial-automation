@@ -21,4 +21,6 @@ VAR_CONFIG
 	::pot_1 AT %IW."4SIM.10-01".AnalogInput01;
 	::pot_2 AT %IW."4SIM.10-01".AnalogInput02;
 	::takt AT %IW."4SIM.10-01".Encoder01;
+	::LED_SW_left AT %QX."4SIM.10-01".DigitalOutput01;
+	::LED_SW_right AT %QX."4SIM.10-01".DigitalOutput02;
 END_VAR

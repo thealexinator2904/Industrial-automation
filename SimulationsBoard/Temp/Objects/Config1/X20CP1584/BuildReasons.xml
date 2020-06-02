@@ -1,29 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BuildReasons>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\cyclic.c.o">
-    <BuildReason>Target "cyclic.c.o" does not exist</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\_bur_pvdef.c.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\cyclic.c.o" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\cyclic.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\aufgabe_7\cyclic.c" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\cyclic.c.o" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\init.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\aufgabe_7\init.c" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\aufgabe_2.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\a.out" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\_bur_pvdef.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\cyclic.c.o" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2\aufgabe_2.ox" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\cyclic.c.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\aufgabe_7.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\a.out" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7\aufgabe_7.ox" differs.
 </BuildReason>
   </Rule>
   <Rule ID="#cpu_tp.mak">
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\binaries\config1\x20cp1584\transfer.lst">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_2.br" differs.
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1584\aufgabe_7.br" differs.
 </BuildReason>
   </Rule>
 </BuildReasons>

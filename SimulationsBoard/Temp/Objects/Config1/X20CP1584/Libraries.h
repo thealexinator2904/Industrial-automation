@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _LIBRARIES_20200520115229_
-#define _LIBRARIES_20200520115229_
+#ifndef _LIBRARIES_20200602142624_
+#define _LIBRARIES_20200602142624_
 
 __asm__(".section \".plc\"");
 
@@ -19,6 +19,9 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.var\\\" scope \\\"
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsIecCon/AsIecCon.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsIecCon/AsIecCon.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsIecCon/AsIecCon.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.var\\\" scope \\\"global\\\"\\n\"");
 
 /* Exported library functions and function blocks */
 #ifdef _OPERATOR_EXPORT
@@ -457,9 +460,35 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsIecCon/AsIecCon.var\\\" scope 
 	__asm__(".ascii \"plcexport \\\"WSTRING_TO_LREAL\\\" FUN\\n\"");
 	__asm__(".ascii \"plcexport \\\"WSTRING_TO_STRING\\\" FUN\\n\"");
 #endif
+#ifdef _STANDARD_EXPORT
+	__asm__(".ascii \"plcexport \\\"RF_TRIG\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CTUD\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CTD\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CTU\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"F_TRIG\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"R_TRIG\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"SR\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"RS\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"SEMA\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"TON\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"TOF\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"TP\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"TON_10ms\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"TOF_10ms\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"TP_10ms\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"LEN\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"LEFT\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"RIGHT\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"MID\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"CONCAT\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"INSERT\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"DELETE\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"REPLACE\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"FIND\\\" FUN\\n\"");
+#endif
 
 __asm__(".previous");
 
 
-#endif /* _LIBRARIES_20200520115229_ */
+#endif /* _LIBRARIES_20200602142624_ */
 
