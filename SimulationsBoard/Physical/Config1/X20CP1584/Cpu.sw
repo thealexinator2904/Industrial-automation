@@ -8,9 +8,7 @@
     <Task Name="Aufgabe_7" Source="Aufgabe_7.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
-  <TaskClass Name="Cyclic#6">
-    <Task Name="Aufgabe_6" Source="Aufgabe_6.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
-  </TaskClass>
+  <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8" />
   <Binaries>

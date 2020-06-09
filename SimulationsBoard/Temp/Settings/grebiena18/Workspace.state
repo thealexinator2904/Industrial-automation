@@ -1,28 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.7.2.98?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Cyclic.c" CaretLine="81" CaretColumn="3" FirstVisibleLine="66">
+  <TextEdit ID="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Init.c" CaretLine="36" CaretColumn="16" FirstVisibleLine="1">
     <Bookmarks />
   </TextEdit>
-  <TextEdit ID="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Init.c" CaretLine="23" CaretColumn="1" FirstVisibleLine="1">
+  <TextEdit ID="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Init.c" CaretLine="32" CaretColumn="12" FirstVisibleLine="1">
     <Bookmarks />
   </TextEdit>
-  <TreeView ID="D:\ia\SimulationsBoard\Logical\Aufgabe_3\Variables.var" EditColumn="0" TopRow="0" HorizontalScrollOffset="0" SortedColumn="0">
-    <Columns>
-      <Column Index="0" Width="200" Position="0" />
-      <Column Index="1" Width="100" Position="1" />
-      <Column Index="2" Width="110" Position="2" />
-      <Column Index="3" Width="98" Position="3" />
-      <Column Index="4" Width="72" Position="4" />
-      <Column Index="5" Width="112" Position="5" />
-      <Column Index="6" Width="100" Position="6" />
-      <Column Index="7" Width="200" Position="7" />
-      <Column Index="8" Width="0" Position="8" />
-      <Column Index="9" Width="0" Position="9" />
-      <Column Index="10" Width="0" Position="10" />
-    </Columns>
-    <ExpandedNodes />
-    <SelectedNodes />
-    <ZoomIndices />
-  </TreeView>
+  <TextEdit ID="D:\ia\SimulationsBoard\Logical\Aufgabe_7\Cyclic.c" CaretLine="16" CaretColumn="3" FirstVisibleLine="1">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="D:\ia\SimulationsBoard\Logical\Aufgabe_6\Cyclic.c" CaretLine="9" CaretColumn="1" FirstVisibleLine="1">
+    <Bookmarks />
+  </TextEdit>
 </State>
