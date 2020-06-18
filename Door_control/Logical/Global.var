@@ -1,0 +1,22 @@
+(*Eingänge*)
+VAR
+	S1 : BOOL;
+	S2 : BOOL;
+	S3 : BOOL;
+	S4 : BOOL;
+	S5 : BOOL;
+	S6 : BOOL;
+	S7 : BOOL;
+	S8 : BOOL;
+	B1 : BOOL;
+	B2 : BOOL;
+END_VAR
+(*Ausgänge*)
+VAR
+	M1R : BOOL;
+	M1L : BOOL;
+	M2R : BOOL;
+	M2L : BOOL;
+	Anzeige_1 : BOOL;
+	Anzeige_2 : BOOL;
+END_VAR

@@ -1,0 +1,18 @@
+VAR_CONFIG
+	::S1 AT %IX."X20DI8371".DigitalInput01;
+	::S2 AT %IX."X20DI8371".DigitalInput02;
+	::S3 AT %IX."X20DI8371".DigitalInput03;
+	::S4 AT %IX."X20DI8371".DigitalInput04;
+	::S5 AT %IX."X20DI8371".DigitalInput05;
+	::S6 AT %IX."X20DI8371".DigitalInput06;
+	::S7 AT %IX."X20DI8371".DigitalInput07;
+	::S8 AT %IX."X20DI8371".DigitalInput08;
+	::B1 AT %IX."X20DI8371a".DigitalInput01 INVERSE;
+	::B2 AT %IX."X20DI8371a".DigitalInput02 INVERSE;
+	::M1L  AT %QX."X20DO8322".DigitalOutput02;
+	::M2R  AT %QX."X20DO8322".DigitalOutput03;
+	::M2L  AT %QX."X20DO8322".DigitalOutput04;
+	::Anzeige_1 AT %QX."X20DO8322".DigitalOutput05;
+	::Anzeige_2  AT %QX."X20DO8322".DigitalOutput06;
+	::M1R AT %QX."X20DO8322".DigitalOutput01;
+END_VAR
