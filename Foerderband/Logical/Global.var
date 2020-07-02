@@ -1,0 +1,38 @@
+(*Digital Inputs*)
+VAR
+	DI_Band_links : BOOL;
+	DI_Band_rechts : BOOL;
+	DI_Koppel_rechts : BOOL;
+	DI_Koppel_links : BOOL;
+	DI_Stopper : BOOL;
+	DI_NOTAUS : BOOL;
+	DI_Drehgeber_1 : BOOL;
+	DI_Drehgeber_2 : BOOL;
+	DI_Start : BOOL;
+	DI_Stop : BOOL;
+	DI_RESET : BOOL;
+	DI_Wahl : BOOL;
+	DI_Ident : BYTE;
+END_VAR
+(*Digitale Ausgänge*)
+VAR
+	DO_Antrieb_rechts : BOOL;
+	DO_Antrieb_links : BOOL;
+	DO_schleichgang : BOOL;
+	DO_Stopper : BOOL;
+	DO_Koppel_links : BOOL;
+	DO_Koppel_rechts : BOOL;
+	DO_gruen : BOOL;
+	DO_weiss : BOOL;
+	DO_Q1 : BOOL;
+	DO_Q2 : BOOL;
+END_VAR
+(*Analoge Eingänge*)
+VAR
+	AI_Potentiometer_1 : INT;
+	AI_Potentiometer_2 : INT;
+END_VAR
+(*IO_Link*)
+VAR
+	RFID_Reader : UDINT;
+END_VAR

@@ -1,0 +1,26 @@
+VAR_CONFIG
+	DI_Band_links AT %IX."X20DI8371".DigitalInput01;
+	DI_Band_rechts AT %IX."X20DI8371".DigitalInput02;
+	DI_Koppel_rechts AT %IX."X20DI8371".DigitalInput03;
+	DI_Koppel_links AT %IX."X20DI8371".DigitalInput04;
+	DI_Stopper AT %IX."X20DI8371".DigitalInput05;
+	DI_NOTAUS AT %IX."X20DI8371".DigitalInput06;
+	DI_Drehgeber_1 AT %IX."X20DI8371".DigitalInput07;
+	DI_Drehgeber_2  AT %IX."X20DI8371".DigitalInput08;
+	DI_Start AT %IX."X20DI8371a".DigitalInput01;
+	DI_Stop AT %IX."X20DI8371a".DigitalInput02;
+	DI_RESET AT %IX."X20DI8371a".DigitalInput03;
+	DI_Wahl AT %IX."X20DI8371a".DigitalInput04;
+	DO_Antrieb_rechts AT %QX."X20DO8322".DigitalOutput01;
+	DO_Antrieb_links AT %QX."X20DO8322".DigitalOutput02;
+	DO_schleichgang AT %QX."X20DO8322".DigitalOutput03;
+	DO_Stopper AT %QX."X20DO8322".DigitalOutput04;
+	DO_Koppel_links AT %QX."X20DO8322".DigitalOutput05;
+	DO_Koppel_rechts AT %QX."X20DO8322".DigitalOutput06;
+	DO_gruen AT %QX."X20DO8322a".DigitalOutput01;
+	DO_weiss AT %QX."X20DO8322a".DigitalOutput02;
+	DO_Q1 AT %QX."X20DO8322a".DigitalOutput03;
+	DO_Q2 AT %QX."X20DO8322a".DigitalOutput04;
+	AI_Potentiometer_1 AT %IW."X20AI2222".AnalogInput01;
+	AI_Potentiometer_2 AT %IW."X20AI2222".AnalogInput02;
+END_VAR
