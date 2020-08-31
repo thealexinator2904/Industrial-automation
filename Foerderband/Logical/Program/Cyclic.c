@@ -1,3 +1,5 @@
+#define CHECK_CONDITION(params) (params) && isAutoMode()
+
 #include <bur/plctypes.h>
 #include <standard.h>
 
@@ -5,12 +7,18 @@
 #include <AsDefault.h>
 #endif
 
-enum error_states{TIMEOUT_LEG_1, TIMEOUT_LEG_2, DETECTION_ERROR};
+enum error_states{NO_ERROR, TIMEOUT_LEG_1, TIMEOUT_LEG_2, DETECTION_ERROR};
 enum programm_states{INIT, STOP, GO_PRE_WORK, DETECT, WORK, GO_AFT_WORK, WAIT_TO_LET_GO, LET_GO, ERROR};
+
+BOOL isAutoMode()
+{
+	return 1;
+}
 
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum programm_states state=INIT;
+	static enum error_states error= NO_ERROR; 
 	static F_TRIGtyp F_TRIG_01;
 	
 	switch(state)
@@ -76,12 +84,6 @@ void _CYCLIC ProgramCyclic(void)
 			{
 				state = WORK;
 				timer_2s.IN = 0;
-			}	
-			
-			//Sollte eigentlich GARNICHT passieren, aber bei timer error immer hilfreich 
-			if(timer_5s.Q)
-			{
-				state = ERROR;
 				timer_5s.IN = 0;
 			}
 			break;
@@ -101,11 +103,21 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Antrieb_rechts = 1;
 			DO_schleichgang = 0;
 			if(DI_Band_rechts)
-				state = WAIT_TO_LET_GO; 
+				state = WAIT_TO_LET_GO;
 			break;
 		case WAIT_TO_LET_GO:
+			DO_Stopper = 0;
+			DO_Antrieb_rechts = 0;
+			DO_schleichgang = 0;
+			DO_Koppel_rechts = 1;
+			if(DI_Koppel_rechts) //wait till Übernahmebestätigung
+				state = STOP; //eigentlich let go, aber mein rechter Platz ist frei, ich wünsche mir jemanden herbei :( 
 			break;
-		case LET_GO:
+		case LET_GO: //Let it go, Let it go, can't hold it back anymore :D
+				DO_Koppel_rechts = 0;
+				DO_Antrieb_rechts = 0;//eigentlich 0 aber testzwecke
+				if(!DI_Koppel_rechts)
+					state = STOP;
 			break;
 		case ERROR:
 			break;

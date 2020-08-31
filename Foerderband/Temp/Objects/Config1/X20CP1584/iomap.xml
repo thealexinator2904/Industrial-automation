@@ -553,35 +553,35 @@
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput01" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput01" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Band_links" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Band_links" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput02" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput02" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Band_rechts" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Band_rechts" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput03" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput03" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Koppel_rechts" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Koppel_rechts" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput04" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput04" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Koppel_links" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Koppel_links" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput05" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput05" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Stopper" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Stopper" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput06" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput06" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_NOTAUS" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_NOTAUS" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput07" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput07" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Drehgeber_1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Drehgeber_1" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.DigitalInput08" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="DigitalInput08" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Drehgeber_2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Drehgeber_2" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST1.BusModuleId" Type="UINT">
 <Prod Device="IF6.ST1" DPName="BusModuleId" Kind="io"/>
@@ -639,19 +639,19 @@
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput01" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput01" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Start" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Start" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput02" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput02" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Stop" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Stop" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput03" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput03" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_RESET" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_RESET" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput04" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput04" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="DI_Wahl" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="DI_Wahl" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput05" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput05" Kind="io"/>
@@ -724,27 +724,27 @@
 <Prod Device="IF6.ST3" DPName="FirmwareVersion" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput01" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Antrieb_rechts" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Antrieb_rechts" Kind="pv"/>
 <Cons Device="IF6.ST3" DPName="DigitalOutput01" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput02" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Antrieb_links" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Antrieb_links" Kind="pv"/>
 <Cons Device="IF6.ST3" DPName="DigitalOutput02" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput03" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_schleichgang" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_schleichgang" Kind="pv"/>
 <Cons Device="IF6.ST3" DPName="DigitalOutput03" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput04" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Stopper" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Stopper" Kind="pv"/>
 <Cons Device="IF6.ST3" DPName="DigitalOutput04" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput05" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Koppel_links" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Koppel_links" Kind="pv"/>
 <Cons Device="IF6.ST3" DPName="DigitalOutput05" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput06" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Koppel_rechts" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Koppel_rechts" Kind="pv"/>
 <Cons Device="IF6.ST3" DPName="DigitalOutput06" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST3.DigitalOutput07" Type="BOOL">
@@ -832,19 +832,19 @@
 <Prod Device="IF6.ST4" DPName="FirmwareVersion" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput01" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_gruen" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_gruen" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput01" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput02" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_weiss" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_weiss" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput02" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput03" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Q1" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Q1" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput03" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput04" Type="BOOL">
-<Prod Device="TC#4-CPYDEV" DPName="DO_Q2" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="DO_Q2" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput04" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput05" Type="BOOL">
@@ -942,11 +942,11 @@
 </LN>
 <LN ID="%IW.IF6.ST5.AnalogInput01" Type="INT">
 <Prod Device="IF6.ST5" DPName="AnalogInput01" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="AI_Potentiometer_1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="AI_Potentiometer_1" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST5.AnalogInput02" Type="INT">
 <Prod Device="IF6.ST5" DPName="AnalogInput02" Kind="io"/>
-<Cons Device="TC#4-CPYDEV" DPName="AI_Potentiometer_2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="AI_Potentiometer_2" Kind="pv"/>
 </LN>
 <LN ID="%IB.IF6.ST5.StatusInput01" Type="USINT">
 <Prod Device="IF6.ST5" DPName="StatusInput01" Kind="io"/>
