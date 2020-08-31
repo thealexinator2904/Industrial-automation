@@ -19,7 +19,7 @@ void _INIT ProgramInit(void)
 	DI_Stop=0;
 	DI_RESET=0;
 	DI_Wahl=0;
-	DI_Ident=0;
+	DI_Ident_1 = DI_Ident_2 = DI_Ident_3 = DI_Ident_4=0;
 
 	DO_Antrieb_rechts=0;
 	DO_Antrieb_links=0;
@@ -36,4 +36,6 @@ void _INIT ProgramInit(void)
 	AI_Potentiometer_2=0;
 	RFID_Reader=0;
 
+	timer_5s.PT = 5000;
+	timer_2s.PT = 2000;
 }

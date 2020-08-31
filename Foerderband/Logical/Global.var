@@ -12,7 +12,10 @@ VAR
 	DI_Stop : BOOL;
 	DI_RESET : BOOL;
 	DI_Wahl : BOOL;
-	DI_Ident : BYTE;
+	DI_Ident_1 : BOOL;
+	DI_Ident_2 : BOOL;
+	DI_Ident_3 : BOOL;
+	DI_Ident_4 : BOOL;
 END_VAR
 (*Digitale Ausgänge*)
 VAR
