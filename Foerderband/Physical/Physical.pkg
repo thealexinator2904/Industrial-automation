@@ -2,6 +2,11 @@
 <?AutomationStudio Version=4.7.2.98?>
 <Physical xmlns="http://br-automation.co.at/AS/Physical">
   <Objects>
-    <Object Type="Configuration">Config1</Object>
+    <Object Type="Configuration">station_1</Object>
+    <Object Type="Configuration">station_2</Object>
+    <Object Type="Configuration">station_3</Object>
+    <Object Type="Configuration">station_4</Object>
+    <Object Type="Configuration">station_5</Object>
+    <Object Type="Configuration">station_6</Object>
   </Objects>
 </Physical>
