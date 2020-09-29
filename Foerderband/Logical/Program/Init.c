@@ -36,6 +36,6 @@ void _INIT ProgramInit(void)
 	AI_Potentiometer_2=0;
 	RFID_Reader=0;
 
-	timer_5s.PT = 5000;
+	timer_5s.PT = 6000;
 	timer_2s.PT = 2000;
 }
