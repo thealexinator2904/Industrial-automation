@@ -1,0 +1,8 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=Program 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index=0 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                         DI_Koppel_links                                     BOOL    1 "                                                            TRUE"    0    1    1    2    0    0         
+                        DI_Koppel_rechts                                     BOOL    1 "                                                            TRUE"    0    1    1    2    0    0         
+                         DO_Koppel_links                                     BOOL    3 "                                                           FALSE"    0    1    1    2    0    0         
+                        DO_Koppel_rechts                                     BOOL    3 "                                                            TRUE"    0    1    1    2    0    0         
+                              state_glob                                    USINT    0 "                                                               7"    0    5    1   10    0    0         

@@ -1,7 +1,3 @@
-#define CHECK_CONDITION(params) (params) && isAutoMode()
-#define true 1
-#define false 0
-
 #include <bur/plctypes.h>
 #include <standard.h>
 
@@ -33,7 +29,6 @@ void set_Koppel(enum koppel_state state)
 }
 BOOL isAutoMode()
 {
-	
 	return 1;
 }
 
@@ -47,7 +42,7 @@ void _CYCLIC ProgramCyclic(void)
 	
 	if(!DI_NOTAUS)
 		state = EMER_HALT;
-
+	DO_Q2=0;
 	switch(state)
 	{
 		case EMER_HALT:
@@ -63,17 +58,18 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Stopper = 0;
 			DO_schleichgang = 0;
 			timer_5s.IN = 1;
+			timer_2s.IN = 0;
 			set_Koppel(BUSY);
 			//Schritt 1 im Init: Anlage leer fahren um Fehler durch
 			//power loss abzufangen
-			if(DI_Band_links && auto_mode)
+			/*if(DI_Band_links && auto_mode)
 			{
 				state = GO_PRE_WORK;
 				timer_5s.IN = 0;
-			}
+			}*/
 			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
 			{
-				state=WORK;
+				state=DETECT;
 				timer_5s.IN = 0;			
 			}
 			if(DI_Band_rechts && auto_mode)
@@ -99,10 +95,11 @@ void _CYCLIC ProgramCyclic(void)
 		case STOP:
 			DO_Antrieb_rechts = 0;
 			DO_Antrieb_links = 0;
-			DO_Koppel_links = 1;
 			DO_Stopper = 0;
+			timer_5s.IN = 0;
+			timer_2s.IN = 0;
 			set_Koppel(RTR);
-			if(auto_mode && !DI_Koppel_links)
+			if(auto_mode && !DI_Koppel_links && DI_Band_links)
 				state = GO_PRE_WORK;
 			if(!auto_mode)
 			{
@@ -111,16 +108,11 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 		case GO_PRE_WORK:
 			DO_Antrieb_rechts = 1;
-			DO_Koppel_links = 0;
 			timer_5s.IN = 1;
-			set_Koppel(BUSY);
+			timer_2s.IN = 0;
+			set_Koppel(RTR);
 			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
 				state = DETECT;
-			if(timer_5s.Q && auto_mode)
-			{
-				state = ERROR;
-				timer_5s.IN = 0;
-			}
 			if(!auto_mode)
 			{
 				state = MANUAL;
@@ -129,7 +121,6 @@ void _CYCLIC ProgramCyclic(void)
 		case DETECT:
 			DO_Antrieb_rechts = 1;
 			DO_schleichgang = 1;
-			DO_Koppel_links = 0;
 			set_Koppel(BUSY);
 			timer_5s.IN = 1;
 			timer_2s.IN = 1;
@@ -148,6 +139,7 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Antrieb_rechts = 0;
 			DO_schleichgang = 0;
 			DO_Koppel_links = 0;
+			timer_2s.IN = 0;
 			set_Koppel(BUSY);
 			//hier kannste mal arbeiten du Spast
 			timer_5s.IN = 1;
@@ -165,7 +157,8 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Stopper = 1;
 			DO_Antrieb_rechts = 1;
 			DO_schleichgang = 0;
-			DO_Koppel_links = 0;
+			timer_5s.IN = 0;
+			timer_2s.IN = 0;
 			set_Koppel(BUSY);
 			if(DI_Band_rechts)
 				state = WAIT_TO_LET_GO;
@@ -178,22 +171,22 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Stopper = 0;
 			DO_Antrieb_rechts = 0;
 			DO_schleichgang = 0;
-			DO_Koppel_rechts = 1;
-			DO_Koppel_links = 0;
+			timer_5s.IN = 0;
+			timer_2s.IN = 0;
 			set_Koppel(RTT);
-			if(DI_Koppel_rechts) //wait till Übernahmebestätigung
-				state = LET_GO; //eigentlich let go, aber mein rechter Platz ist frei, ich wünsche mir jemanden herbei :( 
+			if(!DI_Koppel_rechts) //wait till Übernahmebestätigung
+				state = LET_GO;
 			if(!auto_mode)
 			{
 				state = MANUAL;
 			}
 			break;
 		case LET_GO: //Let it go, Let it go, can't hold it back anymore :D
-			DO_Koppel_rechts = 0;
-			DO_Antrieb_rechts = 0;//eigentlich 0 aber testzwecke
-			DO_Koppel_links = 0;
-			set_Koppel(BUSY);
-			if(!DI_Koppel_rechts && auto_mode && F_TRIG_rechts.Q)
+			DO_Antrieb_rechts = 1;
+			timer_5s.IN = 0;
+			timer_2s.IN = 0;
+			set_Koppel(RTT);
+			if(auto_mode && !DI_Band_rechts)
 				state = STOP;
 			if(!auto_mode)
 			{
@@ -203,6 +196,8 @@ void _CYCLIC ProgramCyclic(void)
 		case ERROR:
 			DO_Antrieb_links = 0;
 			DO_Antrieb_rechts= 0;
+			timer_5s.IN = 0;
+			timer_2s.IN = 0;
 			DO_Q2=1;
 			set_Koppel(BUSY);
 			if(!auto_mode)
@@ -216,7 +211,8 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Antrieb_rechts= !DO_Antrieb_links && !DI_Stop;
 			DO_Stopper = DI_RESET;
 			set_Koppel(BUSY);
-			DO_Koppel_links = 1;
+			timer_5s.IN = 0;
+			timer_2s.IN = 0;
 			if(auto_mode)
 				state= INIT;
 			break;
