@@ -5,6 +5,13 @@
     <Object Type="File" Description="Global data types">Global.typ</Object>
     <Object Type="File" Description="Global variables">Global.var</Object>
     <Object Type="Package" Description="Global libraries">Libraries</Object>
-    <Object Type="Program" Language="ANSIC">Program</Object>
+    <Object Type="Program" Language="ANSIC">Foerderband</Object>
+    <Object Type="Program" Language="ANSIC">FoerdebandWatch</Object>
+    <Object Type="Program" Language="ANSIC">stat_1</Object>
+    <Object Type="Program" Language="ANSIC">stat_2</Object>
+    <Object Type="Program" Language="ANSIC">stat_3</Object>
+    <Object Type="Program" Language="ANSIC">stat_4</Object>
+    <Object Type="Program" Language="ANSIC">stat_5</Object>
+    <Object Type="Program" Language="ANSIC">stat_6</Object>
   </Objects>
 </Package>

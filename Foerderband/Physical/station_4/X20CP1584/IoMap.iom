@@ -25,6 +25,21 @@ VAR_CONFIG
 	AI_Potentiometer_2 AT %IW."X20AI2222".AnalogInput02;
 	::DI_Ident_1 AT %IX."X20DI8371a".DigitalInput05;
 	::DI_Ident_2 AT %IX."X20DI8371a".DigitalInput06;
-	::DI_Ident_3  AT %IX."X20DI8371a".DigitalInput07;
-	 ::DI_Ident_4 AT %IX."X20DI8371a".DigitalInput08;
+	::DI_Ident_3 AT %IX."X20DI8371a".DigitalInput07;
+	::DI_Ident_4 AT %IX."X20DI8371a".DigitalInput08;
+	DI_Hubzylinder_oben  AT %IX."X20DI8371b".DigitalInput01;
+	DI_Hubzylinder_unten  AT %IX."X20DI8371b".DigitalInput02;
+	DI_phi_0  AT %IX."X20DI8371b".DigitalInput03;
+	DI_phi_180  AT %IX."X20DI8371b".DigitalInput04;
+	DI_Greifer_open  AT %IX."X20DI8371b".DigitalInput05;
+	DI_Greifer_closed  AT %IX."X20DI8371b".DigitalInput06;
+	DI_Stau  AT %IX."X20DI8371b".DigitalInput07;
+	DI_werkstueck  AT %IX."X20DI8371b".DigitalInput08;
+	DO_Hubzylinder_auf  AT %QX."X20DO8322b".DigitalOutput01;
+	DO_Hubzylinder_ab  AT %QX."X20DO8322b".DigitalOutput02;
+	DO_phi_0  AT %QX."X20DO8322b".DigitalOutput03;
+	DO_phi_180  AT %QX."X20DO8322b".DigitalOutput04;
+	DO_Greifer_open  AT %QX."X20DO8322b".DigitalOutput05;
+	DO_Greifer_close  AT %QX."X20DO8322b".DigitalOutput06;
+	DO_Zylinderklemmung  AT %QX."X20DO8322b".DigitalOutput07;
 END_VAR

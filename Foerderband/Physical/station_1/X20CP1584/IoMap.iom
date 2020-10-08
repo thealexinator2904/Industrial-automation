@@ -25,6 +25,20 @@ VAR_CONFIG
 	AI_Potentiometer_2 AT %IW."X20AI2222".AnalogInput02;
 	::DI_Ident_1 AT %IX."X20DI8371a".DigitalInput05;
 	::DI_Ident_2 AT %IX."X20DI8371a".DigitalInput06;
-	::DI_Ident_3  AT %IX."X20DI8371a".DigitalInput07;
-	 ::DI_Ident_4 AT %IX."X20DI8371a".DigitalInput08;
+	::DI_Ident_3 AT %IX."X20DI8371a".DigitalInput07;
+	::DI_Ident_4 AT %IX."X20DI8371a".DigitalInput08;
+	DI_X_axis_links  AT %IX."X20DI8371b".DigitalInput01;
+	DI_X_axis_recht AT %IX."X20DI8371b".DigitalInput02;
+	DI_Frontschale_korr  AT %IX."X20DI8371b".DigitalInput03;
+	DI_Frontschale_vorh  AT %IX."X20DI8371b".DigitalInput04;
+	DI_Z_axis_oben  AT %IX."X20DI8371b".DigitalInput05;
+	DI_Z_axis_unten  AT %IX."X20DI8371b".DigitalInput06;
+	DI_Deckel_bereits_vorh  AT %IX."X20DI8371b".DigitalInput07;
+	DO_X_axis_nach_links  AT %QX."X20DO8322b".DigitalOutput01;
+	DO_X_axis_nach_rechts AT %QX."X20DO8322b".DigitalOutput02;
+	DO_Z_axis_nach_oben  AT %QX."X20DO8322b".DigitalOutput03;
+	DO_Z_axis_nach_unten  AT %QX."X20DO8322b".DigitalOutput04;
+	DO_Z_axis_Klemmung  AT %QX."X20DO8322b".DigitalOutput05;
+	DO_Bohrer1  AT %QX."X20DO8322b".DigitalOutput06;
+	DO_Bohrer2  AT %QX."X20DO8322b".DigitalOutput07;
 END_VAR

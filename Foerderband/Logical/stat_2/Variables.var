@@ -1,0 +1,3 @@
+VAR
+	timer_astable : TON;
+END_VAR

@@ -1,4 +1,0 @@
-VAR
-	timer_2s : TON;
-	timer_5s : TON;
-END_VAR

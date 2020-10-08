@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildReasons>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\cyclic.c.o">
+    <BuildReason>Target "cyclic.c.o" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\exit.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.var" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\init.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.var" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\_bur_pvdef.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\cyclic.c.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\cyclic.c.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\foerderban.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\a.out" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban\foerderban.ox" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\iomap.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.var" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <BuildReason>Rule is forced.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\station_1\x20cp1584\transfer.lst">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_1\x20cp1584\foerderban.br" differs.
+</BuildReason>
+  </Rule>
+</BuildReasons>

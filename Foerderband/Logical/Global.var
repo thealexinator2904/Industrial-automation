@@ -37,6 +37,30 @@ VAR
 END_VAR
 (*IO_Link*)
 VAR
-	state_glob : USINT;
 	RFID_Reader : UDINT;
+END_VAR
+(*Statusvariablen*)
+VAR
+	work_state : USINT;
+	foerderband_state : USINT;
+	work_done : USINT;
+	work_now : BOOL;
+END_VAR
+(*stat_1*)
+VAR
+	DI_Hubzylinder_oben : BOOL;
+	DI_Hubzylinder_unten : BOOL;
+	DI_untere_Klinge : BOOL;
+	DI_obere_Klinge : BOOL;
+	DI_Mag_leer : BOOL;
+	DI_Palette : BOOL;
+	DI_Frontschale : BOOL;
+END_VAR
+(*Ausg*)
+VAR
+	DO_Hubzylinder_auf : BOOL;
+	DO_Hubzylinder_ab : BOOL;
+	DO_Vereinzler_close : BOOL;
+	DO_Vereinzler_open : BOOL;
+	DO_Zylinderklemmung : BOOL;
 END_VAR
