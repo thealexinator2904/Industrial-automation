@@ -48,6 +48,12 @@ VAR
 	work_done : BOOL;
 	work_now : BOOL;
 END_VAR
+(*Timer*)
+VAR
+	timer_error_time : INT;
+	timer_error : TON;
+	timer_blink : TON;
+END_VAR
 (*stat_2*)
 VAR
 	DI_Hubzylinder_oben : BOOL;

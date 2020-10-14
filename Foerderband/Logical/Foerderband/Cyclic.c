@@ -71,6 +71,8 @@ BOOL isAutoMode()
 	return auto_mode;
 }
 
+blinkLed(BOOL* led, INT time_to_blink);
+
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum programm_states state=INIT;
@@ -111,7 +113,7 @@ void _CYCLIC ProgramCyclic(void)
 			}*/
 			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
 			{
-				state=DETECT;
+				state = DETECT;
 				timer_5s.IN = 0;			
 			}
 			if(DI_Band_rechts && auto_mode)
@@ -257,10 +259,20 @@ void _CYCLIC ProgramCyclic(void)
 			//DO_Antrieb_rechts = !DO_Antrieb_links && !DI_Stop;
 			DO_Stopper = DI_RESET;
 			
-			if (!manual_work_mode_glob)
+			if (!manual_work_mode_glob)	//TODO testen
 			{
-				DO_Antrieb_links = DI_Start;
-				DO_Antrieb_rechts = !DO_Antrieb_links && !DI_Stop;
+				if(DI_Start)
+				{
+					DO_Antrieb_links = 1;
+					blinkLed(&DO_gruen, 50);
+				}
+				else if(!DO_Antrieb_links && !DI_Stop)
+				{
+					DO_Antrieb_rechts = 1;
+//					blinkLed(&DO_Q1, &DO_Q2, 50);
+					blinkLed(&DO_Q1, 50);
+				}
+				
 				DO_Stopper = DI_RESET;
 			}
 			else
@@ -283,12 +295,7 @@ void _CYCLIC ProgramCyclic(void)
 	
 	if(DI_Wahl && !auto_mode)
 	{
-		timer_blink.IN = 1;
-		if(timer_blink.Q)
-		{
-			timer_blink.IN = 0;
-			DO_gruen = !DO_gruen;
-		}
+		blinkLed(&DO_gruen, 130)
 	}else
 	{
 		DO_gruen = auto_mode;	
@@ -296,7 +303,6 @@ void _CYCLIC ProgramCyclic(void)
 	
 	TON(&timer_5s);
 	TON(&timer_2s);
-	TON(&timer_blink);
 	R_TRIG(&F_TRIG_01);
 	F_TRIG(&F_TRIG_rechts);
 	
@@ -305,3 +311,34 @@ void _CYCLIC ProgramCyclic(void)
 
 	foerderband_state = state;
 }
+
+blinkLed(BOOL* led, INT time_to_blink) //TODO testen
+{
+	timer_blink.IN = 1;
+	timer_blink.PT = time_to_blink;
+			
+	TON(&timer_blink);
+			
+	if(timer_blink.Q)
+	{
+		*led = !(*led);
+		timer_blink.IN = 0;
+		TON(&timer_blink);
+	}
+}
+
+//blinkLed(BOOL* led1, BOOL* led2, INT time_to_blink)
+//{
+//	timer_blink.IN = 1;
+//	timer_blink.PT = time_to_blink;
+//			
+//	TON(&timer_blink);
+//			
+//	if(timer_blink.Q)
+//	{
+//		*led1 = !(*led1);
+//		*led2 = !(*led2);
+//		timer_blink.IN = 0;
+//		TON(&timer_blink);
+//	}
+//}
