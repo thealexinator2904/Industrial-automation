@@ -62,6 +62,7 @@ void _CYCLIC ProgramCyclic(void)
 		state = EMER_HALT;
 		
 	auto_mode = isAutoMode();
+	auto_mode_glob = auto_mode;
 	work_now = 0;
 	switch(state)
 	{

@@ -26,6 +26,7 @@ void _CYCLIC ProgramCyclic(void)
 
 char handleDoor(struct motorDATA *motor, char s_open, char isOTHERdoorClosed, char* isClosed)
 {
+
 	static int state = STOP;
 	static R_TRIGtyp edge;
 	static TONtyp doorOpenTimer;

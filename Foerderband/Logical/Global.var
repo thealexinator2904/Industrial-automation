@@ -41,12 +41,13 @@ VAR
 END_VAR
 (*Statusvariablen*)
 VAR
+	auto_mode_glob : USINT;
 	work_state : USINT;
 	foerderband_state : USINT;
-	work_done : USINT;
+	work_done : BOOL;
 	work_now : BOOL;
 END_VAR
-(*stat_1*)
+(*stat_2*)
 VAR
 	DI_Hubzylinder_oben : BOOL;
 	DI_Hubzylinder_unten : BOOL;
@@ -63,4 +64,21 @@ VAR
 	DO_Vereinzler_close : BOOL;
 	DO_Vereinzler_open : BOOL;
 	DO_Zylinderklemmung : BOOL;
+END_VAR
+(*stat1*)
+VAR
+	DI_X_axis_links : BOOL;
+	DI_X_axis_recht : BOOL;
+	DI_Frontschale_korr : BOOL;
+	DI_Frontschale_vorh : BOOL;
+	DI_Z_axis_oben : BOOL;
+	DI_Deckel_bereits_vorh : BOOL;
+	DI_Z_axis_unten : BOOL;
+	DO_X_axis_nach_links : BOOL;
+	DO_X_axis_nach_rechts : BOOL;
+	DO_Z_axis_nach_oben : BOOL;
+	DO_Z_axis_nach_unten : BOOL;
+	DO_Z_axis_Klemmung : BOOL;
+	DO_Bohrer1 : BOOL;
+	DO_Bohrer2 : BOOL;
 END_VAR

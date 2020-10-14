@@ -1,3 +1,5 @@
+#define false 0
+#define true 1
 
 #include <bur/plctypes.h>
 
@@ -22,7 +24,6 @@ void setHubzylinderstate(enum hubzylinderstates  state)
 			DO_Hubzylinder_auf = 0;
 			DO_Hubzylinder_ab = 1;
 			break;
-		
 		case DONT_MOVE:
 			DO_Zylinderklemmung = 0;
 			break;
@@ -47,14 +48,17 @@ void setVereinzlerstate(enum vereinzlerstates state)
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
+
 	switch(state)
 	{
 		case WAIT:
 			setHubzylinderstate(UP);
 			setVereinzlerstate(CLOSE);
 			work_done = 0;
-			if(work_now)
+			if(work_now && DI_Palette)
 				state=SENKEN;
+			if(DI_Frontschale)
+				state = HEBEN;
 			break;
 		case SENKEN:
 			setHubzylinderstate(DWN);
@@ -74,11 +78,14 @@ void _CYCLIC ProgramCyclic(void)
 				state = FERTIG;
 			break;
 		case FERTIG:
-			work_done = 1;
+			work_done = true;
 			if(work_now == 0)
 				state = WAIT;
+			break;
 		case ERROR:
-
 			break;
 	}
+	if(!auto_mode_glob || !work_now)
+		state = WAIT;
+	work_state = state;
 }
