@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<?AutomationStudio Version=3.0?>
+<Project xmlns="http://br-automation.co.at/AS/Project"><Configuration Name="station_1"/><ConfigurationFiles ConfigurationName="station_1" ActiveConfigurationFile="\Logical\stat_2\Cyclic.c"><ConfigurationFile Placement="\Logical\stat_4\Cyclic.c,stat_4,2,44,0,1,-1,-1,-1,-1,2,24,1264,776"/><ConfigurationFile Placement="\Logical\stat_2\Cyclic.c,stat_2,2,44,0,1,-1,-1,-1,-1,2,24,1264,776"/></ConfigurationFiles></Project>

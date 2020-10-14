@@ -12,6 +12,27 @@ enum error_states{NO_ERROR, TIMEOUT_LEG_1, TIMEOUT_LEG_2, DETECTION_ERROR};
 enum programm_states{EMER_HALT, INIT, STOP, GO_PRE_WORK, DETECT, WORK, GO_AFT_WORK, WAIT_TO_LET_GO, LET_GO, MANUAL, ERROR};
 enum koppel_state{RTR, RTT, BUSY};
 
+BOOL isWorkMode()
+{
+	static TON_typ timer;
+	static BOOL returnVal= false;
+	
+	timer.IN = DI_RESET;
+	timer.PT = 2000;
+	
+	if(timer.Q)
+	{
+		returnVal = !returnVal;
+		timer.IN = 0;
+	}
+
+	if(auto_mode_glob)
+		returnVal = false;
+	
+	TON(&timer);
+	
+	return returnVal;
+}
 void set_Koppel(enum koppel_state state)
 {
 	switch(state)
@@ -156,7 +177,7 @@ void _CYCLIC ProgramCyclic(void)
 				state = MANUAL;
 			}
 			break;
-		case WORK:
+		case WORK: 
 			DO_Antrieb_rechts = 0;
 			DO_schleichgang = 0;
 			DO_Koppel_links = 0;
@@ -229,12 +250,29 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 		case MANUAL:
 			DO_schleichgang = 1;
-			DO_Antrieb_links = DI_Start;
-			DO_Antrieb_rechts= !DO_Antrieb_links && !DI_Stop;
-			DO_Stopper = DI_RESET;
 			set_Koppel(BUSY);
 			timer_5s.IN = 0;
 			timer_2s.IN = 0;
+			//DO_Antrieb_links = DI_Start;
+			//DO_Antrieb_rechts = !DO_Antrieb_links && !DI_Stop;
+			DO_Stopper = DI_RESET;
+			
+			if (!manual_work_mode_glob)
+			{
+				DO_Antrieb_links = DI_Start;
+				DO_Antrieb_rechts = !DO_Antrieb_links && !DI_Stop;
+				DO_Stopper = DI_RESET;
+			}
+			else
+			{	
+				DO_Antrieb_links = 0;
+				DO_Antrieb_rechts = 0;
+			}
+			if (AI_Potentiometer_1 > 16000)
+			{
+				DO_schleichgang = 0;
+			}
+		
 			if(auto_mode)
 				state= INIT;
 			break;
@@ -261,5 +299,9 @@ void _CYCLIC ProgramCyclic(void)
 	TON(&timer_blink);
 	R_TRIG(&F_TRIG_01);
 	F_TRIG(&F_TRIG_rechts);
+	
+	manual_work_mode_glob = isWorkMode();
+	DO_Q2 = manual_work_mode_glob;
+
 	foerderband_state = state;
 }

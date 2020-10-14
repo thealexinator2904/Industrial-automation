@@ -1,8 +1,6 @@
-
 VAR
-
+	Timer_Pressen : TON;
 END_VAR
-
 VAR CONSTANT
-
+	Time_Pressen : UINT := 300;
 END_VAR

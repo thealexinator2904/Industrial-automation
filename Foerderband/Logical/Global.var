@@ -41,6 +41,7 @@ VAR
 END_VAR
 (*Statusvariablen*)
 VAR
+	manual_work_mode_glob : BOOL;
 	auto_mode_glob : USINT;
 	work_state : USINT;
 	foerderband_state : USINT;
@@ -81,4 +82,12 @@ VAR
 	DO_Z_axis_Klemmung : BOOL;
 	DO_Bohrer1 : BOOL;
 	DO_Bohrer2 : BOOL;
+END_VAR
+(*stat_3*)
+VAR
+	DI_Hubzylinder_unten_stat3 : BOOL;
+	DI_Hubzylinder_oben_stat3 : BOOL;
+	DI_Frontschale_vorhanden : BOOL;
+	DO_Hubzylinder_ab_stat3 : BOOL;
+	DO_Hubzylinder_auf_stat3 : BOOL;
 END_VAR
