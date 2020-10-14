@@ -97,3 +97,17 @@ VAR
 	DO_Hubzylinder_ab_stat3 : BOOL;
 	DO_Hubzylinder_auf_stat3 : BOOL;
 END_VAR
+(*stat_4*)
+VAR
+	DI_phi_0 : BOOL;
+	DI_phi_180 : BOOL;
+	DI_Greifer_open : BOOL;
+	DI_Greifer_closed : BOOL;
+	DI_phi_4 : BOOL;
+	DI_Stau : BOOL;
+	DI_werkstueck : BOOL;
+	DO_phi_0 : BOOL;
+	DO_phi_180 : BOOL;
+	DO_Greifer_open : BOOL;
+	DO_Greifer_close : BOOL;
+END_VAR
