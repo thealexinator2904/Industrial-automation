@@ -32,7 +32,7 @@ void _CYCLIC ProgramCyclic(void)
 			{
 				error_state = KEINE_FRONTSCHALE;
 				error_flag = 1;
-				state = ERROR;
+				state = ERROR_STAT3;
 			}
 			break;
 		
@@ -68,7 +68,7 @@ void _CYCLIC ProgramCyclic(void)
 				state = WAIT;
 			break;
 		
-		case ERROR:
+		case ERROR_STAT3:
 			if(error_flag = 0)
 				state = WAIT;
 			break;

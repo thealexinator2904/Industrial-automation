@@ -79,7 +79,7 @@ void _CYCLIC ProgramCyclic(void)
 				state = WAIT;
 			break;
 		
-		case ERROR:
+		case ERROR_STAT4:
 			break;
 	}
 	

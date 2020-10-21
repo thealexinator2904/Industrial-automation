@@ -8,6 +8,10 @@
 #include <AsDefault.h>
 #endif
 
+#define BLINK_FAST 200
+#define BLINK_MIDDLE 350
+#define BLINK_SLOW 750
+
 BOOL isWorkMode();
 BOOL isAutoMode();
 void set_Koppel(enum koppel_state state);
@@ -20,6 +24,7 @@ void _CYCLIC ProgramCyclic(void)
 	static enum error_codes error_code = KEIN_ERROR;
 
 	static F_TRIGtyp F_TRIG_01, F_TRIG_autoMode, F_TRIG_rechts;
+	static R_TRIGtyp R_TRIG_reset;
 	static int auto_mode = false;
 	
 	if(!DI_NOTAUS)
@@ -202,32 +207,47 @@ void _CYCLIC ProgramCyclic(void)
 				if(DI_Start)
 				{
 					DO_Antrieb_links = 1;
+					DO_Antrieb_rechts = 0;
+					
+					DO_Q1 = 0;
+					DO_Q2 = 0;
+					DO_weiss = 0;
 					
 					if(DO_schleichgang)
-						blinkLed(&DO_gruen, 250);
+						blinkLed(&DO_gruen, BLINK_MIDDLE);
 					else
-						blinkLed(&DO_gruen, 125);
+						blinkLed(&DO_gruen, BLINK_FAST);
 				}
-				else if(!DO_Antrieb_links && !DI_RESET)
+				else if(!DO_Antrieb_links && !DI_Stop)
 				{
 					DO_Antrieb_rechts = 1;
+					DO_Antrieb_links = 0;
+					
+					DO_Q1 = 0;
+					DO_Q2 = 0;
+					DO_gruen = 0;
 					
 					if(DO_schleichgang)
-						blinkLed(&DO_weiss, 250);
+						blinkLed(&DO_weiss, BLINK_MIDDLE);
 					else
-						blinkLed(&DO_weiss, 125);
+						blinkLed(&DO_weiss, BLINK_FAST);
 				}
 				else
 				{
 					DO_Antrieb_links = 0;
 					DO_Antrieb_rechts = 0;
+					
+//					DO_Q1 = 0;
+//					DO_Q2 = 0;
+//					DO_gruen = 0;
+//					DO_weiss = 0;
 				}
-				
-				if(DI_Stop)
+				//TODO blinken grün geht net, q1 q2 bei stopper toggle a net
+				if(R_TRIG_reset.Q)
 				{
-					DO_Stopper = 1;
-					DO_Q1 = 1;
-					DO_Q2 = 1;
+					DO_Stopper = !DO_Stopper;
+					DO_Q1 = !DO_Q1;
+					DO_Q2 = !DO_Q2;
 				}
 			}
 			else
@@ -237,7 +257,13 @@ void _CYCLIC ProgramCyclic(void)
 			}
 
 			if(auto_mode)
+			{
+				DO_weiss = 0;
+				DO_Q1 = 0;
+				DO_Q2 = 0;
+			
 				state = INIT;
+			}
 			break;
 	}
 
@@ -245,12 +271,14 @@ void _CYCLIC ProgramCyclic(void)
 	F_TRIG_rechts.CLK = DI_Band_rechts;
 	
 	if(DI_Wahl && !auto_mode)
-		blinkLed(&DO_gruen, 130);
+		blinkLed(&DO_gruen, BLINK_SLOW);
 	else
 		DO_gruen = auto_mode;	
 	
 	TON(&timer_2s);
 	R_TRIG(&F_TRIG_01);
+	R_TRIG_reset.CLK = DI_RESET;
+	R_TRIG(&R_TRIG_reset);
 	F_TRIG(&F_TRIG_rechts);
 	
 	manual_work_mode_glob = isWorkMode();

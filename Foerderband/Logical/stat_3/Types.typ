@@ -13,7 +13,7 @@ TYPE
 		HALTEN,
 		HEBEN,
 		FERTIG,
-		ERROR
+		ERROR_STAT3
 		);
 	error_states : 
 		(
