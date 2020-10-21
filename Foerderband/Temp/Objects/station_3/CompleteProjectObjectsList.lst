@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.7.2.98"?>
+<Objects>
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="132466265714688170" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="132477518902651790"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="132477550699149400"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="132466265712188080" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\operator\binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="132466265713428120" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="132466265713486550"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="132466265713538080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="132466265713588050"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\runtime\binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="132466265713958200" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="132466265714008080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="132466265714068100"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="132466265714108130"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\astime\binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="132466265712988050" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="132466265712768070"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="132466265712858070"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="132466265712938070"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="132466265712078220" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="132466265711518220"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="132466265711578260"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="132466265711638130"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\standard\binary.lby"
+    LogicalPath="Libraries.standard"
+    Type="Library"
+    LastWriteTime="132466265714488240" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\standard\standard.fun"
+    LogicalPath="Libraries.standard.standard.fun"
+    Type="File"
+    LastWriteTime="132466265714538130"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\standard\standard.typ"
+    LogicalPath="Libraries.standard.standard.typ"
+    Type="File"
+    LastWriteTime="132466265714598110"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Libraries\standard\standard.var"
+    LogicalPath="Libraries.standard.standard.var"
+    Type="File"
+    LastWriteTime="132466265714638300"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\ANSIC.prg"
+    LogicalPath="Foerderband"
+    Type="Program"
+    LastWriteTime="132466265711068210" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Cyclic.c"
+    LogicalPath="Foerderband.Cyclic.c"
+    Type="File"
+    LastWriteTime="132477552115809290"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Init.c"
+    LogicalPath="Foerderband.Init.c"
+    Type="File"
+    LastWriteTime="132477551664349280"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Exit.c"
+    LogicalPath="Foerderband.Exit.c"
+    Type="File"
+    LastWriteTime="132466265711168200"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Types.typ"
+    LogicalPath="Foerderband.Types.typ"
+    Type="File"
+    LastWriteTime="132466265711258130"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Variables.var"
+    LogicalPath="Foerderband.Variables.var"
+    Type="File"
+    LastWriteTime="132477545636799970"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\ANSIC.prg"
+    LogicalPath="FoerdebandWatch"
+    Type="Program"
+    LastWriteTime="132466265710768120" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Cyclic.c"
+    LogicalPath="FoerdebandWatch.Cyclic.c"
+    Type="File"
+    LastWriteTime="132477519820481730"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Init.c"
+    LogicalPath="FoerdebandWatch.Init.c"
+    Type="File"
+    LastWriteTime="132466265710898230"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Exit.c"
+    LogicalPath="FoerdebandWatch.Exit.c"
+    Type="File"
+    LastWriteTime="132466265710858070"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Types.typ"
+    LogicalPath="FoerdebandWatch.Types.typ"
+    Type="File"
+    LastWriteTime="132466265710948080"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Variables.var"
+    LogicalPath="FoerdebandWatch.Variables.var"
+    Type="File"
+    LastWriteTime="132466265710998060"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_1\ANSIC.prg"
+    LogicalPath="stat_1"
+    Type="Program"
+    LastWriteTime="132466265714758180" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_1\Cyclic.c"
+    LogicalPath="stat_1.Cyclic.c"
+    Type="File"
+    LastWriteTime="132477545634979980"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_1\Init.c"
+    LogicalPath="stat_1.Init.c"
+    Type="File"
+    LastWriteTime="132466265714908170"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_1\Exit.c"
+    LogicalPath="stat_1.Exit.c"
+    Type="File"
+    LastWriteTime="132466265714858080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_1\Types.typ"
+    LogicalPath="stat_1.Types.typ"
+    Type="File"
+    LastWriteTime="132477545637519970"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_1\Variables.var"
+    LogicalPath="stat_1.Variables.var"
+    Type="File"
+    LastWriteTime="132466265714988040"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_2\ANSIC.prg"
+    LogicalPath="stat_2"
+    Type="Program"
+    LastWriteTime="132466265715058230" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_2\Cyclic.c"
+    LogicalPath="stat_2.Cyclic.c"
+    Type="File"
+    LastWriteTime="132471387206904410"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_2\Init.c"
+    LogicalPath="stat_2.Init.c"
+    Type="File"
+    LastWriteTime="132466265715198070"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_2\Exit.c"
+    LogicalPath="stat_2.Exit.c"
+    Type="File"
+    LastWriteTime="132466265715158120"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_2\Types.typ"
+    LogicalPath="stat_2.Types.typ"
+    Type="File"
+    LastWriteTime="132466265715238120"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_2\Variables.var"
+    LogicalPath="stat_2.Variables.var"
+    Type="File"
+    LastWriteTime="132466265715268140"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\ANSIC.prg"
+    LogicalPath="stat_3"
+    Type="Program"
+    LastWriteTime="132466265715368090" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Cyclic.c"
+    LogicalPath="stat_3.Cyclic.c"
+    Type="File"
+    LastWriteTime="132471479175378640"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Init.c"
+    LogicalPath="stat_3.Init.c"
+    Type="File"
+    LastWriteTime="132466265715498080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Exit.c"
+    LogicalPath="stat_3.Exit.c"
+    Type="File"
+    LastWriteTime="132466265715458070"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Types.typ"
+    LogicalPath="stat_3.Types.typ"
+    Type="File"
+    LastWriteTime="132466265715538090"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Variables.var"
+    LogicalPath="stat_3.Variables.var"
+    Type="File"
+    LastWriteTime="132471442198099260"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_4\ANSIC.prg"
+    LogicalPath="stat_4"
+    Type="Program"
+    LastWriteTime="132466265715678040" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_4\Cyclic.c"
+    LogicalPath="stat_4.Cyclic.c"
+    Type="File"
+    LastWriteTime="132471496319045760"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_4\Init.c"
+    LogicalPath="stat_4.Init.c"
+    Type="File"
+    LastWriteTime="132466265715838110"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_4\Exit.c"
+    LogicalPath="stat_4.Exit.c"
+    Type="File"
+    LastWriteTime="132466265715788110"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_4\Types.typ"
+    LogicalPath="stat_4.Types.typ"
+    Type="File"
+    LastWriteTime="132466265715878160"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_4\Variables.var"
+    LogicalPath="stat_4.Variables.var"
+    Type="File"
+    LastWriteTime="132466265715938140"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\ANSIC.prg"
+    LogicalPath="stat_5"
+    Type="Program"
+    LastWriteTime="132466265716038160" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Cyclic.c"
+    LogicalPath="stat_5.Cyclic.c"
+    Type="File"
+    LastWriteTime="132466265716088140"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Init.c"
+    LogicalPath="stat_5.Init.c"
+    Type="File"
+    LastWriteTime="132466265716178170"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Exit.c"
+    LogicalPath="stat_5.Exit.c"
+    Type="File"
+    LastWriteTime="132466265716128190"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Types.typ"
+    LogicalPath="stat_5.Types.typ"
+    Type="File"
+    LastWriteTime="132466265716228230"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Variables.var"
+    LogicalPath="stat_5.Variables.var"
+    Type="File"
+    LastWriteTime="132466265716278200"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\ANSIC.prg"
+    LogicalPath="stat_6"
+    Type="Program"
+    LastWriteTime="132466265716388220" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Cyclic.c"
+    LogicalPath="stat_6.Cyclic.c"
+    Type="File"
+    LastWriteTime="132466265716428160"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Init.c"
+    LogicalPath="stat_6.Init.c"
+    Type="File"
+    LastWriteTime="132466265716518140"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Exit.c"
+    LogicalPath="stat_6.Exit.c"
+    Type="File"
+    LastWriteTime="132466265716478230"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Types.typ"
+    LogicalPath="stat_6.Types.typ"
+    Type="File"
+    LastWriteTime="132466265716558160"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Variables.var"
+    LogicalPath="stat_6.Variables.var"
+    Type="File"
+    LastWriteTime="132466265716618120"
+    Private="true" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\Config.pkg"
+    LogicalPath="station_3"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="132466265723808220" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\Hardware.hw"
+    LogicalPath="station_3.Hardware.hw"
+    Type="File"
+    LastWriteTime="132466265723858170"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\Hardware.hwl"
+    LogicalPath="station_3.Hardware.hwl"
+    Type="File"
+    LastWriteTime="132466265723908090"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\Cpu.pkg"
+    LogicalPath="station_3.X20CP1584"
+    Type="Cpu"
+    LastWriteTime="132466265725618140" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\Cpu.sw"
+    LogicalPath="station_3.X20CP1584.Cpu.sw"
+    Type="File"
+    LastWriteTime="132466265725678060"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\Cpu.per"
+    LogicalPath="station_3.X20CP1584.Cpu.per"
+    Type="File"
+    LastWriteTime="132466265725568080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\IoMap.iom"
+    LogicalPath="station_3.X20CP1584.IoMap.iom"
+    Type="File"
+    LastWriteTime="132471436810590470"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\PvMap.vvm"
+    LogicalPath="station_3.X20CP1584.PvMap.vvm"
+    Type="File"
+    LastWriteTime="132466265726528060"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\Connectivity\Package.pkg"
+    LogicalPath="station_3.X20CP1584.Connectivity"
+    Type="Package"
+    LastWriteTime="132466265725518090" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\Connectivity\OpcUA\Package.pkg"
+    LogicalPath="station_3.X20CP1584.Connectivity.OpcUA"
+    Type="Package"
+    LastWriteTime="132466265725458130" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\TextSystem\Package.pkg"
+    LogicalPath="station_3.X20CP1584.TextSystem"
+    Type="Package"
+    LastWriteTime="132466265726628150" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\UnitSystem\Package.pkg"
+    LogicalPath="station_3.X20CP1584.UnitSystem"
+    Type="Package"
+    LastWriteTime="132466265726728190" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity"
+    Type="Package"
+    LastWriteTime="132466265725028170" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\UserRoleSystem\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.UserRoleSystem"
+    Type="Package"
+    LastWriteTime="132466265725208060" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\UserRoleSystem\Role.role"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.UserRoleSystem.Role.role"
+    Type="File"
+    LastWriteTime="132466265725248170"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\UserRoleSystem\User.user"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.UserRoleSystem.User.user"
+    Type="File"
+    LastWriteTime="132466265725298230"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore"
+    Type="Package"
+    LastWriteTime="132466265724678110" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates"
+    Type="Package"
+    LastWriteTime="132466265724518180" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\Certificates\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates.Certificates"
+    Type="Package"
+    LastWriteTime="132466265724468100" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\OwnCertificates\PrivateKeys\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.OwnCertificates.PrivateKeys"
+    Type="Package"
+    LastWriteTime="132466265724628140" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.ThirdPartyCertificates"
+    Type="Package"
+    LastWriteTime="132466265724758050" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\SoftwareCertificates\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.ThirdPartyCertificates.SoftwareCertificates"
+    Type="Package"
+    LastWriteTime="132466265724828180" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\CertificateRevocationLists\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.CertificateRevocationLists"
+    Type="Package"
+    LastWriteTime="132466265724188050" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\CertificateStore\CertificateSigningRequests\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.CertificateStore.CertificateSigningRequests"
+    Type="Package"
+    LastWriteTime="132466265724288140" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\TransportLayerSecurity\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.TransportLayerSecurity"
+    Type="Package"
+    LastWriteTime="132466265725118140" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\Firewall\Package.pkg"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.Firewall"
+    Type="Package"
+    LastWriteTime="132466265724918090" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\AccessAndSecurity\Firewall\Rules.firewallRules"
+    LogicalPath="station_3.X20CP1584.AccessAndSecurity.Firewall.Rules.firewallRules"
+    Type="File"
+    LastWriteTime="132466265724978080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\mappControl\Package.pkg"
+    LogicalPath="station_3.X20CP1584.mappControl"
+    Type="Package"
+    LastWriteTime="132466265726948070" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\mappMotion\Package.pkg"
+    LogicalPath="station_3.X20CP1584.mappMotion"
+    Type="Package"
+    LastWriteTime="132466265727048070" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\mappServices\Package.pkg"
+    LogicalPath="station_3.X20CP1584.mappServices"
+    Type="Package"
+    LastWriteTime="132466265727128050" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\mappView\Package.pkg"
+    LogicalPath="station_3.X20CP1584.mappView"
+    Type="Package"
+    LastWriteTime="132466265727218160" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\mappCockpit\Package.pkg"
+    LogicalPath="station_3.X20CP1584.mappCockpit"
+    Type="Package"
+    LastWriteTime="132466265726818180" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Package.pkg"
+    LogicalPath="station_3.X20CP1584.DTM"
+    Type="Package"
+    LastWriteTime="132466265726428130" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\Package.pkg"
+    LogicalPath="station_3.X20CP1584.DTM.Communication"
+    Type="Package"
+    LastWriteTime="132466265726108100" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\Communication.dtm"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.Communication.dtm"
+    Type="File"
+    LastWriteTime="132466265726058080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\CommDTM\Package.pkg"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.CommDTM"
+    Type="Package"
+    LastWriteTime="132466265725988160" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\CommDTM\CommDTM.dtmdre"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.CommDTM.CommDTM.dtmdre"
+    Type="File"
+    LastWriteTime="132466265725848080"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\CommDTM\CommDTM.dtmtre"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.CommDTM.CommDTM.dtmtre"
+    Type="File"
+    LastWriteTime="132466265725938050"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\CommDTM\CommDTM.dtmdri"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.CommDTM.CommDTM.dtmdri"
+    Type="File"
+    LastWriteTime="132466265725888120"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\X20DS438A\Package.pkg"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.X20DS438A"
+    Type="Package"
+    LastWriteTime="132466265726198080" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\X20DS438A\X20DS438A.dtmdre"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.X20DS438A.X20DS438A.dtmdre"
+    Type="File"
+    LastWriteTime="132466265726248190"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\X20DS438A\X20DS438A.dtmtre"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.X20DS438A.X20DS438A.dtmtre"
+    Type="File"
+    LastWriteTime="132466265726368200"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\X20CP1584\DTM\Communication\X20DS438A\X20DS438A.dtmdri"
+    LogicalPath="station_3.X20CP1584.DTM.Communication.X20DS438A.X20DS438A.dtmdri"
+    Type="File"
+    LastWriteTime="132466265726308160"
+    Private="false" />
+  <Object
+    Path="Z:\GitHub\Industrial-automation\Foerderband\Physical\station_3\Hardware.jpg"
+    LogicalPath="station_3.Hardware.jpg"
+    Type="File"
+    LastWriteTime="132466265723958050"
+    Private="false" />
+</Objects>

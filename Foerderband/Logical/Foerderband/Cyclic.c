@@ -8,14 +8,256 @@
 #include <AsDefault.h>
 #endif
 
-enum error_states{NO_ERROR, TIMEOUT_LEG_1, TIMEOUT_LEG_2, DETECTION_ERROR};
-enum programm_states{EMER_HALT, INIT, STOP, GO_PRE_WORK, DETECT, WORK, GO_AFT_WORK, WAIT_TO_LET_GO, LET_GO, MANUAL, ERROR};
-enum koppel_state{RTR, RTT, BUSY};
+BOOL isWorkMode();
+BOOL isAutoMode();
+void set_Koppel(enum koppel_state state);
+blinkLed(BOOL* led, INT time_to_blink);
+blinkLed2(BOOL* led1, BOOL* led2, INT time_to_blink);
+
+void _CYCLIC ProgramCyclic(void)
+{
+	static enum programm_states state = INIT;
+	static enum error_codes error_code = NO_ERROR;
+
+	static F_TRIGtyp F_TRIG_01, F_TRIG_autoMode, F_TRIG_rechts;
+	static int auto_mode = false;
+	
+	if(!DI_NOTAUS)
+		state = EMER_HALT;
+		
+	auto_mode = isAutoMode();
+	auto_mode_glob = auto_mode;
+	work_now = 0;
+	switch(state)
+	{
+		case EMER_HALT:
+			DO_Antrieb_rechts = 0;
+			DO_Antrieb_links = 0;
+			set_Koppel(BUSY);
+			
+			if(DI_NOTAUS)
+				state = INIT;
+			break;
+		
+		case INIT:
+			DO_Antrieb_rechts = 1;
+			DO_Antrieb_links = 0;
+			DO_Stopper = 0;
+			DO_schleichgang = 0;
+			set_Koppel(BUSY);
+			
+			timer_2s.IN = 0;
+			
+			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
+				state = DETECT;	
+	
+			if(DI_Band_rechts && auto_mode)
+				state = GO_AFT_WORK;
+			
+			if(!auto_mode)
+				state = MANUAL;
+			break;
+		
+		case STOP:
+			DO_Antrieb_rechts = 0;
+			DO_Antrieb_links = 0;
+			DO_Stopper = 0;
+			set_Koppel(RTR);
+			
+			timer_2s.IN = 0;
+
+			
+			if(auto_mode && !DI_Koppel_links && DI_Band_links)
+				state = GO_PRE_WORK;
+			if(!auto_mode)
+			{
+				state = MANUAL;
+			}
+			break;
+		
+		case GO_PRE_WORK:
+			DO_Antrieb_rechts = 1;
+			set_Koppel(RTR);
+			
+			timer_2s.IN = 0;
+			
+			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
+				state = DETECT;
+			
+			if(!auto_mode)
+			{
+				state = MANUAL;
+			}
+			break;	
+		
+		case DETECT:
+			DO_Antrieb_rechts = 1;
+			DO_schleichgang = 1;
+			set_Koppel(BUSY);
+			
+			timer_2s.IN = 1;
+			
+			if(timer_2s.Q && auto_mode)
+			{
+				state = WORK;
+				timer_2s.IN = 0;
+			}
+			
+			if(!auto_mode)
+				state = MANUAL;
+			break;
+		
+		case WORK: 
+			DO_Antrieb_rechts = 0;
+			DO_schleichgang = 0;
+			DO_Koppel_links = 0;
+			set_Koppel(BUSY);
+			
+			timer_2s.IN = 0;
+			work_now = 1;
+			
+			if(work_done && auto_mode)
+				state = GO_AFT_WORK;
+			
+			if(!auto_mode)
+				state = MANUAL;
+			break;
+		
+		case GO_AFT_WORK:
+			DO_Stopper = 1;
+			DO_schleichgang = 0;
+			DO_Antrieb_rechts = 1;
+			set_Koppel(BUSY);
+			
+			timer_2s.IN = 0;
+
+			if(DI_Band_rechts)
+				state = WAIT_TO_LET_GO;
+			
+			if(!auto_mode)
+			{
+				state = MANUAL;
+			}
+			break;
+		
+		case WAIT_TO_LET_GO:
+			DO_Stopper = 0;
+			DO_schleichgang = 0;
+			DO_Antrieb_rechts = 0;
+			set_Koppel(RTT);
+			
+			timer_2s.IN = 0;
+
+			if(!DI_Koppel_rechts) //wait till Übernahmebestätigung
+				state = LET_GO;
+			
+			if(!auto_mode)
+			{
+				state = MANUAL;
+			}
+			break;
+		
+		case LET_GO: //Let it go, Let it go, can't hold it back anymore :D
+			DO_Antrieb_rechts = 1;
+			set_Koppel(RTT);
+			
+			timer_2s.IN = 0;
+
+			if(auto_mode && !DI_Band_rechts)
+				state = STOP;
+			
+			if(!auto_mode)
+			{
+				state = MANUAL;
+			}
+			break;
+		
+		case ERROR:
+			DO_Antrieb_links = 0;
+			DO_Antrieb_rechts= 0;
+			error_flag = 1;
+			set_Koppel(BUSY);
+			
+			timer_2s.IN = 0;
+			blinkLed2(&DO_Q1, &DO_Q2, 150);
+
+			if(!auto_mode)
+			{
+				state = MANUAL;
+			}
+			break;
+		
+		case MANUAL:
+			set_Koppel(BUSY);
+			timer_2s.IN = 0;
+			error_flag = 0;
+
+			if (AI_Potentiometer_1 > 16000)
+				DO_schleichgang = 0;
+			else
+				DO_schleichgang = 1;
+			
+			if (!manual_work_mode_glob)
+			{
+				if(DI_Start)
+				{
+					DO_Antrieb_links = 1;
+					
+					if(DO_schleichgang)
+						blinkLed(&DO_gruen, 250);
+					else
+						blinkLed(&DO_gruen, 125);
+				}
+				else if(!DO_Antrieb_links && !DI_RESET)
+				{
+					DO_Antrieb_rechts = 1;
+					
+					if(DO_schleichgang)
+						blinkLed(&DO_weiss, 250);
+					else
+						blinkLed(&DO_weiss, 125);
+				}
+				
+				if(DI_Stop)
+				{
+					DO_Stopper = 1;
+					DO_Q1 = 1;
+					DO_Q2 = 1;
+				}
+			}
+			else
+			{	
+				DO_Antrieb_links = 0;
+				DO_Antrieb_rechts = 0;
+			}
+
+			if(auto_mode)
+				state = INIT;
+			break;
+	}
+
+	DO_Q1 = auto_mode;
+	F_TRIG_rechts.CLK = DI_Band_rechts;
+	
+	if(DI_Wahl && !auto_mode)
+		blinkLed(&DO_gruen, 130);
+	else
+		DO_gruen = auto_mode;	
+	
+	TON(&timer_2s);
+	R_TRIG(&F_TRIG_01);
+	F_TRIG(&F_TRIG_rechts);
+	
+	manual_work_mode_glob = isWorkMode();
+	DO_Q2 = manual_work_mode_glob;
+
+	foerderband_state = state;
+}
 
 BOOL isWorkMode()
 {
 	static TON_typ timer;
-	static BOOL returnVal= false;
+	static BOOL returnVal = false;
 	
 	timer.IN = DI_RESET;
 	timer.PT = 2000;
@@ -33,24 +275,7 @@ BOOL isWorkMode()
 	
 	return returnVal;
 }
-void set_Koppel(enum koppel_state state)
-{
-	switch(state)
-	{
-		case RTR:
-			DO_Koppel_links = 1;
-			DO_Koppel_rechts = 0;
-			break;
-		case RTT:
-			DO_Koppel_links = !1;
-			DO_Koppel_rechts = !0;
-			break;
-		case BUSY:
-			DO_Koppel_links = 0;
-			DO_Koppel_rechts = 0;
-			break;
-	}
-}
+
 BOOL isAutoMode()
 {	
 	static R_TRIGtyp r_start_but;
@@ -60,259 +285,40 @@ BOOL isAutoMode()
 	R_TRIG(&r_start_but);
 	
 	if(DI_Wahl)
-		if(r_start_but.Q)
-			auto_mode =  true;
+		if(r_start_but.Q && !error_flag)
+			auto_mode = true;
 		else ;
 	else
 		auto_mode = false;
 	
 	if(!DI_Stop)
 		auto_mode = false;
+	
 	return auto_mode;
 }
 
-blinkLed(BOOL* led, INT time_to_blink);
-
-void _CYCLIC ProgramCyclic(void)
+void set_Koppel(enum koppel_state state)
 {
-	static enum programm_states state=INIT;
-	static enum error_states error= NO_ERROR;
-
-	static F_TRIGtyp F_TRIG_01, F_TRIG_autoMode, F_TRIG_rechts;
-	static int auto_mode=false;
-	
-	if(!DI_NOTAUS)
-		state = EMER_HALT;
-		
-	auto_mode = isAutoMode();
-	auto_mode_glob = auto_mode;
-	work_now = 0;
 	switch(state)
 	{
-		case EMER_HALT:
-			DO_Antrieb_rechts = 0;
-			DO_Antrieb_links = 0;
-			set_Koppel(BUSY);
-			if(DI_NOTAUS)
-				state = INIT;
+		case RTR:
+			DO_Koppel_links = 1;
+			DO_Koppel_rechts = 0;
 			break;
-		case INIT:
-			DO_Antrieb_rechts = 1;
-			DO_Antrieb_links = 0;
-			DO_Stopper = 0;
-			DO_schleichgang = 0;
-			timer_5s.IN = 1;
-			timer_2s.IN = 0;
-			set_Koppel(BUSY);
-			//Schritt 1 im Init: Anlage leer fahren um Fehler durch
-			//power loss abzufangen
-			/*if(DI_Band_links && auto_mode)
-			{
-				state = GO_PRE_WORK;
-				timer_5s.IN = 0;
-			}*/
-			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
-			{
-				state = DETECT;
-				timer_5s.IN = 0;			
-			}
-			if(DI_Band_rechts && auto_mode)
-			{
-				state=GO_AFT_WORK;
-				timer_5s.IN = 0;			
-			}
-			if(!auto_mode)
-			{
-				state = MANUAL;
-				timer_5s.IN = 0;
-			}
-			//Wenn die Palette nach 5 Sekunden nirgends aufgetaucht
-			//ist, wird wohl keine da sein \O.O/ Was weiß ich,
-			//eigentlich isses ja wurscht
-			if(timer_5s.Q)
-			{
-				state = STOP;
-				timer_5s.IN = 0;
-				DO_Stopper = 0;
-			}
-			break;
-		case STOP:
-			DO_Antrieb_rechts = 0;
-			DO_Antrieb_links = 0;
-			DO_Stopper = 0;
-			timer_5s.IN = 0;
-			timer_2s.IN = 0;
-			set_Koppel(RTR);
-			if(auto_mode && !DI_Koppel_links && DI_Band_links)
-				state = GO_PRE_WORK;
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case GO_PRE_WORK:
-			DO_Antrieb_rechts = 1;
-			timer_5s.IN = 1;
-			timer_2s.IN = 0;
-			set_Koppel(RTR);
-			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
-				state = DETECT;
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;	
-		case DETECT:
-			DO_Antrieb_rechts = 1;
-			DO_schleichgang = 1;
-			set_Koppel(BUSY);
-			timer_5s.IN = 1;
-			timer_2s.IN = 1;
-			if(timer_2s.Q && auto_mode)
-			{
-				state = WORK;
-				timer_2s.IN = 0;
-				timer_5s.IN = 0;
-			}
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case WORK: 
-			DO_Antrieb_rechts = 0;
-			DO_schleichgang = 0;
-			DO_Koppel_links = 0;
-			timer_2s.IN = 0;
-			set_Koppel(BUSY);
-			//hier kannste mal arbeiten du Spast
-			timer_5s.IN = 1;
-			work_now = 1;
-			if(work_done && auto_mode)
-			{
-				state = GO_AFT_WORK;
-				timer_5s.IN = 0;
-			}
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case GO_AFT_WORK:
-			DO_Stopper = 1;
-			DO_Antrieb_rechts = 1;
-			DO_schleichgang = 0;
-			timer_5s.IN = 0;
-			timer_2s.IN = 0;
-			set_Koppel(BUSY);
-			if(DI_Band_rechts)
-				state = WAIT_TO_LET_GO;
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case WAIT_TO_LET_GO:
-			DO_Stopper = 0;
-			DO_Antrieb_rechts = 0;
-			DO_schleichgang = 0;
-			timer_5s.IN = 0;
-			timer_2s.IN = 0;
-			set_Koppel(RTT);
-			if(!DI_Koppel_rechts) //wait till Übernahmebestätigung
-				state = LET_GO;
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case LET_GO: //Let it go, Let it go, can't hold it back anymore :D
-			DO_Antrieb_rechts = 1;
-			timer_5s.IN = 0;
-			timer_2s.IN = 0;
-			set_Koppel(RTT);
-			if(auto_mode && !DI_Band_rechts)
-				state = STOP;
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case ERROR:
-			DO_Antrieb_links = 0;
-			DO_Antrieb_rechts= 0;
-			timer_5s.IN = 0;
-			timer_2s.IN = 0;
-			DO_Q2=1;
-			set_Koppel(BUSY);
-			if(!auto_mode)
-			{
-				state = MANUAL;
-			}
-			break;
-		case MANUAL:
-			DO_schleichgang = 1;
-			set_Koppel(BUSY);
-			timer_5s.IN = 0;
-			timer_2s.IN = 0;
-			//DO_Antrieb_links = DI_Start;
-			//DO_Antrieb_rechts = !DO_Antrieb_links && !DI_Stop;
-			DO_Stopper = DI_RESET;
-			
-			if (!manual_work_mode_glob)	//TODO testen
-			{
-				if(DI_Start)
-				{
-					DO_Antrieb_links = 1;
-					blinkLed(&DO_gruen, 50);
-				}
-				else if(!DO_Antrieb_links && !DI_Stop)
-				{
-					DO_Antrieb_rechts = 1;
-//					blinkLed(&DO_Q1, &DO_Q2, 50);
-					blinkLed(&DO_Q1, 50);
-				}
-				
-				DO_Stopper = DI_RESET;
-			}
-			else
-			{	
-				DO_Antrieb_links = 0;
-				DO_Antrieb_rechts = 0;
-			}
-			if (AI_Potentiometer_1 > 16000)
-			{
-				DO_schleichgang = 0;
-			}
 		
-			if(auto_mode)
-				state= INIT;
+		case RTT:
+			DO_Koppel_links = !1;
+			DO_Koppel_rechts = !0;
+			break;
+		
+		case BUSY:
+			DO_Koppel_links = 0;
+			DO_Koppel_rechts = 0;
 			break;
 	}
-
-	DO_Q1 = auto_mode;
-	F_TRIG_rechts.CLK= DI_Band_rechts;
-	
-	if(DI_Wahl && !auto_mode)
-	{
-		blinkLed(&DO_gruen, 130)
-	}else
-	{
-		DO_gruen = auto_mode;	
-	}
-	
-	TON(&timer_5s);
-	TON(&timer_2s);
-	R_TRIG(&F_TRIG_01);
-	F_TRIG(&F_TRIG_rechts);
-	
-	manual_work_mode_glob = isWorkMode();
-	DO_Q2 = manual_work_mode_glob;
-
-	foerderband_state = state;
 }
 
-blinkLed(BOOL* led, INT time_to_blink) //TODO testen
+blinkLed(BOOL* led, INT time_to_blink)
 {
 	timer_blink.IN = 1;
 	timer_blink.PT = time_to_blink;
@@ -327,18 +333,18 @@ blinkLed(BOOL* led, INT time_to_blink) //TODO testen
 	}
 }
 
-//blinkLed(BOOL* led1, BOOL* led2, INT time_to_blink)
-//{
-//	timer_blink.IN = 1;
-//	timer_blink.PT = time_to_blink;
-//			
-//	TON(&timer_blink);
-//			
-//	if(timer_blink.Q)
-//	{
-//		*led1 = !(*led1);
-//		*led2 = !(*led2);
-//		timer_blink.IN = 0;
-//		TON(&timer_blink);
-//	}
-//}
+blinkLed2(BOOL* led_1, BOOL* led_2, INT time_to_blink)
+{
+	timer_blink2.IN = 1;
+	timer_blink2.PT = time_to_blink;
+			
+	TON(&timer_blink2);
+			
+	if(timer_blink2.Q)
+	{
+		*led_1 = !(*led_1);
+		*led_2 = !(*led_2);
+		timer_blink2.IN = 0;
+		TON(&timer_blink2);
+	}
+}

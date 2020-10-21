@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildReasons>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_3\x20cp1584\foerderban\cyclic.c.o">
+    <BuildReason>Target "cyclic.c.o" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_3\x20cp1584\foerderban\_bur_pvdef.c.o">
+    <BuildReason>Target "_bur_pvdef.c.o" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_3\x20cp1584\foerderban\a.out">
+    <BuildReason>Target "a.out" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_3\x20cp1584\foerderban\foerderban.ox">
+    <BuildReason>Target "foerderban.ox" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_3\x20cp1584\foerderban.br">
+    <BuildReason>Target "foerderban.br" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <BuildReason>Rule is forced.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\station_3\x20cp1584\transfer.lst">
+    <BuildReason>Target "transfer.lst" does not exist</BuildReason>
+  </Rule>
+</BuildReasons>

@@ -7,38 +7,17 @@
 #include <AsDefault.h>
 #endif
 
-enum hubzylinderstates {UP, DWN, DONT_MOVE};
-enum states{WAIT, SENKEN, HALTEN, HEBEN, FERTIG, ERROR};
-enum error_states {NO_ERROR, KEINE_FRONTSCHALE};
-
-void setHubzylinderstate (enum hubzylinderstates state)
-{
-	switch(state)
-	{
-		case UP:
-			DO_Hubzylinder_auf_stat3 = 1;
-			DO_Hubzylinder_ab_stat3 = 0;
-			break;
-		case DWN:
-			DO_Hubzylinder_auf_stat3 = 0;
-			DO_Hubzylinder_ab_stat3 = 1;
-			break;
-		case DONT_MOVE:
-			DO_Hubzylinder_auf_stat3 = 0;
-			DO_Hubzylinder_ab_stat3 = 0;
-			break;
-	}
-}
-
+void setHubzylinderstate (enum hubzylinderstates state);
 
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
-	static enum error_states error_state = NO_ERROR;
+	static enum error_states error_state = KEIN_ERROR;
 	static F_TRIGtyp stop_trig;
 
 	stop_trig.CLK = DI_Stop;
 	F_TRIG(&stop_trig);
+	
 	switch(state)
 	{
 		case WAIT:	//Auf Arbeitsbefehl (work_now) warten und überprüfen, ob Frontschale vorhanden
@@ -48,9 +27,11 @@ void _CYCLIC ProgramCyclic(void)
 			if((work_now && DI_Frontschale_vorhanden && auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q))	//Arbeitsbefehl vorhanden & Werkstück in Ordnung --> Senken
 				state = SENKEN;
 			
+			// TODO Testen
 			if(work_now && !DI_Frontschale_vorhanden)	//Arbeitsbefehl vorhanden & Werkstück nicht in Ordnung --> Error
 			{
 				error_state = KEINE_FRONTSCHALE;
+				error_flag = 1;
 				state = ERROR;
 			}
 			break;
@@ -64,8 +45,6 @@ void _CYCLIC ProgramCyclic(void)
 		
 		case HALTEN:	//Hubzylinder nicht bewegen, Timer abwarten, dann Hubzylinder heben
 			setHubzylinderstate(DONT_MOVE);
-			
-			Timer_Pressen.PT = Time_Pressen;
 			Timer_Pressen.IN = 1;
 
 			if ((Timer_Pressen.Q&& auto_mode_glob)|| (manual_work_mode_glob && stop_trig.Q))
@@ -90,12 +69,36 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 		
 		case ERROR:
+			if(error_flag = 0)
+				state = WAIT;
 			break;
 	}
 
 	if((!auto_mode_glob || !work_now) &&(!manual_work_mode_glob))
 		state = WAIT;
+	
 	work_state = state;
 	TON(&Timer_Pressen);
 
+}
+
+void setHubzylinderstate (enum hubzylinderstates state)
+{
+	switch(state)
+	{
+		case UP:
+			DO_Hubzylinder_auf_stat3 = 1;
+			DO_Hubzylinder_ab_stat3 = 0;
+			break;
+		
+		case DWN:
+			DO_Hubzylinder_auf_stat3 = 0;
+			DO_Hubzylinder_ab_stat3 = 1;
+			break;
+		
+		case DONT_MOVE:
+			DO_Hubzylinder_auf_stat3 = 0;
+			DO_Hubzylinder_ab_stat3 = 0;
+			break;
+	}
 }

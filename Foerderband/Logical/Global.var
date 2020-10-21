@@ -47,11 +47,19 @@ VAR
 	foerderband_state : USINT;
 	work_done : BOOL;
 	work_now : BOOL;
+	error_flag : BOOL := FALSE;
 END_VAR
 (*Timer*)
+VAR CONSTANT
+	timer_error_stopper_time : INT := 200;
+	timer_error_time : INT := 12000;
+	timer_2s_time : INT := 2000;
+END_VAR
 VAR
-	timer_error_time : INT;
+	timer_2s : TON;
+	timer_error_stopper : TON;
 	timer_error : TON;
+	timer_blink2 : TON;
 	timer_blink : TON;
 END_VAR
 (*stat_2*)

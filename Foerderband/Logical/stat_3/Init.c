@@ -7,5 +7,5 @@
 
 void _INIT ProgramInit(void)
 {
-
+	Timer_Pressen.PT = Time_Pressen;
 }
