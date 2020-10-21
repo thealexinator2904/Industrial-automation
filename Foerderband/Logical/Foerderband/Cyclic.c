@@ -264,13 +264,20 @@ void _CYCLIC ProgramCyclic(void)
 				if(DI_Start)
 				{
 					DO_Antrieb_links = 1;
+					DO_Antrieb_rechts = 0;
 					blinkLed(&DO_gruen, 50);
 				}
 				else if(!DO_Antrieb_links && !DI_Stop)
 				{
+					DO_Antrieb_links = 0;
 					DO_Antrieb_rechts = 1;
 //					blinkLed(&DO_Q1, &DO_Q2, 50);
 					blinkLed(&DO_Q1, 50);
+				}
+				else
+				{
+					DO_Antrieb_links = 0;
+					DO_Antrieb_rechts = 0;					
 				}
 				
 				DO_Stopper = DI_RESET;
@@ -295,7 +302,7 @@ void _CYCLIC ProgramCyclic(void)
 	
 	if(DI_Wahl && !auto_mode)
 	{
-		blinkLed(&DO_gruen, 130)
+		blinkLed(&DO_gruen, 130);
 	}else
 	{
 		DO_gruen = auto_mode;	

@@ -6,5 +6,5 @@
   <IEC ExtendedConstants="true" IecExtendedComments="true" KeywordsAsStructureMembers="false" NamingConventions="true" Pointers="true" Preprocessor="false" />
   <Motion RestartAcoposParameter="true" RestartInitParameter="true" />
   <Project StoreRuntimeInProject="false" />
-  <Variables DefaultInitValue="0" DefaultRetain="false" DefaultVolatile="true" />
+  <Variables DefaultInitValue="0" DefaultRetain="false" DefaultVolatile="false" />
 </Project>
