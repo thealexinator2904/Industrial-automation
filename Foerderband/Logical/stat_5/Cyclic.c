@@ -1,115 +1,49 @@
+#define TARGET_TEMP 9000
+#define HYSTERESE 100
+
 #define false 0
 #define true 1
 
 #include <bur/plctypes.h>
-
+#include <standard.h>
 #ifdef _DEFAULT_INCLUDES
 #include <AsDefault.h>
 #endif
 
-enum hubzylinderstates{UP, DWN, DONT_MOVE};
-enum drehzylinderstates{_0, _180};
-enum greiferstate{OPEN, CLOSE};
-enum states{WAIT, GREIFEN,LOESEN, HEBEN, DREHEN, SENKEN, FERTIG, ERROR};
-
-void setHubzylinderstate(enum hubzylinderstates  state)
-{
-	DO_Zylinderklemmung = 1;
-	switch(state)
-	{
-		case UP:
-			DO_Hubzylinder_auf = 1;
-			DO_Hubzylinder_ab = 0;
-			break;
-		case DWN:
-			DO_Hubzylinder_auf = 0;
-			DO_Hubzylinder_ab = 1;
-			break;
-		case DONT_MOVE:
-			DO_Zylinderklemmung = 0;
-			break;
-	}
-}
-
-void setDrehzylinderstate(enum drehzylinderstates state)
-{
-	switch(state)
-	{
-		case _0:
-			DO_phi_0 = 1;
-			DO_phi_180 = 0;
-			break;
-		case _180:
-			DO_phi_0 = 0;
-			DO_phi_180 = 1;	
-			break;
-	}
-}
-
-void setGreiferstate(enum greiferstate state)
-{
-	switch(state)
-	{
-		case OPEN:
-			DO_Greifer_open = 1;
-			DO_Greifer_close = 0;
-			break;
-		case CLOSE:
-			DO_Greifer_open = 0;
-			DO_Greifer_close = 1;
-			break;
-	}
-}
+enum states{WAIT, HEIZEN, FERTIG, ERROR};
 
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
-
+	static int _ready_to_go=false;
+	static TON_typ heat_timer;
+	heat_timer.PT=12000;
+	heat_timer.IN=_ready_to_go;
 	switch(state)
 	{
 		case WAIT:
-			setHubzylinderstate(UP);
-			setDrehzylinderstate(_0);
-			setGreiferstate(OPEN);
+			DO_Heizung = 0;
 			work_done = 0;
+			_ready_to_go = 0;
 			if(work_now)
-				state=SENKEN;
-			if(!DI_Frontschale)
-				state = FERTIG;
+				state=HEIZEN;
+			/*if(!DI_Frontschale)
+				state = FERTIG;*/
 			break;
-		case GREIFEN:
-			setGreiferstate(CLOSE);
-			if(DI_Greifer_closed)
-				state= HEBEN;
-			break;
-		case HEBEN:
-			setHubzylinderstate(UP);
-			if(DI_Hubzylinder_oben && DI_phi_0)
-				state=DREHEN;
-			if(DI_Hubzylinder_oben && DI_phi_180)
-				state = FERTIG;
-			break;
-		
-		case DREHEN:
-			setDrehzylinderstate(_180);
-			if(DI_phi_180)
-				state = SENKEN;
-			break;
-		
-		case SENKEN:
-			setHubzylinderstate(DWN);
-			if(DI_Hubzylinder_unten && DI_phi_0)
-				state=GREIFEN;
-			if(DI_Hubzylinder_unten && DI_phi_180)
-				state=LOESEN;
-			break;
-		case LOESEN:
-			setGreiferstate(OPEN);
-			if(DI_Greifer_open);
-			state = HEBEN;
+		case HEIZEN:
+			if(AI_Messwandler > TARGET_TEMP + HYSTERESE/2)
+				DO_Heizung = 0;
+			if(AI_Messwandler < TARGET_TEMP - HYSTERESE/2)
+				DO_Heizung = 1;
+			if(AI_Messwandler > TARGET_TEMP)
+				_ready_to_go = 1;
+			if(heat_timer.Q)
+				state=FERTIG;
 			break;
 		case FERTIG:
 			work_done = true;
+			DO_Heizung = 0;
+			_ready_to_go = 0;
 			if(work_now == 0)
 				state = WAIT;
 			break;
@@ -119,4 +53,5 @@ void _CYCLIC ProgramCyclic(void)
 	if(!auto_mode_glob || !work_now)
 		state = WAIT;
 	work_state = state;
+	TON(&heat_timer);
 }
