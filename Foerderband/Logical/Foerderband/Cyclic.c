@@ -17,7 +17,7 @@ blinkLed2(BOOL* led1, BOOL* led2, INT time_to_blink);
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum programm_states state = INIT;
-	static enum error_codes error_code = NO_ERROR;
+	static enum error_codes error_code = KEIN_ERROR;
 
 	static F_TRIGtyp F_TRIG_01, F_TRIG_autoMode, F_TRIG_rechts;
 	static int auto_mode = false;
@@ -216,6 +216,11 @@ void _CYCLIC ProgramCyclic(void)
 						blinkLed(&DO_weiss, 250);
 					else
 						blinkLed(&DO_weiss, 125);
+				}
+				else
+				{
+					DO_Antrieb_links = 0;
+					DO_Antrieb_rechts = 0;
 				}
 				
 				if(DI_Stop)
