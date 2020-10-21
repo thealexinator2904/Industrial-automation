@@ -119,3 +119,10 @@ VAR
 	DO_Greifer_open : BOOL;
 	DO_Greifer_close : BOOL;
 END_VAR
+(*stat_5*)
+VAR
+	DO_Heizung : BOOL := FALSE;
+	DO_Leistung : BOOL := FALSE;
+	AI_Messwandler : INT := 0;
+	AI_Messwandler_2 : INT := 0;
+END_VAR

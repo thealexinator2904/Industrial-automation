@@ -313,6 +313,7 @@
 </LN>
 <LN ID="%IX.IF3.ST1.IF1.ST2.DigitalInput01" Type="BOOL">
 <Prod Device="IF3.ST1.IF1.ST2" DPName="DigitalInput01" Kind="io"/>
+<<<<<<< HEAD
 <Cons Device="TC#1-CPYDEV" DPName="DI_Hubzylinder_oben_stat3" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF3.ST1.IF1.ST2.DigitalInput02" Type="BOOL">
@@ -322,6 +323,14 @@
 <LN ID="%IX.IF3.ST1.IF1.ST2.DigitalInput03" Type="BOOL">
 <Prod Device="IF3.ST1.IF1.ST2" DPName="DigitalInput03" Kind="io"/>
 <Cons Device="TC#1-CPYDEV" DPName="DI_Frontschale_vorhanden" Kind="pv"/>
+=======
+</LN>
+<LN ID="%IX.IF3.ST1.IF1.ST2.DigitalInput02" Type="BOOL">
+<Prod Device="IF3.ST1.IF1.ST2" DPName="DigitalInput02" Kind="io"/>
+</LN>
+<LN ID="%IX.IF3.ST1.IF1.ST2.DigitalInput03" Type="BOOL">
+<Prod Device="IF3.ST1.IF1.ST2" DPName="DigitalInput03" Kind="io"/>
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
 </LN>
 <LN ID="%IX.IF3.ST1.IF1.ST2.DigitalInput04" Type="BOOL">
 <Prod Device="IF3.ST1.IF1.ST2" DPName="DigitalInput04" Kind="io"/>
@@ -393,11 +402,17 @@
 <Prod Device="IF3.ST1.IF1.ST3" DPName="FirmwareVersion" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.IF1.ST3.DigitalOutput01" Type="BOOL">
+<<<<<<< HEAD
 <Prod Device="TC#1-CPYDEV" DPName="DO_Hubzylinder_auf_stat3" Kind="pv"/>
 <Cons Device="IF3.ST1.IF1.ST3" DPName="DigitalOutput01" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.IF1.ST3.DigitalOutput02" Type="BOOL">
 <Prod Device="TC#1-CPYDEV" DPName="DO_Hubzylinder_ab_stat3" Kind="pv"/>
+=======
+<Cons Device="IF3.ST1.IF1.ST3" DPName="DigitalOutput01" Kind="io"/>
+</LN>
+<LN ID="%QX.IF3.ST1.IF1.ST3.DigitalOutput02" Type="BOOL">
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
 <Cons Device="IF3.ST1.IF1.ST3" DPName="DigitalOutput02" Kind="io"/>
 </LN>
 <LN ID="%QX.IF3.ST1.IF1.ST3.DigitalOutput03" Type="BOOL">

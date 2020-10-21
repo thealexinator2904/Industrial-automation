@@ -27,8 +27,8 @@ VAR_CONFIG
 	::DI_Ident_2 AT %IX."X20DI8371a".DigitalInput06;
 	::DI_Ident_3 AT %IX."X20DI8371a".DigitalInput07;
 	::DI_Ident_4 AT %IX."X20DI8371a".DigitalInput08;
-	DO_Heizung  AT %QX."X20DO8322b".DigitalOutput01;
-	DO_Leistung  AT %QX."X20DO8322b".DigitalOutput02;
-	AI_Messwandler  AT %IW."X20AI2222a".AnalogInput01;
-	AI_Messwandler  AT %IW."X20AI2222a".AnalogInput02;
+	DO_Heizung AT %QX."X20DO8322b".DigitalOutput01;
+	DO_Leistung AT %QX."X20DO8322b".DigitalOutput02;
+	AI_Messwandler AT %IW."X20AI2222a".AnalogInput01;
+	AI_Messwandler_2 AT %IW."X20AI2222a".AnalogInput02;
 END_VAR

@@ -3,7 +3,10 @@
 <Transfer xmlns="http://br-automation.co.at/AS/Transfer">
   <OperatingSystem Version="A4.73"/>
   <Hardware Target="SG4"/>
+<<<<<<< HEAD
   <Operation Delete="stat_3.br"/>
+=======
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
   <Operation Delete="Foerderban.br"/>
   <Operation Download="asfw.br" Memory="SystemROM"/>
   <Operation Download="ashwd.br" Memory="SystemROM"/>
@@ -20,5 +23,8 @@
   <Operation Download="ashwac.br" Memory="UserROM"/>
   <Operation Download="standard.br" Memory="UserROM"/>
   <Operation Download="Foerderban.br" Memory="UserROM"/>
+<<<<<<< HEAD
   <Operation Download="stat_3.br" Memory="UserROM"/>
+=======
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
 </Transfer>

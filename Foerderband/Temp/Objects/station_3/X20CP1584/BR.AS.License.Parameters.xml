@@ -2,6 +2,7 @@
 <Parameters>
   <Connection>
     <DeviceParameters>/IF=tcpip /LOPO=11159 /SA=1</DeviceParameters>
+<<<<<<< HEAD
     <ConnectionParameters>/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=10.36.37.3 /REPO=11159 /ANSL=1 /PT=11169</ConnectionParameters>
   </Connection>
   <AsProject>
@@ -9,6 +10,15 @@
     <ProjectName>Foerderband</ProjectName>
     <ActiveConfigurationName>station_3</ActiveConfigurationName>
     <LicenseDataFolder>Z:\GitHub\Industrial-automation\Foerderband\Temp\Objects\station_3\X20CP1584</LicenseDataFolder>
+=======
+    <ConnectionParameters>/COMT=2500 /AM=* /DAIP=10.36.37.3 /REPO=11159 /ANSL=1</ConnectionParameters>
+  </Connection>
+  <AsProject>
+    <ApjFullFileName>D:\ia\Foerderband\Foerderband.apj</ApjFullFileName>
+    <ProjectName>Foerderband</ProjectName>
+    <ActiveConfigurationName>station_3</ActiveConfigurationName>
+    <LicenseDataFolder>D:\ia\Foerderband\Temp\Objects\station_3\X20CP1584</LicenseDataFolder>
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
   </AsProject>
   <General>
     <DeleteParameterFile>false</DeleteParameterFile>

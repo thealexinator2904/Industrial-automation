@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BuildReasons>
+<<<<<<< HEAD
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_3\x20cp1584\foerderban\cyclic.c.o">
     <BuildReason>Target "cyclic.c.o" does not exist</BuildReason>
   </Rule>
@@ -21,4 +22,9 @@
   <Rule ID="$(AS_PROJECT_PATH)\binaries\station_3\x20cp1584\transfer.lst">
     <BuildReason>Target "transfer.lst" does not exist</BuildReason>
   </Rule>
+=======
+  <Rule ID="#cpu_tp.mak">
+    <BuildReason>Rule is forced.</BuildReason>
+  </Rule>
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
 </BuildReasons>

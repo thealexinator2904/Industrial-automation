@@ -9,6 +9,7 @@
       Source="Foerderband"
       Language="ANSIC">
       <File
+<<<<<<< HEAD
         Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Types.typ" />
       <File
         Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Variables.var" />
@@ -22,6 +23,11 @@
         Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Types.typ" />
       <File
         Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_3\Variables.var" />
+=======
+        Path="D:\ia\Foerderband\Logical\Foerderband\Types.typ" />
+      <File
+        Path="D:\ia\Foerderband\Logical\Foerderband\Variables.var" />
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
     </Task>
   </TaskClass>
   <TaskClass

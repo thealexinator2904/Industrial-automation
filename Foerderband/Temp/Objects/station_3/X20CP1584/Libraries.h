@@ -1,8 +1,13 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
+<<<<<<< HEAD
 #ifndef _LIBRARIES_20201021140016_
 #define _LIBRARIES_20201021140016_
+=======
+#ifndef _LIBRARIES_20201006135905_
+#define _LIBRARIES_20201006135905_
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
 
 __asm__(".section \".plc\"");
 
@@ -490,5 +495,9 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/standard/standard.var\\\" scope 
 __asm__(".previous");
 
 
+<<<<<<< HEAD
 #endif /* _LIBRARIES_20201021140016_ */
+=======
+#endif /* _LIBRARIES_20201006135905_ */
+>>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
 
