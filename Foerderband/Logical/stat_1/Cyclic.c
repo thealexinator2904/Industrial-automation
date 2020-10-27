@@ -1,5 +1,6 @@
 #define false 0
 #define true 1
+#define OR_MANUAL_MODE(bedingung) (bedingung&& auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q)
 
 #include <bur/plctypes.h>
 
@@ -14,7 +15,11 @@ void setBohrer(int on);
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
+	static F_TRIGtyp stop_trig;
 
+	stop_trig.CLK = DI_Stop;
+	F_TRIG(&stop_trig);
+	
 	switch(state)
 	{
 		case WAIT:
@@ -23,14 +28,14 @@ void _CYCLIC ProgramCyclic(void)
 			setBohrer(0);
 			work_done = 0;
 			
-			if(work_now)
+			if(OR_MANUAL_MODE(work_now))
 				state = BOHREN;
 			break;
 		
 		case SENKEN:
 			setHubzylinderstate(DWN);
 			
-			if(DI_Z_axis_unten)
+			if(OR_MANUAL_MODE(DI_Z_axis_unten))
 				state = HEBEN;
 			break;
 		
@@ -42,14 +47,14 @@ void _CYCLIC ProgramCyclic(void)
 		case VERFAHREN:
 			setLinearAchse(RECHTS);
 			
-			if(DI_X_axis_links)
+			if(OR_MANUAL_MODE(DI_X_axis_links))
 				state = BOHREN;
 			break;
 		
 		case HEBEN:
 			setHubzylinderstate(UP);
 			
-			if(DI_Z_axis_oben)
+			if(OR_MANUAL_MODE(DI_Z_axis_oben))
 			{
 				if(DI_X_axis_recht)
 					state = VERFAHREN;
@@ -60,7 +65,7 @@ void _CYCLIC ProgramCyclic(void)
 		case FERTIG:
 			work_done = true;
 			
-			if(work_now == 0)
+			if(OR_MANUAL_MODE(work_now == 0))
 				state = WAIT;
 			break;
 		
