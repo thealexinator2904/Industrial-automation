@@ -1,6 +1,0 @@
-$(AS_PROJECT_PATH)/Logical/Libraries/standard/standard.fun
-$(AS_PROJECT_PATH)/Logical/Global.var
-<<<<<<< HEAD
-=======
-$(AS_PROJECT_PATH)/Logical/Foerderband/Variables.var
->>>>>>> b20e66e0e128ad50a465f280a9c356db7e86c456
