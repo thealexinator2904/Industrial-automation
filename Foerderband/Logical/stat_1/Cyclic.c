@@ -1,6 +1,6 @@
 #define false 0
 #define true 1
-#define OR_MANUAL_MODE(bedingung) (bedingung&& auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q)
+#define OR_MANUAL_MODE(bedingung) ((bedingung)&& auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q)
 
 #include <bur/plctypes.h>
 

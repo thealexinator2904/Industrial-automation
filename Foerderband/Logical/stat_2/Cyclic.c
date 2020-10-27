@@ -13,7 +13,11 @@ void setVereinzlerstate(enum vereinzlerstates state);
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
+	static F_TRIGtyp stop_trig;
 
+	stop_trig.CLK = DI_Stop;
+	F_TRIG(&stop_trig);
+	
 	switch(state)
 	{
 		case WAIT:
