@@ -15,9 +15,9 @@ TYPE
 		FERTIG,
 		ERROR_STAT3
 		);
-	error_states : 
+	error_codes_stat3 : 
 		(
-		KEIN_ERROR,
-		KEINE_FRONTSCHALE
+		KEIN_ERROR_STAT3,
+		KEINE_FRONTSCHALE_STAT3
 		);
 END_TYPE

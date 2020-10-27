@@ -57,7 +57,7 @@ VAR CONSTANT
 	time_blink_middle : INT := 375;
 	time_blink_fast : INT := 175;
 	timer_error_stopper_time : INT := 200;
-	timer_error_time : INT := 12000;
+	timer_error_motor_an_time : INT := 10000;
 	heat_timer_time : INT := 12000;
 	timer_2s_time : INT := 2000;
 END_VAR

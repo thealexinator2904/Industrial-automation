@@ -36,7 +36,7 @@ void _CYCLIC ProgramCyclic(void)
 	else
 		timer_error.IN = 0;
 	
-	timer_error.PT = timer_error_time;
+	timer_error.PT = timer_error_motor_an_time;
 	TON(&timer_error);
 	
 	if(timer_error.Q)

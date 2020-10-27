@@ -140,9 +140,7 @@ void _CYCLIC ProgramCyclic(void)
 				state = WAIT_TO_LET_GO;
 			
 			if(!auto_mode)
-			{
 				state = MANUAL;
-			}
 			break;
 		
 		case WAIT_TO_LET_GO:
@@ -153,13 +151,11 @@ void _CYCLIC ProgramCyclic(void)
 			
 			timer_2s.IN = 0;
 
-			if(!DI_Koppel_rechts) //wait till Übernahmebestätigung
+			if(!DI_Koppel_rechts) //wait till ÜBERNAHMEBESTÄTIUNGSNACHWEISDOKUMENTENSTEMPEL
 				state = LET_GO;
 			
 			if(!auto_mode)
-			{
 				state = MANUAL;
-			}
 			break;
 		
 		case LET_GO: //Let it go, Let it go, can't hold it back anymore :D
@@ -172,9 +168,7 @@ void _CYCLIC ProgramCyclic(void)
 				state = STOP;
 			
 			if(!auto_mode)
-			{
 				state = MANUAL;
-			}
 			break;
 		
 		case ERROR:
@@ -184,7 +178,7 @@ void _CYCLIC ProgramCyclic(void)
 			set_Koppel(BUSY);
 			
 			timer_2s.IN = 0;
-			blinkLed2(&DO_Q1, &DO_Q2, time_blink_fast);
+			blinkLed2(&DO_weiss, &DO_gruen, time_blink_fast);
 
 			if(!auto_mode)
 				state = MANUAL;
@@ -274,7 +268,7 @@ void _CYCLIC ProgramCyclic(void)
 
 	foerderband_state = state;
 	
-	if(set_error_state == 1)
+	if(set_error_state)
 		state = ERROR;
 }
 
