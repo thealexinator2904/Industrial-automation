@@ -51,6 +51,9 @@ VAR
 END_VAR
 (*Timer*)
 VAR CONSTANT
+	time_blink_slow : INT := 700;
+	time_blink_middle : INT := 375;
+	time_blink_fast : INT := 175;
 	timer_error_stopper_time : INT := 200;
 	timer_error_time : INT := 12000;
 	heat_timer_time : INT := 12000;

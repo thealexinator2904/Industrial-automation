@@ -8,10 +8,6 @@
 #include <AsDefault.h>
 #endif
 
-#define BLINK_FAST 200
-#define BLINK_MIDDLE 350
-#define BLINK_SLOW 750
-
 BOOL isWorkMode();
 BOOL isAutoMode();
 void set_Koppel(enum koppel_state state);
@@ -33,6 +29,7 @@ void _CYCLIC ProgramCyclic(void)
 	auto_mode = isAutoMode();
 	auto_mode_glob = auto_mode;
 	work_now = 0;
+	
 	switch(state)
 	{
 		case EMER_HALT:
@@ -208,46 +205,36 @@ void _CYCLIC ProgramCyclic(void)
 				{
 					DO_Antrieb_links = 1;
 					DO_Antrieb_rechts = 0;
-					
-					DO_Q1 = 0;
-					DO_Q2 = 0;
 					DO_weiss = 0;
 					
 					if(DO_schleichgang)
-						blinkLed(&DO_gruen, BLINK_MIDDLE);
+						blinkLed(&DO_gruen, time_blink_middle);
 					else
-						blinkLed(&DO_gruen, BLINK_FAST);
+						blinkLed(&DO_gruen, time_blink_fast);
 				}
 				else if(!DO_Antrieb_links && !DI_Stop)
 				{
 					DO_Antrieb_rechts = 1;
 					DO_Antrieb_links = 0;
-					
-					DO_Q1 = 0;
-					DO_Q2 = 0;
 					DO_gruen = 0;
 					
 					if(DO_schleichgang)
-						blinkLed(&DO_weiss, BLINK_MIDDLE);
+						blinkLed(&DO_weiss, time_blink_middle);
 					else
-						blinkLed(&DO_weiss, BLINK_FAST);
+						blinkLed(&DO_weiss, time_blink_fast);
 				}
 				else
 				{
 					DO_Antrieb_links = 0;
 					DO_Antrieb_rechts = 0;
 					
-//					DO_Q1 = 0;
-//					DO_Q2 = 0;
-//					DO_gruen = 0;
-//					DO_weiss = 0;
+					DO_gruen = 0;
+					DO_weiss = 0;
 				}
-				//TODO blinken grün geht net, q1 q2 bei stopper toggle a net
+			
 				if(R_TRIG_reset.Q)
 				{
 					DO_Stopper = !DO_Stopper;
-					DO_Q1 = !DO_Q1;
-					DO_Q2 = !DO_Q2;
 				}
 			}
 			else
@@ -258,6 +245,7 @@ void _CYCLIC ProgramCyclic(void)
 
 			if(auto_mode)
 			{
+				DO_gruen = 0;
 				DO_weiss = 0;
 				DO_Q1 = 0;
 				DO_Q2 = 0;
@@ -271,9 +259,9 @@ void _CYCLIC ProgramCyclic(void)
 	F_TRIG_rechts.CLK = DI_Band_rechts;
 	
 	if(DI_Wahl && !auto_mode)
-		blinkLed(&DO_gruen, BLINK_SLOW);
-	else
-		DO_gruen = auto_mode;	
+		blinkLed(&DO_gruen, time_blink_slow);
+//	else
+//		DO_gruen = auto_mode;	
 	
 	TON(&timer_2s);
 	R_TRIG(&F_TRIG_01);
