@@ -4,12 +4,11 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="Foerderban" Source="Foerderband.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <Task Name="stat_1" Source="stat_1.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="Foerdeband" Source="FoerdebandWatch.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
-  <TaskClass Name="Cyclic#4">
-    <Task Name="Foerdeband" Source="" Memory="UserROM" Language="Binary" />
-  </TaskClass>
+  <TaskClass Name="Cyclic#4" />
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />

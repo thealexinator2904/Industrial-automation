@@ -1,6 +1,9 @@
 
 #include <bur/plctypes.h>
 
+#define true 1
+#define false 0
+
 #ifdef _DEFAULT_INCLUDES
 #include <AsDefault.h>
 #endif
@@ -24,7 +27,7 @@ void _CYCLIC ProgramCyclic(void)
 		TON(&timer_error_stopper);
 		
 		error_code = KEINE_DRUCKLUFT;
-		state = ERROR;
+		set_error_state = true;
 	}
 	
 	//Motor läuft 12 Sekunden (im Automatikmodus)
@@ -42,6 +45,6 @@ void _CYCLIC ProgramCyclic(void)
 		TON(&timer_error);
 		
 		error_code = MOTOR_LAEUFT_ZU_LANGE;
-		state = ERROR;
+		set_error_state = true;
 	}
 }

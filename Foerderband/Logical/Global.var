@@ -47,6 +47,7 @@ VAR
 	foerderband_state : USINT;
 	work_done : BOOL;
 	work_now : BOOL;
+	set_error_state : BOOL := FALSE;
 	error_flag : BOOL := FALSE;
 END_VAR
 (*Timer*)

@@ -42,6 +42,7 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 		
 		case INIT:
+			DO_gruen = 1;
 			DO_Antrieb_rechts = 1;
 			DO_Antrieb_links = 0;
 			DO_Stopper = 0;
@@ -67,7 +68,6 @@ void _CYCLIC ProgramCyclic(void)
 			set_Koppel(RTR);
 			
 			timer_2s.IN = 0;
-
 			
 			if(auto_mode && !DI_Koppel_links && DI_Band_links)
 				state = GO_PRE_WORK;
@@ -87,9 +87,7 @@ void _CYCLIC ProgramCyclic(void)
 				state = DETECT;
 			
 			if(!auto_mode)
-			{
 				state = MANUAL;
-			}
 			break;	
 		
 		case DETECT:
@@ -176,17 +174,15 @@ void _CYCLIC ProgramCyclic(void)
 		
 		case ERROR:
 			DO_Antrieb_links = 0;
-			DO_Antrieb_rechts= 0;
-			error_flag = 1;
+			DO_Antrieb_rechts = 0;
+			error_flag = true;
 			set_Koppel(BUSY);
 			
 			timer_2s.IN = 0;
-			blinkLed2(&DO_Q1, &DO_Q2, 150);
+			blinkLed2(&DO_Q1, &DO_Q2, time_blink_fast);
 
 			if(!auto_mode)
-			{
 				state = MANUAL;
-			}
 			break;
 		
 		case MANUAL:
@@ -260,8 +256,6 @@ void _CYCLIC ProgramCyclic(void)
 	
 	if(DI_Wahl && !auto_mode)
 		blinkLed(&DO_gruen, time_blink_slow);
-//	else
-//		DO_gruen = auto_mode;	
 	
 	TON(&timer_2s);
 	R_TRIG(&F_TRIG_01);
@@ -273,6 +267,9 @@ void _CYCLIC ProgramCyclic(void)
 	DO_Q2 = manual_work_mode_glob;
 
 	foerderband_state = state;
+	
+	if(set_error_state == 1)
+		state = ERROR;
 }
 
 BOOL isWorkMode()
@@ -310,7 +307,11 @@ BOOL isAutoMode()
 			auto_mode = true;
 		else ;
 	else
+	{
 		auto_mode = false;
+		error_flag = false;
+		set_error_state = false;
+	}
 	
 	if(!DI_Stop)
 		auto_mode = false;

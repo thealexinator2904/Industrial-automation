@@ -2,8 +2,8 @@
 <?AutomationStudio Version=4.7.2.98?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
+    <Task Name="Foerdeband" Source="FoerdebandWatch.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <Task Name="Foerderban" Source="Foerderband.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
-    <Task Name="Program" Source="" Memory="UserROM" Language="Binary" />
     <Task Name="stat_6" Source="stat_6.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />

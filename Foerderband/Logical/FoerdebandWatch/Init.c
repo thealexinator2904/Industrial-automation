@@ -7,5 +7,4 @@
 
 void _INIT ProgramInit(void)
 {
-
 }
