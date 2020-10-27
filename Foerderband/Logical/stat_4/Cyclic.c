@@ -1,6 +1,8 @@
 #define false 0
 #define true 1
 
+#define OR_MANUAL_MODE(bedingung) (((bedingung)&& auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q))
+
 #include <bur/plctypes.h>
 
 #ifdef _DEFAULT_INCLUDES
@@ -14,7 +16,11 @@ void setGreiferstate(enum greiferstate state);
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
+	static F_TRIGtyp stop_trig;
 
+	stop_trig.CLK = DI_Stop;
+	F_TRIG(&stop_trig);
+	
 	switch(state)
 	{
 		case WAIT:
@@ -24,7 +30,7 @@ void _CYCLIC ProgramCyclic(void)
 			
 			work_done = 0;
 			
-			if(work_now)
+			if(OR_MANUAL_MODE(work_now))
 				state = SENKEN;
 			
 			if(!DI_Frontschale)
@@ -34,41 +40,41 @@ void _CYCLIC ProgramCyclic(void)
 		case GREIFEN:
 			setGreiferstate(CLOSE);
 			
-			if(DI_Greifer_closed)
+			if(OR_MANUAL_MODE(DI_Greifer_closed))
 				state = HEBEN;
 			break;
 		
 		case HEBEN:
 			setHubzylinderstate(UP);
 			
-			if(DI_Hubzylinder_oben && DI_phi_0)
+			if(OR_MANUAL_MODE(DI_Hubzylinder_oben && DI_phi_0))
 				state = DREHEN;
 			
-			if(DI_Hubzylinder_oben && DI_phi_180)
+			if(OR_MANUAL_MODE(DI_Hubzylinder_oben && DI_phi_180))
 				state = FERTIG;
 			break;
 		
 		case DREHEN:
 			setDrehzylinderstate(_180);
 			
-			if(DI_phi_180)
+			if(OR_MANUAL_MODE(DI_phi_180))
 				state = SENKEN;
 			break;
 		
 		case SENKEN:
 			setHubzylinderstate(DWN);
 			
-			if(DI_Hubzylinder_unten && DI_phi_0)
+			if(OR_MANUAL_MODE(DI_Hubzylinder_unten && DI_phi_0))
 				state = GREIFEN;
 			
-			if(DI_Hubzylinder_unten && DI_phi_180)
+			if(OR_MANUAL_MODE(DI_Hubzylinder_unten && DI_phi_180))
 				state = LOESEN;
 			break;
 		
 		case LOESEN:
 			setGreiferstate(OPEN);
 			
-			if(DI_Greifer_open);
+			if(OR_MANUAL_MODE(DI_Greifer_open))
 				state = HEBEN;
 			break;
 		
@@ -87,6 +93,7 @@ void _CYCLIC ProgramCyclic(void)
 		state = WAIT;
 	
 	work_state = state;
+
 }
 
 void setHubzylinderstate(enum hubzylinderstates  state)

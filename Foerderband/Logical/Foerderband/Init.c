@@ -37,4 +37,5 @@ void _INIT ProgramInit(void)
 	RFID_Reader = 0;
 
 	timer_2s.PT = timer_2s_time;
+	timer_5s.PT = time_5_s_timer;
 }

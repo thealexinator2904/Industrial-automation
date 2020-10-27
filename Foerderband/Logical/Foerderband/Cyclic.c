@@ -50,13 +50,18 @@ void _CYCLIC ProgramCyclic(void)
 			set_Koppel(BUSY);
 			
 			timer_2s.IN = 0;
-			
+			timer_5s.IN = 1;
 			if((DI_Ident_1 || DI_Ident_2 || DI_Ident_3 || DI_Ident_4) && auto_mode)
 				state = DETECT;	
 	
 			if(DI_Band_rechts && auto_mode)
 				state = GO_AFT_WORK;
 			
+			if(timer_5s.Q && auto_mode)
+			{
+				timer_5s.IN = 0;
+				state = STOP;
+			}
 			if(!auto_mode)
 				state = MANUAL;
 			break;
@@ -69,7 +74,7 @@ void _CYCLIC ProgramCyclic(void)
 			
 			timer_2s.IN = 0;
 			
-			if(auto_mode && !DI_Koppel_links && DI_Band_links)
+			if(auto_mode && !DI_Koppel_links)
 				state = GO_PRE_WORK;
 			if(!auto_mode)
 			{
@@ -258,6 +263,7 @@ void _CYCLIC ProgramCyclic(void)
 		blinkLed(&DO_gruen, time_blink_slow);
 	
 	TON(&timer_2s);
+	TON(&timer_5s);
 	R_TRIG(&F_TRIG_01);
 	R_TRIG_reset.CLK = DI_RESET;
 	R_TRIG(&R_TRIG_reset);
