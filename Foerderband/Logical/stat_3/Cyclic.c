@@ -14,26 +14,28 @@ void setHubzylinderstate (enum hubzylinderstates state);
 void _CYCLIC ProgramCyclic(void)
 {
 	static enum states state = WAIT;
-	static enum error_codes_stat3 error_codes_stat3 = KEIN_ERROR_STAT3;
+	static enum error_codes_stat3 error_code_stat3 = KEIN_ERROR_STAT3;
 	static F_TRIGtyp stop_trig;
 
 	stop_trig.CLK = DI_Stop;
 	F_TRIG(&stop_trig);
+	
+	error_state_indicator = error_code_stat3;
 	
 	switch(state)
 	{
 		case WAIT:	//Auf Arbeitsbefehl (work_now) warten und überprüfen, ob Frontschale vorhanden
 			setHubzylinderstate(UP);
 			work_done = 0;
-			error_codes_stat3 = KEIN_ERROR_STAT3;
+			error_code_stat3 = KEIN_ERROR_STAT3;
 			
 			if((work_now && DI_Frontschale_vorhanden && auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q))	//Arbeitsbefehl vorhanden & Werkstück in Ordnung --> Senken
 				state = SENKEN;
 			
-			// TODO Testen
+			// TODO Testen - EROR CODE GEHT NICHT. Auch bei Foerderband testen
 			if(work_now && !DI_Frontschale_vorhanden)	//Arbeitsbefehl vorhanden & Werkstück nicht in Ordnung --> Error
 			{
-				error_codes_stat3 = KEINE_FRONTSCHALE_STAT3;
+				error_code_stat3 = KEINE_FRONTSCHALE_STAT3;
 				error_flag = true;
 				state = ERROR_STAT3;
 			}
@@ -75,7 +77,10 @@ void _CYCLIC ProgramCyclic(void)
 			set_error_state = true;
 			
 			if(error_flag = 0)
+			{
+				error_code_stat3 = KEIN_ERROR_STAT3;
 				state = WAIT;
+			}
 			break;
 	}
 

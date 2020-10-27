@@ -63,7 +63,10 @@ void _CYCLIC ProgramCyclic(void)
 				state = STOP;
 			}
 			if(!auto_mode)
+			{
 				state = MANUAL;
+				timer_5s.IN = 0;
+			}
 			break;
 		
 		case STOP:
@@ -254,7 +257,7 @@ void _CYCLIC ProgramCyclic(void)
 	F_TRIG_rechts.CLK = DI_Band_rechts;
 	
 	if(DI_Wahl && !auto_mode)
-		blinkLed(&DO_gruen, time_blink_slow);
+		blinkLed(&DO_gruen, time_blink_middle);
 	
 	TON(&timer_2s);
 	TON(&timer_5s);
