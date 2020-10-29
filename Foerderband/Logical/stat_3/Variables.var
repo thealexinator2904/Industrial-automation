@@ -4,3 +4,6 @@ END_VAR
 VAR CONSTANT
 	Time_Pressen : UINT := 300;
 END_VAR
+VAR
+	error_state_indicator : USINT := 0;
+END_VAR
