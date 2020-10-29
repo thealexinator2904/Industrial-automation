@@ -27,7 +27,8 @@ void _CYCLIC ProgramCyclic(void)
 			work_done = 0;
 			error_codes_stat3 = KEIN_ERROR_STAT3;
 			
-			if((work_now && DI_Frontschale_vorhanden && auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q))	//Arbeitsbefehl vorhanden & Werkstück in Ordnung --> Senken
+			if(OR_MANUAL_MODE(work_now && DI_Frontschale_vorhanden))
+			//if((work_now && DI_Frontschale_vorhanden && auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q))	//Arbeitsbefehl vorhanden & Werkstück in Ordnung --> Senken
 				state = SENKEN;
 			
 			// TODO Testen
@@ -42,7 +43,8 @@ void _CYCLIC ProgramCyclic(void)
 		case SENKEN:	//Hubzylinder senken und halten 
 			setHubzylinderstate(DWN);
 			
-			if((DI_Hubzylinder_unten_stat3 && auto_mode_glob)|| (manual_work_mode_glob && stop_trig.Q))
+			//if((DI_Hubzylinder_unten_stat3 && auto_mode_glob)|| (manual_work_mode_glob && stop_trig.Q))
+			if(OR_MANUAL_MODE(DI_Hubzylinder_unten_stat3))
 				state = HALTEN;	
 			break;
 		
@@ -50,7 +52,8 @@ void _CYCLIC ProgramCyclic(void)
 			setHubzylinderstate(DONT_MOVE);
 			Timer_Pressen.IN = 1;
 
-			if ((Timer_Pressen.Q&& auto_mode_glob)|| (manual_work_mode_glob && stop_trig.Q))
+			if(OR_MANUAL_MODE(Timer_Pressen.Q))
+			//if ((Timer_Pressen.Q&& auto_mode_glob)|| (manual_work_mode_glob && stop_trig.Q))
 			{
 				Timer_Pressen.IN = 0;
 				state = HEBEN;

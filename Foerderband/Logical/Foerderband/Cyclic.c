@@ -188,7 +188,7 @@ void _CYCLIC ProgramCyclic(void)
 			set_Koppel(BUSY);
 			timer_2s.IN = 0;
 			error_flag = 0;
-
+			timer_5s.IN = 0;
 			if (AI_Potentiometer_1 > 16000)
 				DO_schleichgang = 0;
 			else
