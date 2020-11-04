@@ -182,7 +182,7 @@
     Path="D:\github\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Cyclic.c"
     LogicalPath="FoerdebandWatch.Cyclic.c"
     Type="File"
-    LastWriteTime="132489610010808873"
+    LastWriteTime="132489614450802977"
     Private="false" />
   <Object
     Path="D:\github\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Init.c"
@@ -322,7 +322,7 @@
     Path="D:\github\Industrial-automation\Foerderband\Logical\stat_4\Cyclic.c"
     LogicalPath="stat_4.Cyclic.c"
     Type="File"
-    LastWriteTime="132489534649425837"
+    LastWriteTime="132489635611667482"
     Private="false" />
   <Object
     Path="D:\github\Industrial-automation\Foerderband\Logical\stat_4\Init.c"

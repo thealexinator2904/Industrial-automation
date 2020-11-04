@@ -192,7 +192,7 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\foerdeband.ox" LastWriteTime="2020-11-04 08:51:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\foerdeband.ox" LastWriteTime="2020-11-04 12:10:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_5\x20cp1584\cpu.per" LastWriteTime="2020-10-27 12:02:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
@@ -203,22 +203,22 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="4096" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\foerdeband.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\a.out" LastWriteTime="2020-11-04 08:51:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\a.out" LastWriteTime="2020-11-04 12:10:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\Foerdeband.ox&quot; -T SG4 -r Cyclic1 -G V4.1.2  -B A4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o" LastWriteTime="1601-01-01 00:00:00" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o" LastWriteTime="2020-11-04 12:10:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\init.c.o" LastWriteTime="2020-11-04 08:51:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\exit.c.o" LastWriteTime="2020-11-04 08:51:42" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\_bur_pvdef.c.o" LastWriteTime="2020-11-04 08:51:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\_bur_pvdef.c.o" LastWriteTime="2020-11-04 12:10:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\Cyclic.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\Init.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\Exit.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\_bur_pvdef.c.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_5\X20CP1584\Foerdeband\a.out&quot; -G V4.1.2  -T SG4 -M IA32 &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libAsIecCon.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libastime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libstandard.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libruntime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\liboperator.a&quot; -specs=I386specs_brelf" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerdebandwatch\cyclic.c" LastWriteTime="2020-11-04 10:56:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerdebandwatch\cyclic.c" LastWriteTime="2020-11-04 11:04:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
     <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
@@ -246,7 +246,7 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\_bur_pvdef.c.o">
     <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\_bur_pvdef.c" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o" LastWriteTime="1601-01-01 00:00:00" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o" LastWriteTime="2020-11-04 12:10:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\init.c.o" LastWriteTime="2020-11-04 08:51:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\exit.c.o" LastWriteTime="2020-11-04 08:51:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
@@ -287,7 +287,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\fwrules.br" LastWriteTime="2020-10-27 13:47:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerderban.br" LastWriteTime="2020-11-04 08:51:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\stat_5.br" LastWriteTime="2020-11-04 08:51:42" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband.br" LastWriteTime="2020-11-04 08:51:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband.br" LastWriteTime="2020-11-04 12:10:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\standard.br" LastWriteTime="2020-10-27 13:47:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\asiol1.br" LastWriteTime="2020-10-27 13:47:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_5\x20cp1584\cpu.sw" LastWriteTime="2020-10-27 13:47:04" />

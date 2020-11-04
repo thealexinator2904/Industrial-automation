@@ -2,7 +2,7 @@
 <Parameters>
   <Connection>
     <DeviceParameters>/IF=tcpip /LOPO=11159 /SA=1</DeviceParameters>
-    <ConnectionParameters>/COMT=2500 /AM=* /DAIP=10.36.37.5 /REPO=11159 /ANSL=1</ConnectionParameters>
+    <ConnectionParameters>/COMT=2500 /AM=* /DAIP=10.36.37.5 /REPO=11159 /ANSL=1 /PT=11169</ConnectionParameters>
   </Connection>
   <AsProject>
     <ApjFullFileName>D:\github\Industrial-automation\Foerderband\Foerderband.apj</ApjFullFileName>

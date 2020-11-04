@@ -1,10 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BuildReasons>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\foerdebandwatch\cyclic.c" differs.
+    <BuildReason>Target "cyclic.c.o" does not exist</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\_bur_pvdef.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\cyclic.c.o" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\foerdeband.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\a.out" differs.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband\foerdeband.ox" differs.
 </BuildReason>
   </Rule>
   <Rule ID="#cpu_tp.mak">
     <BuildReason>Rule is forced.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\station_5\x20cp1584\transfer.lst">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_5\x20cp1584\foerdeband.br" differs.
+</BuildReason>
   </Rule>
 </BuildReasons>

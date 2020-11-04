@@ -3,6 +3,8 @@
 <Transfer xmlns="http://br-automation.co.at/AS/Transfer">
   <OperatingSystem Version="A4.73"/>
   <Hardware Target="SG4"/>
+  <Operation Delete="Foerdeband.br"/>
+  <Operation Delete="stat_1.br"/>
   <Operation Delete="Foerderban.br"/>
   <Operation Download="asfw.br" Memory="SystemROM"/>
   <Operation Download="ashwd.br" Memory="SystemROM"/>
@@ -20,4 +22,5 @@
   <Operation Download="standard.br" Memory="UserROM"/>
   <Operation Download="Foerderban.br" Memory="UserROM"/>
   <Operation Download="stat_1.br" Memory="UserROM"/>
+  <Operation Download="Foerdeband.br" Memory="UserROM"/>
 </Transfer>

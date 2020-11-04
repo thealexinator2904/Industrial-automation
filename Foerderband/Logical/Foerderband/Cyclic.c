@@ -36,9 +36,9 @@ void _CYCLIC ProgramCyclic(void)
 			DO_Antrieb_rechts = 0;
 			DO_Antrieb_links = 0;
 			set_Koppel(BUSY);
-			
+			auto_mode = false;
 			if(DI_NOTAUS)
-				state = INIT;
+				state = MANUAL;
 			break;
 		
 		case INIT:
@@ -318,7 +318,8 @@ BOOL isAutoMode()
 	
 	if(!DI_Stop)
 		auto_mode = false;
-	
+	if(foerderband_state == EMER_HALT)
+		auto_mode = false;
 	return auto_mode;
 }
 
