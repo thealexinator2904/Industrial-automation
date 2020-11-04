@@ -9,9 +9,9 @@
       Source="Foerderband"
       Language="ANSIC">
       <File
-        Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Types.typ" />
+        Path="D:\github\Industrial-automation\Foerderband\Logical\Foerderband\Types.typ" />
       <File
-        Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\Foerderband\Variables.var" />
+        Path="D:\github\Industrial-automation\Foerderband\Logical\Foerderband\Variables.var" />
     </Task>
     <Task
       Name="stat_5"
@@ -19,9 +19,9 @@
       Source="stat_5"
       Language="ANSIC">
       <File
-        Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Types.typ" />
+        Path="D:\github\Industrial-automation\Foerderband\Logical\stat_5\Types.typ" />
       <File
-        Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Variables.var" />
+        Path="D:\github\Industrial-automation\Foerderband\Logical\stat_5\Variables.var" />
     </Task>
     <Task
       Name="Foerdeband"
@@ -29,9 +29,9 @@
       Source="FoerdebandWatch"
       Language="ANSIC">
       <File
-        Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Types.typ" />
+        Path="D:\github\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Types.typ" />
       <File
-        Path="Z:\GitHub\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Variables.var" />
+        Path="D:\github\Industrial-automation\Foerderband\Logical\FoerdebandWatch\Variables.var" />
     </Task>
   </TaskClass>
   <TaskClass

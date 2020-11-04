@@ -11,6 +11,8 @@
 void _CYCLIC ProgramCyclic(void)
 {	
 	static enum error_codes error_code = KEIN_ERROR;
+	static TON_typ drehgeber_timer;
+	drehgeber_timer.PT=800;
 	
 	//Stopper ist nicht im gewünschten Zustand / Keine Druckluft vorhanden
 	if(DI_Stopper != DO_Stopper)
@@ -47,4 +49,13 @@ void _CYCLIC ProgramCyclic(void)
 		error_code = MOTOR_LAEUFT_ZU_LANGE;
 		set_error_state = true;
 	}
+	//Motor soll laufen, läuft aber ned :(
+	drehgeber_timer.IN = DI_Drehgeber_1 && (DO_Antrieb_rechts || DO_Antrieb_links);
+	TON(&drehgeber_timer);
+	if(drehgeber_timer.Q)
+	{
+		error_code = ERROR_ANTRIEB;
+		set_error_state = true;
+	}
+
 }

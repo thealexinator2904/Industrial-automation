@@ -29,7 +29,7 @@ void _CYCLIC ProgramCyclic(void)
 			setGreiferstate(OPEN);
 			
 			work_done = 0;
-			
+			 
 			if(OR_MANUAL_MODE(work_now))
 				state = SENKEN;
 			

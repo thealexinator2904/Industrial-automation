@@ -4,7 +4,8 @@ TYPE
 		(
 		KEIN_ERROR,
 		MOTOR_LAEUFT_ZU_LANGE,
-		KEINE_DRUCKLUFT
+		KEINE_DRUCKLUFT,
+		ERROR_ANTRIEB
 		);
 	programm_states : 
 		(

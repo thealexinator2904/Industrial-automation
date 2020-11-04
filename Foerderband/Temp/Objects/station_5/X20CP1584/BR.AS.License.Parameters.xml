@@ -5,10 +5,10 @@
     <ConnectionParameters>/COMT=2500 /AM=* /DAIP=10.36.37.5 /REPO=11159 /ANSL=1</ConnectionParameters>
   </Connection>
   <AsProject>
-    <ApjFullFileName>Z:\GitHub\Industrial-automation\Foerderband\Foerderband.apj</ApjFullFileName>
+    <ApjFullFileName>D:\github\Industrial-automation\Foerderband\Foerderband.apj</ApjFullFileName>
     <ProjectName>Foerderband</ProjectName>
     <ActiveConfigurationName>station_5</ActiveConfigurationName>
-    <LicenseDataFolder>Z:\GitHub\Industrial-automation\Foerderband\Temp\Objects\station_5\X20CP1584</LicenseDataFolder>
+    <LicenseDataFolder>D:\github\Industrial-automation\Foerderband\Temp\Objects\station_5\X20CP1584</LicenseDataFolder>
   </AsProject>
   <General>
     <DeleteParameterFile>false</DeleteParameterFile>
