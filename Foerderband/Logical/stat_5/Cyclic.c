@@ -28,8 +28,6 @@ void _CYCLIC ProgramCyclic(void)
 			
 			if(work_now)
 				state = HEIZEN;
-			/*if(!DI_Frontschale)
-				state = FERTIG;*/
 			break;
 		
 		case HEIZEN:

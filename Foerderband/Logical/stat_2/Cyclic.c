@@ -1,6 +1,8 @@
 #define false 0
 #define true 1
 
+#define OR_MANUAL_MODE(bedingung) ((( bedingung ) && auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q))
+
 #include <bur/plctypes.h>
 
 #ifdef _DEFAULT_INCLUDES
@@ -25,7 +27,7 @@ void _CYCLIC ProgramCyclic(void)
 			setVereinzlerstate(CLOSE);
 			work_done = 0;
 			
-			if(work_now && DI_Palette)
+			if(OR_MANUAL_MODE( work_now && DI_Palette))
 				state = SENKEN;
 			
 			if(DI_Frontschale)
@@ -35,7 +37,7 @@ void _CYCLIC ProgramCyclic(void)
 		case SENKEN:
 			setHubzylinderstate(DWN);
 			
-			if(DI_Hubzylinder_unten)
+			if(OR_MANUAL_MODE( DI_Hubzylinder_unten ))
 				state = FALLEN_LASSEN;
 			break;
 		
@@ -43,7 +45,7 @@ void _CYCLIC ProgramCyclic(void)
 			setHubzylinderstate(DONT_MOVE);
 			setVereinzlerstate(OPEN);
 			
-			if(DI_Hubzylinder_unten && DI_obere_Klinge)
+			if(OR_MANUAL_MODE( DI_Hubzylinder_unten && DI_obere_Klinge))
 				state = HEBEN;
 			break;
 		
@@ -51,7 +53,7 @@ void _CYCLIC ProgramCyclic(void)
 			setVereinzlerstate(CLOSE);
 			setHubzylinderstate(UP);
 			
-			if(DI_Hubzylinder_oben)
+			if(OR_MANUAL_MODE( DI_Hubzylinder_oben))
 				state = FERTIG;
 			break;
 		
@@ -65,7 +67,7 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 	}
 	
-	if(!auto_mode_glob || !work_now)
+	if((!auto_mode_glob || !work_now) && !manual_work_mode_glob)
 		state = WAIT;
 	work_state = state;
 }

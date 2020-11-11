@@ -73,7 +73,7 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 	}
 	
-	if(!auto_mode_glob || !work_now)
+	if((!auto_mode_glob || !work_now) && !manual_work_mode_glob)
 		state = WAIT;
 	
 	work_state = state;
