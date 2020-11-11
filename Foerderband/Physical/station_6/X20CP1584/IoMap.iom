@@ -27,8 +27,8 @@ VAR_CONFIG
 	::DI_Ident_2 AT %IX."X20DI8371a".DigitalInput06;
 	::DI_Ident_3 AT %IX."X20DI8371a".DigitalInput07;
 	::DI_Ident_4 AT %IX."X20DI8371a".DigitalInput08;
-	DI_Kamera_01  AT %IX."X20DI8371b".DigitalInput01;
-	DI_Kamera_00  AT %IX."X20DI8371b".DigitalInput02;
-	DI_Kamera_02  AT %IX."X20DI8371b".DigitalInput03;
-	DO_Kamera_Trigger  AT %QX."X20DO8322b".DigitalOutput01;
+	::stat_6:DI_Kamera_01 AT %IX."X20DI8371b".DigitalInput01;
+	::stat_6:DI_Kamera_00 AT %IX."X20DI8371b".DigitalInput02;
+	::stat_6:DI_Kamera_02 AT %IX."X20DI8371b".DigitalInput03;
+	::stat_6:DO_Kamera_Trigger AT %QX."X20DO8322b".DigitalOutput01;
 END_VAR
