@@ -20,7 +20,7 @@ void _CYCLIC ProgramCyclic(void)
 
 	stop_trig.CLK = DI_Stop;
 	F_TRIG(&stop_trig);
-	
+
 	switch(state)
 	{
 		case WAIT:
@@ -47,10 +47,10 @@ void _CYCLIC ProgramCyclic(void)
 		case HEBEN:
 			setHubzylinderstate(UP);
 			
-			if(OR_MANUAL_MODE(DI_Hubzylinder_oben && DI_phi_0))
+			if(OR_MANUAL_MODE(DI_Hubzylinder_oben && DI_phi_0) && DI_phi_0)
 				state = DREHEN;
 			
-			if(OR_MANUAL_MODE(DI_Hubzylinder_oben && DI_phi_180))
+			if(OR_MANUAL_MODE(DI_Hubzylinder_oben && DI_phi_180) && DI_phi_180)
 				state = FERTIG;
 			break;
 		
@@ -64,10 +64,10 @@ void _CYCLIC ProgramCyclic(void)
 		case SENKEN:
 			setHubzylinderstate(DWN);
 			
-			if(OR_MANUAL_MODE(DI_Hubzylinder_unten && DI_phi_0))
+			if(OR_MANUAL_MODE(DI_Hubzylinder_unten && DI_phi_0) && DI_phi_0)
 				state = GREIFEN;
 			
-			if(OR_MANUAL_MODE(DI_Hubzylinder_unten && DI_phi_180))
+			if(OR_MANUAL_MODE(DI_Hubzylinder_unten && DI_phi_180) && DI_phi_180)
 				state = LOESEN;
 			break;
 		
@@ -89,7 +89,7 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 	}
 	
-	if(!auto_mode_glob || !work_now)
+	if((!auto_mode_glob || !work_now) && !manual_work_mode_glob)
 		state = WAIT;
 	
 	work_state = state;
