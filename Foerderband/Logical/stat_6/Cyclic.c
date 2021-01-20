@@ -73,9 +73,7 @@ int takePicture(void)
 	timer_picture.IN = true;
 	timer_picture.PT = timer_picture_time;
 	TON(&timer_picture);
-	
-	return false;
-	
+		
 	if(timer_picture.Q)
 	{
 		DO_Kamera_Trigger = !DO_Kamera_Trigger;
@@ -84,14 +82,15 @@ int takePicture(void)
 		
 		return true;
 	}
+	else
+		return false;
 }
 
 void processPicture(void)
 {
-	if (DI_Kamera_00 && (!DI_Kamera_02)) //good pic
+	if (DI_Kamera_01 && (!DI_Kamera_02)) //good pic
 		nice_pic_cnt++;
 			
-	else if ((!DI_Kamera_00) && DI_Kamera_02)	//bad pic
+	else if ((!DI_Kamera_01) && DI_Kamera_02)	//bad pic
 		shit_pic_cnt++;
-}		
-		
+}
