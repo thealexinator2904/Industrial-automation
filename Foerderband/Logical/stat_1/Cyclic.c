@@ -3,10 +3,13 @@
 #define OR_MANUAL_MODE(bedingung) ((bedingung)&& auto_mode_glob) || (manual_work_mode_glob && stop_trig.Q)
 
 #include <bur/plctypes.h>
+#include <standard.h>
 
 #ifdef _DEFAULT_INCLUDES
 #include <AsDefault.h>
 #endif
+
+
 
 void setHubzylinderstate(enum hubzylinderstates  state);
 void setLinearAchse(enum linearStates state);
@@ -14,8 +17,9 @@ void setBohrer(int on);
 
 void _CYCLIC ProgramCyclic(void)
 {
-	static enum states state = WAIT;
+	static enum states state = WAIT, lastState;
 	static F_TRIGtyp stop_trig;
+	static TON_typ Error_timer;
 
 	stop_trig.CLK = DI_Stop;
 	F_TRIG(&stop_trig);
@@ -69,13 +73,21 @@ void _CYCLIC ProgramCyclic(void)
 				state = WAIT;
 			break;
 		
-		case ERROR_STAT1:			
+		case ERROR_STAT1:
+			setBohrer(0);
 			break;
 	}
 	
 	if((!auto_mode_glob || !work_now) && !manual_work_mode_glob)
 		state = WAIT;
+		
+	Error_timer.PT = 4000;
+	Error_timer.IN = ((state != WAIT) && (state == lastState));
+	TON(&Error_timer);
 	
+	if(Error_timer.Q)
+		state= ERROR_STAT1;
+	lastState=state;
 	work_state = state;
 }
 
