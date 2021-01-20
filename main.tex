@@ -1,0 +1,64 @@
+%%%%% SOME OPTIONS %%%%% 
+\newcommand{\german}{true} % germanTrue or false --> Switch between german and english headers / titlepage
+\newcommand{\coloredTitlePage}{true} % Switch between colored and BW titlepage
+\newcommand{\company}{false}
+\newcommand{\ECE}{true}
+%%%%% Required Settings for the template %%%%%
+\input{LaTeX/ECEconfig.sty}
+\usepackage{hyperref}
+
+\makeglossaries
+
+\makeatletter
+\newcommand{\myscope}[2] % #1 = name , #2 = rotation angle
+{\draw[thick,rotate=#2] (#1) circle (12pt)
+ (#1) ++(-0.35,-0.1) -- ++(0.3,0.3) --++(0,-0.3)-- ++(0.3,0.3) --++(0,-0.3);
+}
+\newcommand{\costumPicWidth}[0]{
+0.8\textwidth
+}
+
+\newcommand{\costumPlotWidth}[0]{
+\textwidth
+}
+
+\addto\extrasngerman{\def\figureautorefname{Abbildung}}
+\addto\extrasngerman{\def\equationautorefname{Gleichung}}
+\addto\extrasngerman{\def\tableautorefname{Tabelle}}
+
+\input{LaTeX/Einheiten}
+
+\begin{document}
+\input{LaTeX/frontmatter/glossaries}
+%frontmatter inluding:
+%titlepage, abstract, acknowledgments, declaration, toc, lof, lot
+\frontmatter
+\renewcommand{\thepage}{\Roman{page}}
+
+\input{LaTeX/frontmatter/titlepage}
+
+\tableofcontents
+\printglossary
+%mainmatter inluding: Parts, chapters, sections, appendicies
+\mainmatter
+%Hier die verschiedenn tex_Dokumente der Labore einfügen
+\chapter{Überschrift 1}
+
+\chapter{Überschrift 2}
+
+
+\newpage
+\chapter{Signaturen}
+    Fertig gestellt am \today \\
+    \begin{figure}[H]
+        \centering
+        \includegraphics{LaTeX/pics/signature_grebien.png}
+    	\caption{Signatur: Grebien Alexander}
+    	\label{pic:signatur_grebien}
+    \end{figure}
+        
+\listoffigures
+\listoftables
+\bibliographystyle{ieeetr}
+\bibliography{meine_Zitatsbibliothek.bib}
+\end{document}

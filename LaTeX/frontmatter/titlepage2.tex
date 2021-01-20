@@ -1,0 +1,96 @@
+% titlepage ----> changelog
+%% Author: Mayer Florian (ECE)
+%%
+%% 10.10.16 ---------> Created TitlePage 
+
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont 
+
+
+
+\ifthenelse{\equal{\coloredTitlePage}{true}}
+{
+\newcommand{\bcol}{DENcol}
+\newcommand{\tcol}{white}
+}{
+\newcommand{\bcol}{white}
+\newcommand{\tcol}{black}
+}
+
+\thispagestyle{empty}
+
+%====== Create Sizes For Title what so ever ====== %
+\newcommand{\MainTitlesize}{\bf\fontsize{24}{24}\selectfont}
+\newcommand{\SubTitlesize}{\bf\fontsize{16}{16}\selectfont}
+\newcommand{\Namesize}{\bf\fontsize{14}{14}\selectfont}
+
+\ifthenelse{\equal{\german}{true}}
+{
+\begin{tikzpicture}[overlay]
+
+\node (Logo) at (17cm,-1) [anchor = east] {\includegraphics{LaTeX/temp_graphics/logo_FHJ_ECE_white.eps}};
+
+%%%% Hier ist das AT&S LOGO
+\node (Logo2) at (9.5cm,-1) [anchor = east] {\includegraphics[scale = 0.125]{LaTeX/temp_graphics/ats_logo_RGB_large.jpg}};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% ===== CREATE background ===== %%
+% Background Box
+\node (boxOne)  at (7cm,-12) [minimum width=1.1\paperwidth,fill = \bcol, minimum height=18cm, inner sep=0pt] {};
+
+\node (AuthName) [color = \tcol, font = \Namesize, align = flush right, anchor = north east] at (16,-6){\ThesisAuthor};
+
+\node (ThesisTitle) [color = \tcol, font = \MainTitlesize, align = flush right, anchor = north east] at ($(AuthName.south east) + (0,-2em)$){\ThesisTitle};
+
+\node (ThesisSubtitle) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisTitle.south east) + (0,-0.25em)$){\ThesisSubtitle};
+
+\node (ThesisType) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisSubtitle.south east) + (0,-2em)$){\ThesisType};
+
+\node (Organization) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(ThesisType.south east) + (0,-1.5em)$){\Organization};
+
+\node (Supervisor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Organization.south east) + (0,-1.5em)$){\bf{Betreuer:} \\ \Supervisor};
+
+%\node (Assessor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-1.5em)$){\bf{Prüfer:} \\ \Assessors};
+
+\node (ThesisDate) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-1.5em)$){\bf\ThesisDate};
+
+\node (SpecialNote) [color = \tcol, font = \large, align = center, anchor = north east] at ($(ThesisDate.south east) + (0,-1.5em)$){\begin{varwidth}{14cm} \SpecialNote \end{varwidth}};
+
+\end{tikzpicture}	
+}
+{
+\begin{tikzpicture}[overlay]
+
+\node (Logo) at (17cm,-1) [anchor = east] {\includegraphics{LaTeX/temp_graphics/logo_FHJ_ECE_white.eps}};
+
+%%%% Hier ist das AT&S LOGO
+\node (Logo2) at (9.5cm,-1) [anchor = east] {\includegraphics[scale = 0.125]{LaTeX/temp_graphics/ats_logo_RGB_large.jpg}};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ===== CREATE background ===== %%
+% Background Box
+\node (boxOne)  at (7cm,-12) [minimum width=1.1\paperwidth,fill = \bcol, minimum height=18cm, inner sep=0pt] {};
+
+\node (AuthName) [color = \tcol, font = \Namesize, align = flush right, anchor = north east] at (16,-4){\ThesisAuthor};
+
+\node (ThesisTitle) [color = \tcol, font = \MainTitlesize, align = flush right, anchor = north east] at ($(AuthName.south east) + (0,-2em)$){\ThesisTitle};
+
+\node (ThesisSubtitle) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisTitle.south east) + (0,-0.25em)$){\ThesisSubtitle};
+
+\node (ThesisType) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisSubtitle.south east) + (0,-2em)$){\ThesisType};
+
+\node (Organization) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(ThesisType.south east) + (0,-1.5em)$){\Organization};
+
+\node (Supervisor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Organization.south east) + (0,-1.5em)$){\bf{Supervisor:} \\ \Supervisor};
+
+%\node (Assessor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-1.5em)$){\bf{Assessors:} \\ \Assessors};
+
+\node (ThesisDate) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-1.5em)$){\bf\ThesisDate};
+
+\node (SpecialNote) [color = \tcol, font = \large, align = center, anchor = north east] at ($(ThesisDate.south east) + (0,-1.5em)$){\begin{varwidth}{14cm} \SpecialNote \end{varwidth}};
+
+\end{tikzpicture}
+}
+\renewcommand{\familydefault}{\WorkingFont}
+\normalfont

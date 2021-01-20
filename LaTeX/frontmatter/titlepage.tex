@@ -1,0 +1,187 @@
+% titlepage ----> changelog
+%% Author: Mayer Florian (ECE)
+%%
+%% 10.10.16 ---------> Created TitlePage 
+
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont 
+
+%%%%% Now we add YOUR Personal DATA %%%%%
+%%%%% What you enter here, will be written to the variables used within this document !! %%%%%%
+\ifthenelse{\equal{\german}{true}}
+{
+	\newcommand{\ThesisTitle}{Analoge Signalverarbeitung}
+	\newcommand{\ThesisSubtitle}{Laborprotokoll}
+	\newcommand{\ShortTitle}{ASV Laborprotokoll} % needed for headers within your document 
+	\newcommand{\ThesisAuthor}{Anderle Fabian, Grebien Alexander}
+	\newcommand{\ThesisDate}{Graz, SS2020}
+	\newcommand{\ThesisType}{} % Bachelor Thesis
+	%\newcommand{\Organization}{am Bachelor Studiengang Elektronik und Computer Engineering \\ der FH JOANNEUM -- University of Applied Sciences, Austria}
+	\newcommand{\Supervisor}{} % Supervisor 1 \\ Supervisor 2 \\ ...
+	\newcommand{\CoSupervisor}{} % Supervisor 1 \\ Supervisor 2 \\ ...
+	\newcommand{\Assessors}{}
+	\newcommand{\SpecialNote}{}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+{
+	\newcommand{\ThesisTitle}{Title of your Thesis}
+	\newcommand{\ThesisSubtitle}{Additional Title}
+	\newcommand{\ShortTitle}{Short Title} % needed for headers within your document 
+	\newcommand{\ThesisAuthor}{Author}
+	\newcommand{\ThesisDate}{Graz, \today}
+	\newcommand{\ThesisType}{Bachelor thesis 1 / 2} % Bachelor Thesis
+	%\newcommand{\Organization}{am Bachelor Studiengang Elektronik und Computer Engineering \\ der FH JOANNEUM -- University of Applied Sciences, Austria}
+	\newcommand{\Supervisor}{Your Supervisor} % Supervisor 1 \\ Supervisor 2 \\ ...
+	\newcommand{\CoSupervisor}{Your External-Supervisor} % Supervisor 1 \\ Supervisor 2 \\ ...
+	\newcommand{\Assessors}{Prüfer Eins \\ Prüfer Zwei \\ weitere....}
+	\newcommand{\SpecialNote}{}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\equal{\coloredTitlePage}{true}}
+{
+\newcommand{\bcol}{DENcol}
+\newcommand{\tcol}{white}
+}{
+\newcommand{\bcol}{white}
+\newcommand{\tcol}{black}
+}
+
+\thispagestyle{empty}
+
+%====== Create Sizes For Title what so ever ====== %
+\newcommand{\MainTitlesize}{\bf\fontsize{24}{24}\selectfont}
+\newcommand{\SubTitlesize}{\bf\fontsize{16}{16}\selectfont}
+\newcommand{\Namesize}{\bf\fontsize{14}{14}\selectfont}
+
+\ifthenelse{\equal{\german}{true}}
+{
+\begin{tikzpicture}[overlay]
+
+\ifthenelse{\equal{\company}{true}}
+{
+	\ifthenelse{\equal{\ECE}{true}}
+	{
+		\node (Logo) at (9cm,-1) [anchor = east] {\includegraphics[scale = 1]{LaTeX/temp_graphics/company_logo.eps}};
+		\node (Logo2) at (17cm,-0.9) [anchor = east] {\includegraphics[scale = 1.1]{LaTeX/temp_graphics/logo_FHJ_ECE_white.eps}};
+	}
+	{
+		\node (Logo) at (9cm,-1) [anchor = east] {\includegraphics[scale = 1]{LaTeX/temp_graphics/company_logo.eps}};
+		\node (Logo2) at (17cm,-0.9) [anchor = east] {\includegraphics[scale = 1.1]{LaTeX/temp_graphics/ecm_logo_eps.eps}};
+	}
+}
+{
+	\ifthenelse{\equal{\ECE}{true}}
+	{
+		\node (Logo) at (17cm,-0.9) [anchor = east] {\includegraphics[scale = 1.1]{LaTeX/temp_graphics/logo_FHJ_ECE_white.eps}};
+	}
+	{
+		\node (Logo) at (16cm,-0.9) [anchor = east] {\includegraphics[scale = 0.9]{LaTeX/temp_graphics/ecm_logo_eps.eps}};
+	}
+}
+
+%% ===== CREATE background ===== %%
+% Background Box
+\node (boxOne)  at (7cm,-12) [minimum width=1.1\paperwidth,fill = \bcol, minimum height=18cm, inner sep=0pt] {};
+
+\node (ThesisTitle) [color = \tcol, font = \MainTitlesize, align = flush right, anchor = north east] at (16,-4){\ThesisTitle};
+
+\node (ThesisSubtitle) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisTitle.south east) + (0,-0.25em)$){\ThesisSubtitle};
+
+\node (ThesisType) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisSubtitle.south east) + (0,-3em)$){\ThesisType};
+
+\node (AuthName) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(ThesisType.south east) + (0,-2em)$){\bf{angefertigt von:} \\ \ThesisAuthor};
+
+
+
+\ifthenelse{\equal{\ECE}{true}}
+{
+	\node (Organization) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(AuthName.south east) + (0,-3em)$){am Bachelor-Studiengang Elektronik und Computer Engineering \\ der FH JOANNEUM -- University of Applied Sciences, Austria};
+}
+{
+	\node (Organization) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(AuthName.south east) + (0,-3em)$){am Master-Studiengang Electronics and Computer Engineering \\ der FH JOANNEUM -- University of Applied Sciences, Austria};
+}
+
+\node (Supervisor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Organization.south east) + (0,-3em)$){\bf{ } \\ \Supervisor};
+
+\ifthenelse{\equal{\company}{true}}
+{
+	\node (COSupervisor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-3em)$){\bf{extern Betreut von:} \\ \CoSupervisor};
+	
+	\node (ThesisDate) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(COSupervisor.south east) + (0,-3em)$){\bf\ThesisDate};
+}
+{
+
+\node (ThesisDate) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-3em)$){\bf\ThesisDate};
+
+}
+
+\node (SpecialNote) [color = \tcol, font = \large, align = center, anchor = north east] at ($(ThesisDate.south east) + (0,-3em)$){\begin{varwidth}{14cm} \SpecialNote \end{varwidth}};
+
+\end{tikzpicture}	
+}
+{
+\begin{tikzpicture}[overlay]
+
+\ifthenelse{\equal{\company}{true}}
+{
+	\ifthenelse{\equal{\ECE}{true}}
+	{
+		\node (Logo) at (9cm,-1) [anchor = east] {\includegraphics[scale = 1]{LaTeX/temp_graphics/company_logo.eps}};
+		\node (Logo2) at (17cm,-0.9) [anchor = east] {\includegraphics[scale = 1.1]{LaTeX/temp_graphics/logo_FHJ_ECE_white.eps}};
+	}
+	{
+		\node (Logo) at (9cm,-1) [anchor = east] {\includegraphics[scale = 1]{LaTeX/temp_graphics/company_logo.eps}};
+		\node (Logo2) at (17cm,-0.9) [anchor = east] {\includegraphics[scale = 1.1]{LaTeX/temp_graphics/ecm_logo_eps.eps}};
+	}
+}
+{
+	\ifthenelse{\equal{\ECE}{true}}
+	{
+		\node (Logo) at (17cm,-0.9) [anchor = east] {\includegraphics[scale = 1.1]{LaTeX/temp_graphics/logo_FHJ_ECE_white.eps}};
+	}
+	{
+		\node (Logo) at (16cm,-0.9) [anchor = east] {\includegraphics[scale = 0.9]{LaTeX/temp_graphics/ecm_logo_eps.eps}};
+	}
+}
+
+%% ===== CREATE background ===== %%
+% Background Box
+\node (boxOne)  at (7cm,-12) [minimum width=1.1\paperwidth,fill = \bcol, minimum height=18cm, inner sep=0pt] {};
+
+\node (ThesisTitle) [color = \tcol, font = \MainTitlesize, align = flush right, anchor = north east] at (16,-4){\ThesisTitle};
+
+\node (ThesisSubtitle) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisTitle.south east) + (0,-0.25em)$){\ThesisSubtitle};
+
+\node (ThesisType) [color = \tcol, font = \SubTitlesize, align = flush right, anchor = north east] at ($(ThesisSubtitle.south east) + (0,-3em)$){\ThesisType};
+
+\node (AuthName) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(ThesisType.south east) + (0,-2em)$){\bf{created by:} \\ \ThesisAuthor};
+
+\ifthenelse{\equal{\ECE}{true}}
+{
+	\node (Organization) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(AuthName.south east) + (0,-3em)$){at the bachelor degree programme Elektronik und Computer Engineering \\ of FH JOANNEUM -- University of Applied Sciences, Austria};
+}
+{
+	\node (Organization) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(AuthName.south east) + (0,-3em)$){at the masters degree programme Elektronics and Computer Engineering \\ of FH JOANNEUM -- University of Applied Sciences, Austria};	
+}
+
+\node (Supervisor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Organization.south east) + (0,-3em)$){\bf{supervised by:} \\ \Supervisor};
+
+\ifthenelse{\equal{\company}{true}}
+{
+	\node (COSupervisor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-3em)$){\bf{external supervisor:} \\ \CoSupervisor};
+	
+	\node (ThesisDate) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(COSupervisor.south east) + (0,-3em)$){\bf\ThesisDate};
+}
+{
+	\node (ThesisDate) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-3em)$){\bf\ThesisDate};
+}
+
+%\node (Assessor) [color = \tcol, font = \large, align = flush right, anchor = north east] at ($(Supervisor.south east) + (0,-3em)$){\bf{Prüfer:} \\ \Assessors};
+
+\node (SpecialNote) [color = \tcol, font = \large, align = center, anchor = north east] at ($(ThesisDate.south east) + (0,-3em)$){\begin{varwidth}{14cm} \SpecialNote \end{varwidth}};
+
+\end{tikzpicture}	
+}
+\renewcommand{\familydefault}{\WorkingFont}
+\normalfont

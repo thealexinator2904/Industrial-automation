@@ -1,0 +1,224 @@
+%%%%% Configuration Package for the ThesisTemplate ECE / AEE %%%%%%
+%
+% Created by Mayer Florian October/2016
+% v1.0
+
+%======= DocumentClass ===========%
+\documentclass[11pt, openright]{book} %Extarticle supports more FontSizes
+
+%========= ADD Latex PACKAGES =========%
+\usepackage{tabularx}         
+\usepackage{parskip}%NEW
+\newcolumntype{x}[1]{!{\centering\arraybackslash\vrule width #1}}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc} %to allow vowel mutations
+\usepackage{tikz} % Schematic creator with TikZ in LaTex
+\usepackage{geometry,titlesec,layout}
+\usepackage{subfigure}
+\usepackage{xcolor,colortbl}
+%\usepackage{graphicx,rotating}
+\usepackage{float}
+\usepackage{epstopdf}
+\usepackage[titles]{tocloft}
+\usepackage{blindtext}
+\usepackage{anyfontsize}
+\usepackage{setspace,varwidth}
+\usepackage{ifthen}
+\usepackage{multicol,multirow}
+\usepackage{makecell}
+\usepackage[stable,bottom,hang,splitrule,multiple]{footmisc}% customize footnotes
+\usepackage[final]{listings}% program code listings
+\usepackage[%
+headtopline,plainheadtopline,% activate all lines (header and footer)
+headsepline,plainheadsepline,%
+footsepline,plainfootsepline,%
+footbotline,plainfootbotline,%
+nouppercase% auto update \..mark
+]{scrlayer-scrpage}% (KOMA)
+
+\usepackage[%
+breaklinks=true,% allow line break in links
+colorlinks=true,% if false: framed link
+linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,%
+menucolor=black,urlcolor=black]{hyperref}% hyperlinks for references
+
+\usepackage{amssymb}
+\usepackage{emptypage}
+\usepackage{glossaries}
+\usepackage{appendix}
+\usepackage{mdframed}
+\usepackage{etoolbox}
+\usepackage{chngcntr} 
+
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage[european, straightvoltages, americaninductors, oldvoltagedirection]{circuitikz}
+
+%========= ADD TikZ PACKAGES =========%
+\usetikzlibrary{matrix,calc,positioning,arrows,shapes}
+\usetikzlibrary{decorations.pathreplacing}
+
+%======= END ADD PACKAGES =======%
+\geometry{a4paper,twoside,%
+	%textheight=205mm, %246mm,%
+	textwidth=160mm,%
+	top = 3cm,
+	bottom = 4.5cm,
+	heightrounded=false,% round textheight to multiple of lines (avoids overfull vboxes)
+	ignoreall=true,% do not include header, footer, and margins in calculations
+	marginparsep=5pt,% marginpar only used for signs (centered), thus only small sep. needed
+	marginparwidth=10mm,% prevent margin notes to be out of page
+	hmarginratio=1:2,
+	voffset = 2.25mm,
+	%headheight = 16mm,
+	headsep = 9mm,
+	footskip = 13mm
+}
+\linespread{1.4}
+%======= DEFINE COLORS ===========%
+\definecolor{DENcol}{RGB}{35,171,196} % Department Colour
+
+
+%======= Re-Define Essential Commands and store old ones ======%
+\newcommand{\ChapterFont}{qag}
+\newcommand{\WorkingFont}{\rmdefault}
+\renewcommand{\familydefault}{\WorkingFont}
+\normalfont
+
+%======= Set Depths of TOC / TOF / TOL =======%
+
+\renewcommand{\cftchapfont}{\bf\large\fontfamily{\sfdefault}\selectfont}
+\renewcommand{\cftpartfont}{\bf\large\fontfamily{\sfdefault}\selectfont}
+
+\ifthenelse{\equal{\german}{true}}
+{
+\usepackage[ngerman]{babel}
+\renewcommand{\lstlistingname}{Programmcode} 
+}
+%====== Usefull Additional Commands =======%
+
+% Make clickable footnote
+    \newcommand{\hyperfootnote}[1][]{\def\ArgI\hyperfootnoteRelay}
+    % relay to new command to make extra optional command possible
+    \newcommand\hyperfootnoteRelay[2][]{\href{#1#2}{\ArgI}\footnote{\href{#1#2}{#2}}}
+    % the first optional argument is now in \ArgI, the second is in #1
+    %http://www.brechtdeman.com/blog/latex-clickable-footnote.html
+    % Simple (no arguments)
+    %    \hyperfootnote{http://www.mywebsite.com}
+    % Link text (1 argument)
+    %   \hyperfootnote[My website]{http://www.mywebsite.com}
+    % Link text and invisible prefix (2 arguments)
+    %   \hyperfootnote[My website][http://]{www.mywebsite.com}
+
+\newcommand{\ie}{i.\,e.}
+\newcommand{\Ie}{I.\,e.}
+\newcommand{\eg}{e.\,g.}
+\newcommand{\Eg}{E.\,g.} 
+
+%====== Heading Commands =======%
+
+\pagestyle{scrheadings}%
+% \setlength\parindent{0cm}% no indentation for first line of new paragraph
+% \raggedbottom% do not try to fill pages
+
+% header and footer size
+\setheadwidth{text}% set header width to textwidth
+\setfootwidth{text}% set footer width to textwidth
+\setheadtopline[textwithmarginpar]{0.25pt}% set up separator lines (greater width than text)
+\setheadsepline[textwithmarginpar]{0.25pt}
+\setfootsepline[textwithmarginpar]{0.25pt}
+\setfootbotline[textwithmarginpar]{0.25pt}
+
+\renewcommand*\chaptermark[1]{\markleft{\thechapter~#1}}
+\renewcommand*\sectionmark[1]{\markright{\thesection~#1}} 
+
+\clearscrheadfoot % clear everything
+\ihead[]{}%
+\ohead[\ShortTitle]{\footnotesize\headmark}%
+%\cfoot[\footnotesize\ConfidNote]{\footnotesize\ConfidNote}%
+
+\ofoot[\ifthenelse{\equal{\thepage}{}}{\pagemark}{--~~\pagemark~~--}]{\ifthenelse{\equal{\thepage}{}}{\pagemark}{--~~\pagemark~~--}}%
+
+%============== Chapter / Section / Subsection Style ==== %
+\titleformat{\part}[display]
+   {\fontfamily{\sfdefault}\bfseries\fontsize{26}{26}\selectfont\filcenter}
+   {\fontfamily{\sfdefault}\bfseries\fontsize{30}{22}\selectfont\partname{} \thepart}
+   {0.5em}
+   {}
+
+\titleformat{\chapter}[display]
+{\fontfamily{\sfdefault}\bfseries\fontsize{22}{22}\selectfont}%\
+{
+\begin{tikzpicture}[overlay]
+	\node (CoolTitle) at (12,1) [opacity=0.325]{\includegraphics[scale=0.75]{LaTeX/temp_graphics/chapterBacking.eps}};
+	\node (titleNumber) at ($(CoolTitle)+(3,0)$) {\textcolor{black!80}{\fontfamily{\ChapterFont}\bfseries\Large\fontsize{80}{80}\selectfont\thechapter}};
+\end{tikzpicture}
+}
+{0.05em}%
+{\vspace{0.25ex}\filleft}%
+
+\titleformat{\section}{\Large \bfseries \sffamily}{\thesection}{1 em}{}
+\titleformat{\subsection}{\large \bf \sffamily}{\thesubsection}{1 em}{}
+\titleformat{\subsubsection}{\large \bf \sffamily}{\thesubsubsection}{1 em}{}
+
+%%%% CLEAR DOUBLE-PAGE
+% redefine cleardoublepage...
+\makeatletter
+\renewcommand{\cleardoublepage}{\clearpage\if@twoside\ifodd\c@page\else\thispagestyle{plain}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+% ...and define empty double page (e.g., for title sheet)
+\newcommand{\emptydoublepage}{\clearpage\if@twoside\ifodd\c@page\else\thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}%
+% ...and also an empty single page
+\newcommand{\emptypage}{\clearpage\thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi}%
+\makeatother
+
+%%%%% Correct Even and Odd Pages %%%%%
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
+% code listings
+\lstloadlanguages{Bash,VHDL,Matlab,[ANSI]C,Java,[LaTeX]TeX}
+
+\lstset{
+	frame=top,frame=bottom,
+	basicstyle=\fontsize{8}{8}\normalfont\sffamily,    % the size of the fonts that are used for the code
+	stepnumber=1,                           % the step between two line-numbers. If it is 1 each line will be numbered
+	numbersep=6pt,                         % how far the line-numbers are from the code
+	tabsize=2,                              % tab size in blank spaces
+	extendedchars=true,                     %
+	breaklines=true,                        % sets automatic line breaking
+	captionpos=t,                           % sets the caption-position to top
+	mathescape=true,
+	stringstyle=\color{black}\ttfamily, % Farbe der String
+	showspaces=false,           % Leerzeichen anzeigen ?
+	showtabs=false,             % Tabs anzeigen ?
+	xleftmargin=15pt,
+	framexleftmargin=14pt,
+	framexrightmargin=9pt,
+	framexbottommargin=5pt,
+	framextopmargin=5pt,
+	showstringspaces=false,      % Leerzeichen in Strings anzeigen ?
+	numbers = left,
+	linewidth = 150mm
+}
+%%%% MDBOX Setup
+\mdfsetup{%
+middlelinecolor=red,
+middlelinewidth=2pt,
+backgroundcolor=DENcol!10,
+roundcorner=10pt,
+topline = false,
+bottomline = false,
+rightline = false,
+linecolor = DENcol,
+linewidth = 10pt}
+
+%%%% GET RID OF OVERFULL BOXING WARNINGS %%%%
+%\overfullrule=5pt
+\setlength{\headheight}{1.1\baselineskip}
+\raggedbottom
+
+%%%%%%%%%%%%%
+\counterwithout{footnote}{chapter}
+
