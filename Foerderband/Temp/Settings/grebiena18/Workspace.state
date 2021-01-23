@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.7.2.98?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="D:\github\Industrial-automation\Foerderband\Logical\Foerderband\Cyclic.c" CaretLine="321" CaretColumn="22" FirstVisibleLine="299">
+  <TextEdit ID="D:\github\Industrial-automation\Foerderband\Logical\stat_3\Cyclic.c" CaretLine="1" CaretColumn="1" FirstVisibleLine="75">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="D:\github\Industrial-automation\Foerderband\Logical\stat_2\Cyclic.c" CaretLine="70" CaretColumn="1" FirstVisibleLine="58">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="D:\github\Industrial-automation\Foerderband\Logical\stat_1\Cyclic.c" CaretLine="82" CaretColumn="16" FirstVisibleLine="64">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="D:\github\Industrial-automation\Foerderband\Logical\stat_5\Cyclic.c" CaretLine="37" CaretColumn="50" FirstVisibleLine="26">
     <Bookmarks />
   </TextEdit>
 </State>

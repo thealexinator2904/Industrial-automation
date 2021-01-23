@@ -34,6 +34,8 @@ void _CYCLIC ProgramCyclic(void)
 			
 			if(OR_MANUAL_MODE(work_now))
 				state = BOHREN;
+			if(DI_Deckel_bereits_vorh)
+				state = FERTIG;
 			break;
 		
 		case SENKEN:

@@ -14,9 +14,10 @@ void setVereinzlerstate(enum vereinzlerstates state);
 
 void _CYCLIC ProgramCyclic(void)
 {
-	static enum states state = WAIT;
+	static enum states state = WAIT, lastState;
 	static F_TRIGtyp stop_trig;
-
+	static TON_typ Error_timer;
+	
 	stop_trig.CLK = DI_Stop;
 	F_TRIG(&stop_trig);
 	
@@ -69,6 +70,15 @@ void _CYCLIC ProgramCyclic(void)
 	
 	if((!auto_mode_glob || !work_now) && !manual_work_mode_glob)
 		state = WAIT;
+	Error_timer.PT = 4000;
+	Error_timer.IN = ((state != WAIT) && (state == lastState) && (auto_mode_glob));
+	
+	TON(&Error_timer);
+	
+	if(Error_timer.Q)
+		state= ERROR_STAT2;
+	lastState=state;
+	
 	work_state = state;
 }
 

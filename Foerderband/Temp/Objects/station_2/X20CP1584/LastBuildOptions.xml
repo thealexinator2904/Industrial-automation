@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSetOptions UsesUTCTime="True">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\ashwac.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\hardware.hw" LastWriteTime="2020-11-11 12:39:16" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\Hardware.hw&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\ashwac.br&quot; -L &quot;AsIecCon: V*, astime: V*, operator: V*, runtime: V*, standard: V*&quot; -c &quot;station_2&quot; -Z &quot;Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -M IA32 -B A4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;station_2&quot; -T SG4 " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\sysconf.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\hardware.hw" LastWriteTime="2020-11-11 12:39:16" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\Hardware.hw&quot;  -c &quot;station_2&quot; -sysconf -S &quot;X20CP1584&quot; -Z &quot;Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\sysconf.br&quot; -T SG4 -B A4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;station_2&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\asfw.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\hardware.hw" LastWriteTime="2020-11-11 12:39:16" />
+    <Prerequisite ID="c:\automationstudio\as47\upgrades\modified.txt" LastWriteTime="2019-11-25 07:50:14" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\Hardware.hw&quot;  -v V1.00.0 -S &quot;X20CP1584&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\asfw.br&quot; -T SG4 -B A4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;station_2&quot; -zip -s &quot;station_2&quot; -firmware -Z &quot;Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\ashwd.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\hardware.hw" LastWriteTime="2020-11-11 12:39:16" />
+    <Prerequisite ID="c:\automationstudio\as47\upgrades\modified.txt" LastWriteTime="2019-11-25 07:50:14" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\Hardware.hw&quot;  -v V1.00.0 -S &quot;X20CP1584&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\ashwd.br&quot; -T SG4 -B A4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;station_2&quot; -zip -s &quot;station_2&quot; -hwd -Z &quot;Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\arconfig.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\hardware.hw" LastWriteTime="2020-11-11 12:39:16" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\iomap.iom" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\communication.dtm" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\Hardware.hw&quot; &quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\IoMap.iom&quot;  -arconfig -C &quot;/COMT=2500 /RT=1000 /AM=* /DAIP=127.0.0.1 /REPO=11160 /ANSL=1&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -c &quot;station_2&quot; -v V1.00.0 -S &quot;X20CP1584&quot; -Z &quot;Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\arconfig.br&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\ChannelConfiguration.xml&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\HardwareConfiguration.xml&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\ReActionTechnologyConfiguration.xml&quot; -T SG4 -B A4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;station_2&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\udbdef.br">
+    <Prerequisite ID="c:\automationstudio\as47\as\technologypackages\unitsystem\n.d\transfer\modules\sg4\udbdef.br" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="C:\AutomationStudio\AS47\AS\TechnologyPackages\UnitSystem\n.d\Transfer\Modules\SG4\udbdef.br, $(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\udbdef.br" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\iomap.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\iomap.iom" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\pvmap.vvm" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\hardware.hw" LastWriteTime="2020-11-11 12:39:16" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\cpu.sw" LastWriteTime="2020-10-27 13:47:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\channelconfiguration.xml" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\IoMap.iom&quot; &quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\PvMap.vvm&quot;  -m &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\ConfigInfo.cfi&quot; -g &quot;$(AS_PROJECT_PATH)\Temp\Objects\Declarations.lst&quot; -x &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\ChannelConfiguration.xml&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584&quot; -iomap -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\iomap.br&quot; -T SG4 -B A4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;station_2.X20CP1584&quot;" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\tcdata\tcdata.imx">
+    <Prerequisite ID="c:\automationstudio\as47\as\technologypackages\textsystem\n.d\objectcatalog\elements\textconfig\template\tc.textconfig" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter=" -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\TCData\TCData.imx&quot; -c &quot;C:\AutomationStudio\AS47\AS\TechnologyPackages\TextSystem\n.d\ObjectCatalog\Elements\TextConfig\Template\TC.textconfig&quot; -I &quot;C:\AutomationStudio\AS\System\A0473&quot; &quot;C:\AutomationStudio\AS47\AS\TechnologyPackages\UnitSystem\n.d&quot; -P &quot;$(AS_PROJECT_PATH)&quot;" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\tcdata\tcdata.s18d">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\tcdata\tcdata.imx" LastWriteTime="2021-01-23 09:59:24" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\TCData\TCData.imx&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\TCData\TCData.s18d&quot;" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\tcdata.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\tcdata\tcdata.s18d" LastWriteTime="2021-01-23 09:59:26" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\TCData\TCData.s18d&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\TCData.br&quot; -t TextModule" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\role.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\accessandsecurity\userrolesystem\role.role" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\AccessAndSecurity\UserRoleSystem\Role.role&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Role.br&quot; -zip -B A4.73 -z n.d -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;station_2&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\user.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\accessandsecurity\userrolesystem\user.user" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\AccessAndSecurity\UserRoleSystem\User.user&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\User.br&quot; -zip -B A4.73 -z n.d -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;station_2&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\fwrules.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\accessandsecurity\firewall\rules.firewallrules" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\AccessAndSecurity\Firewall\Rules.firewallRules&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\FWRules.br&quot; -zip -B A4.73 -z n.d -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;station_2&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\stat_2.ox" LastWriteTime="2021-01-23 11:20:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\cpu.per" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\stat_2.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\station_2\X20CP1584\LT.ofs&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -extConstants -r Cyclic1 -p 2 -s &quot;stat_2&quot; -L &quot;AsIecCon: V*, astime: V*, operator: V*, runtime: V*, standard: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
+    <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
+    <AdditionalBuildTrigger Key="PermanentDigitalMemory" Value="0" />
+    <AdditionalBuildTrigger Key="RemanentMemory" Value="4096" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\stat_2.ox">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\a.out" LastWriteTime="2021-01-23 11:20:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\stat_2.ox&quot; -T SG4 -r Cyclic1 -G V4.1.2  -B A4.73 " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\a.out">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\cyclic.c.o" LastWriteTime="2021-01-23 11:20:02" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\init.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\exit.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\_bur_pvdef.c.o" LastWriteTime="2021-01-23 11:20:02" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\Cyclic.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\Init.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\Exit.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\_bur_pvdef.c.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\a.out&quot; -G V4.1.2  -T SG4 -M IA32 &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libAsIecCon.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libastime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libstandard.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libruntime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\liboperator.a&quot; -specs=I386specs_brelf" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\cyclic.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\cyclic.c" LastWriteTime="2021-01-23 11:19:58" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\stat_2\Cyclic.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\Cyclic.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;stat_2&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\init.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\init.c" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\stat_2\Init.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\Init.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;stat_2&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\exit.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\exit.c" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\stat_2\Exit.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\Exit.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;stat_2&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\_bur_pvdef.c.o">
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\_bur_pvdef.c" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\cyclic.c.o" LastWriteTime="2021-01-23 11:20:02" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\init.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2\exit.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\stat_2\variables.var" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;C:\AutomationStudio\AS47\AS\GnuInst\V4.1.2\i386-elf\include\bur\_bur_pvdef.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\stat_2\_bur_pvdef.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;stat_2&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\stat_2&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\foerderban.ox" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\cpu.per" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Foerderban.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\station_2\X20CP1584\LT.ofs&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -extConstants -r Cyclic1 -p 3 -s &quot;Foerderband&quot; -L &quot;AsIecCon: V*, astime: V*, operator: V*, runtime: V*, standard: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
+    <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
+    <AdditionalBuildTrigger Key="PermanentDigitalMemory" Value="0" />
+    <AdditionalBuildTrigger Key="RemanentMemory" Value="4096" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\foerderban.ox">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\a.out" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Foerderban.ox&quot; -T SG4 -r Cyclic1 -G V4.1.2  -B A4.73 " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\a.out">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\cyclic.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\init.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\exit.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\_bur_pvdef.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Cyclic.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Init.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Exit.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\_bur_pvdef.c.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\a.out&quot; -G V4.1.2  -T SG4 -M IA32 &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libAsIecCon.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libastime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libstandard.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libruntime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\liboperator.a&quot; -specs=I386specs_brelf" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\cyclic.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerderband\cyclic.c" LastWriteTime="2020-11-04 14:45:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\Foerderband\Cyclic.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Cyclic.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;Foerderband&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\init.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerderband\init.c" LastWriteTime="2020-10-27 13:49:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\Foerderband\Init.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Init.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;Foerderband&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\exit.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerderband\exit.c" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\Foerderband\Exit.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\Exit.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;Foerderband&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\_bur_pvdef.c.o">
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\_bur_pvdef.c" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\cyclic.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\init.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban\exit.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;C:\AutomationStudio\AS47\AS\GnuInst\V4.1.2\i386-elf\include\bur\_bur_pvdef.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerderban\_bur_pvdef.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;Foerderband&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\Foerderband&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\foerdeband.ox" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\cpu.per" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Foerdeband.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\station_2\X20CP1584\LT.ofs&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -extConstants -r Cyclic1 -p 4 -s &quot;FoerdebandWatch&quot; -L &quot;AsIecCon: V*, astime: V*, operator: V*, runtime: V*, standard: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
+    <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
+    <AdditionalBuildTrigger Key="PermanentDigitalMemory" Value="0" />
+    <AdditionalBuildTrigger Key="RemanentMemory" Value="4096" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\foerdeband.ox">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\a.out" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Foerdeband.ox&quot; -T SG4 -r Cyclic1 -G V4.1.2  -B A4.73 " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\a.out">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\cyclic.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\init.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\exit.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\_bur_pvdef.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Cyclic.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Init.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Exit.c.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\_bur_pvdef.c.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\a.out&quot; -G V4.1.2  -T SG4 -M IA32 &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libAsIecCon.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libastime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libstandard.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\libruntime.a&quot; &quot;-Wl,C:\AutomationStudio\AS\System\A0473\SG4\Ia32\liboperator.a&quot; -specs=I386specs_brelf" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\cyclic.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerdebandwatch\cyclic.c" LastWriteTime="2020-11-04 11:04:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch\Cyclic.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Cyclic.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;FoerdebandWatch&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\init.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerdebandwatch\init.c" LastWriteTime="2020-10-27 13:47:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch\Init.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Init.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;FoerdebandWatch&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\exit.c.o">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\foerdebandwatch\exit.c" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch\Exit.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\Exit.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;FoerdebandWatch&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\_bur_pvdef.c.o">
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\_bur_pvdef.c" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\cyclic.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\init.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband\exit.c.o" LastWriteTime="2021-01-23 09:59:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2020-10-29 11:12:44" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plctypes.h" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="c:\automationstudio\as47\as\gnuinst\v4.1.2\i386-elf\include\bur\plc.h" LastWriteTime="2019-10-10 08:00:38" />
+    <CommandLine Parameter="&quot;C:\AutomationStudio\AS47\AS\GnuInst\V4.1.2\i386-elf\include\bur\_bur_pvdef.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Foerdeband\_bur_pvdef.c.o&quot; -T SG4 -M IA32 -B A4.73 -G V4.1.2  -s &quot;FoerdebandWatch&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=I386specs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\FoerdebandWatch&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\Libraries.h&quot; -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
+    <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\standard.br">
+    <Prerequisite ID="c:\automationstudio\as\system\a0473\sg4\ia32\standard.br" LastWriteTime="2020-03-30 20:35:02" />
+    <CommandLine Parameter="C:\AutomationStudio\AS\System\A0473\SG4\Ia32\standard.br, $(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\standard.br" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\asiol1.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\communication.dtm" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\commdtm\commdtm.dtmdre" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\commdtm\commdtm.dtmdri" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\commdtm\commdtm.dtmtre" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\x20ds438a\x20ds438a.dtmdre" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\x20ds438a\x20ds438a.dtmdri" LastWriteTime="2020-10-27 12:02:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\dtm\communication\x20ds438a\x20ds438a.dtmtre" LastWriteTime="2020-10-27 12:02:06" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\DTM\Communication\Communication.dtm&quot;  -D 94a64cda-18e3-4e02-9df8-4711ba989a67 -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\asiol1.br&quot; -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;station_2&quot; " />
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <CommandLine Parameter=" -r -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\station_2\X20CP1584\#cpu_tp.mak&quot; -k" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\station_2\x20cp1584\transfer.lst">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\ashwac.br" LastWriteTime="2021-01-23 09:59:24" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\sysconf.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\asfw.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\ashwd.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\arconfig.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\udbdef.br" LastWriteTime="2019-10-10 08:00:38" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\iomap.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\tcdata.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\role.br" LastWriteTime="2021-01-23 09:59:24" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\user.br" LastWriteTime="2021-01-23 09:59:24" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\fwrules.br" LastWriteTime="2021-01-23 09:59:24" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\stat_2.br" LastWriteTime="2021-01-23 11:20:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerderban.br" LastWriteTime="2021-01-23 09:59:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\foerdeband.br" LastWriteTime="2021-01-23 09:59:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\standard.br" LastWriteTime="2020-03-30 20:35:02" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\station_2\x20cp1584\asiol1.br" LastWriteTime="2021-01-23 09:59:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\station_2\x20cp1584\cpu.sw" LastWriteTime="2020-10-27 13:47:04" />
+    <CommandLine Parameter=" &quot;$(AS_PROJECT_PATH)\Foerderband.apj&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -o &quot;$(AS_PROJECT_PATH)\Binaries&quot; -c &quot;station_2&quot; -i &quot;C:\AutomationStudio\AS47&quot; -S &quot;X20CP1584&quot; -A &quot;X20CP1584&quot; -pil -swFiles &quot;$(AS_PROJECT_PATH)\Physical\station_2\X20CP1584\Cpu.sw&quot; -Z &quot;Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -C &quot;/COMT=2500 /RT=1000 /AM=* /DAIP=127.0.0.1 /REPO=11160 /ANSL=1&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -M IA32 -T SG4" />
+  </Rule>
+</RuleSetOptions>

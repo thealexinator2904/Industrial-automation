@@ -1,0 +1,15 @@
+$(AS_CPU_PATH)/stat_2/_bur_pvdef.c.o:
+$(AS_GNU_INST_PATH)/i386-elf/include/bur/_bur_pvdef.c
+$(AS_TEMP_PATH)/includes/stat_2/asdefault.h
+$(AS_TEMP_PATH)/includes/asdefault.h
+$(AS_GNU_INST_PATH)/i386-elf/include/bur/plctypes.h
+$(AS_GNU_INST_PATH)/i386-elf/include/bur/plc.h
+$(AS_TEMP_PATH)/includes/operator.h
+$(AS_TEMP_PATH)/includes/runtime.h
+$(AS_TEMP_PATH)/includes/standard.h
+$(AS_TEMP_PATH)/includes/astime.h
+$(AS_TEMP_PATH)/includes/asieccon.h
+$(AS_TEMP_PATH)/includes/globaltyp.h
+$(AS_TEMP_PATH)/includes/globalvar.h
+$(AS_TEMP_PATH)/includes/stat_2/typestyp.h
+$(AS_TEMP_PATH)/includes/stat_2/variablesvar.h
