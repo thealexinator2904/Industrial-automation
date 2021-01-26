@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildReasons>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\exit.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\stat_6\variables.var" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\cyclic.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\stat_6\cyclic.c" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\init.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\stat_6\variables.var" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\_bur_pvdef.c.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\cyclic.c.o" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\cyclic.c.o" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\stat_6.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\a.out" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6\stat_6.ox" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\iomap.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\stat_6\variables.var" weicht ab.
+</BuildReason>
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <BuildReason>Regel wird erzwungen.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\station_6\x20cp1584\transfer.lst">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\station_6\x20cp1584\stat_6.br" weicht ab.
+</BuildReason>
+  </Rule>
+</BuildReasons>

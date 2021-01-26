@@ -1,12 +1,15 @@
-VAR CONSTANT
-	timer_picture_time : UINT := 1000;
-END_VAR
 VAR
-	timer_picture : TON;
-	DO_Kamera_Trigger : BOOL := FALSE;
+	DI_Kamera_00 : BOOL := FALSE;
 	DI_Kamera_01 : BOOL := FALSE;
 	DI_Kamera_02 : BOOL := FALSE;
-	DI_Kamera_00 : BOOL := FALSE;
+	DO_Kamera_Trigger : BOOL := FALSE;
+	new_pic : BOOL := FALSE;
+	timer_picture : TON;
+END_VAR
+VAR CONSTANT
+	timer_picture_time : UINT := 100;
+END_VAR
+VAR
 	nice_pic_cnt : USINT := 0;
 	shit_pic_cnt : USINT := 0;
 END_VAR

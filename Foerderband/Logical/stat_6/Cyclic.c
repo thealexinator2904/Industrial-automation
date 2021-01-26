@@ -7,6 +7,7 @@
 
 #define true 1
 #define false 0
+#define TRESHOLD 20
 
 int takePicture(void);
 void processPicture(void);
@@ -23,13 +24,16 @@ void _CYCLIC ProgramCyclic(void)
 	R_TRIG(&R_TRIG_reset);
 	F_TRIG_stop.CLK = DI_Stop;
 	F_TRIG(&F_TRIG_stop);
-	
+		
 	switch(state_stat6)
 	{
 		case WAIT:
 			work_done = false;
-			 
-			if(OR_MANUAL_MODE(work_now))
+			shit_pic_cnt = 0;
+			nice_pic_cnt = 0;
+			new_pic = 0;
+			
+			if(work_now)
 				state_stat6 = TAKE_PIC;
 			break;
 			
@@ -41,22 +45,22 @@ void _CYCLIC ProgramCyclic(void)
 		case PROCESS_PIC:	//processes the picture and decides whether its satisfactory or not
 			processPicture();
 			
-			if((shit_pic_cnt < 3) || (nice_pic_cnt < 3))
+			if((shit_pic_cnt < TRESHOLD) || (nice_pic_cnt < TRESHOLD))
 				state_stat6 = TAKE_PIC;
 			
-			else if(shit_pic_cnt >= 3)	//if 3 consecutive pictures are bad -> ERROR_STAT6
+			if(shit_pic_cnt >= TRESHOLD)	//if 10 consecutive pictures are bad -> ERROR_STAT6
 			{
 				state_stat6 = ERROR_STAT6;
 				error_code_stat6 = SHIT_PIC;
 			}
 	
-			else if (nice_pic_cnt >= 3)	//if 3 consecutive pictures are good -> WORK_DONE
+			else if (nice_pic_cnt >= TRESHOLD)	//if 10 consecutive pictures are good -> WORK_DONE
 				state_stat6 = WORK_DONE;
 			break;
 			
 		case WORK_DONE:
 			work_done = true;
-				
+					
 			if(!work_now)
 				state_stat6 = WAIT;
 			break;
@@ -79,6 +83,7 @@ int takePicture(void)
 		DO_Kamera_Trigger = !DO_Kamera_Trigger;
 		timer_picture.IN = false;
 		TON(&timer_picture);
+		new_pic = true;
 		
 		return true;
 	}
@@ -88,9 +93,14 @@ int takePicture(void)
 
 void processPicture(void)
 {
-	if (DI_Kamera_01 && (!DI_Kamera_02)) //good pic
-		nice_pic_cnt++;
+	if(new_pic)
+	{
+		new_pic = false;
+		
+		if (DI_Kamera_00 && (!DI_Kamera_02)) //good pic
+			nice_pic_cnt++;
 			
-	else if ((!DI_Kamera_01) && DI_Kamera_02)	//bad pic
-		shit_pic_cnt++;
+		else if ((!DI_Kamera_00) && DI_Kamera_02)	//bad pic
+			shit_pic_cnt++;
+	}
 }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.7.2.98"?>
+<ProjectOptions
+  IecNamingConventions="true"
+  IecKeywordsAsStructureMembers="false"
+  IecExtendedConstants="true"
+  LogicalDirectory="Z:\GitHub\Industrial-automation\Foerderband\Logical\"
+  TempDirectory="Z:\GitHub\Industrial-automation\Foerderband\Temp\"
+  AutomationStudioVersion="4.7.2.98"
+  AutomationStudioEdition="Standard"
+  BuildCrossReference="false"
+  ActiveConfiguration="station_6"
+  CreateAnsiCDeclarations="false" />

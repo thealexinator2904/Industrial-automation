@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.7.2.98?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Cyclic.c" CaretLine="34" CaretColumn="10" FirstVisibleLine="1">
+  <TextEdit ID="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Cyclic.c" CaretLine="27" CaretColumn="2" FirstVisibleLine="1">
     <Bookmarks />
   </TextEdit>
-  <TreeView ID="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Variables.var" EditColumn="0" TopRow="0" HorizontalScrollOffset="0" SortedColumn="0">
+  <TextEdit ID="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Init.c" CaretLine="1" CaretColumn="1" FirstVisibleLine="1">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_5\Cyclic.c" CaretLine="29" CaretColumn="15" FirstVisibleLine="1">
+    <Bookmarks />
+  </TextEdit>
+  <TreeView ID="Z:\GitHub\Industrial-automation\Foerderband\Logical\stat_6\Variables.var" EditColumn="0" TopRow="0" HorizontalScrollOffset="0" SortedColumn="2">
     <Columns>
       <Column Index="0" Width="200" Position="0" />
       <Column Index="1" Width="100" Position="1" />
@@ -20,7 +26,7 @@
     </Columns>
     <ExpandedNodes />
     <SelectedNodes>
-      <SelectedNode Row="0" />
+      <SelectedNode Row="6" />
     </SelectedNodes>
     <ZoomIndices />
   </TreeView>
